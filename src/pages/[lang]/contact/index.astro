@@ -1,0 +1,63 @@
+---
+import { getEntry, render } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import { useTranslations, type Lang } from '../../../i18n/utils';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'en' } }, { params: { lang: 'zh' } }];
+}
+
+const { lang } = Astro.params as { lang: Lang };
+const t = useTranslations(lang);
+const entry = await getEntry('pages', `${lang}/contact`);
+const settings = await getEntry('settings', `${lang}/site`);
+const { footer } = settings!.data;
+const { Content } = await render(entry!);
+---
+
+<Layout lang={lang} title={t('page.contact.title')}>
+  <div class="page-header">
+    <div class="container">
+      <h1>{t('page.contact.title')}</h1>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container grid" style="grid-template-columns: 1.1fr 0.9fr; align-items: start;">
+      <div>
+        <div class="prose">
+          <Content />
+        </div>
+        <p>
+          <strong>{footer.address}</strong><br />
+          <a href={`tel:${footer.phone.replace(/\s+/g, '')}`}>{footer.phone}</a><br />
+          <a href={`mailto:${footer.email}`}>{footer.email}</a>
+        </p>
+      </div>
+
+      <form class="card" style="padding: 1.5rem;" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
+        <div class="form-field">
+          <label for="name">{t('page.contact.formName')}</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-field">
+          <label for="email">{t('page.contact.formEmail')}</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-field">
+          <label for="message">{t('page.contact.formMessage')}</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">{t('action.submit')}</button>
+      </form>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @media (max-width: 860px) {
+    .section .container.grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>

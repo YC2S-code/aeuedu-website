@@ -1,0 +1,42 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getLangEntries, slugFromId } from '../../../lib/content';
+import { useTranslations, getLocalePath, type Lang } from '../../../i18n/utils';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'en' } }, { params: { lang: 'zh' } }];
+}
+
+const { lang } = Astro.params as { lang: Lang };
+const t = useTranslations(lang);
+const dateLocale = lang === 'zh' ? 'zh-CN' : 'en-US';
+const events = (await getLangEntries('events', lang)).sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
+---
+
+<Layout lang={lang} title={t('page.events.title')}>
+  <div class="page-header">
+    <div class="container">
+      <h1>{t('page.events.title')}</h1>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        {events.map((event) => (
+          <div class="card">
+            {event.data.image && <img class="card__image" src={event.data.image} alt={event.data.title} />}
+            <div class="card__body">
+              <div class="card__meta">
+                {event.data.date.toLocaleDateString(dateLocale)}
+                {event.data.location ? ` · ${event.data.location}` : ''}
+              </div>
+              <h3>{event.data.title}</h3>
+              <p>{event.data.summary}</p>
+              <a href={getLocalePath(lang, `events/${slugFromId(event.id)}`)}>{t('action.learnMore')}</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,25 @@
+siteName: AEUEDU
+tagline: Empowering Future Leaders Through Education
+nav:
+  home: Home
+  about: About
+  admissions: Admissions
+  programs: Programs
+  news: News
+  events: Events
+  gallery: Gallery
+  contact: Contact
+footer:
+  address: "123 Education Avenue, District 1, Ho Chi Minh City, Vietnam"
+  phone: "+84 28 1234 5678"
+  email: "info@aeuedu.example"
+  mapEmbedUrl: "https://www.google.com/maps?q=Ho+Chi+Minh+City&output=embed"
+  facebook: "https://facebook.com/aeuedu"
+  youtube: "https://youtube.com/@aeuedu"
+  copyright: "© 2026 AEUEDU. All rights reserved."
+home:
+  heroTitle: "Welcome to AEUEDU"
+  heroSubtitle: "A nurturing environment where students grow into confident, capable global citizens."
+  heroImage: "/images/hero-placeholder.jpg"
+  heroCta: "Explore Programs"
+  highlightsTitle: "Why Choose AEUEDU"

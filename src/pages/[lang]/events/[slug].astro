@@ -1,0 +1,45 @@
+---
+import { render } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import { getLangEntries, slugFromId } from '../../../lib/content';
+import { useTranslations, getLocalePath, type Lang } from '../../../i18n/utils';
+
+export async function getStaticPaths() {
+  const langs: Lang[] = ['en', 'zh'];
+  const paths = [];
+  for (const lang of langs) {
+    const entries = await getLangEntries('events', lang);
+    for (const entry of entries) {
+      paths.push({ params: { lang, slug: slugFromId(entry.id) }, props: { entry } });
+    }
+  }
+  return paths;
+}
+
+const { lang } = Astro.params as { lang: Lang };
+const { entry } = Astro.props as { entry: Awaited<ReturnType<typeof getLangEntries<'events'>>>[number] };
+const t = useTranslations(lang);
+const dateLocale = lang === 'zh' ? 'zh-CN' : 'en-US';
+const { Content } = await render(entry);
+---
+
+<Layout lang={lang} title={entry.data.title} description={entry.data.summary}>
+  <div class="page-header">
+    <div class="container">
+      <h1>{entry.data.title}</h1>
+      <p class="card__meta">
+        {t('label.date')}: {entry.data.date.toLocaleDateString(dateLocale)}
+        {entry.data.location && <> · {t('label.location')}: {entry.data.location}</>}
+      </p>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      {entry.data.image && <img src={entry.data.image} alt={entry.data.title} style="border-radius: var(--radius); margin-bottom: 1.5rem;" />}
+      <div class="prose">
+        <Content />
+      </div>
+      <p><a href={getLocalePath(lang, 'events')}>&larr; {t('action.backToList')}</a></p>
+    </div>
+  </section>
+</Layout>

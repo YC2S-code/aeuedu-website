@@ -1,0 +1,49 @@
+---
+interface Props {
+  url: string;
+  title?: string;
+}
+
+const { url, title = 'Video' } = Astro.props;
+
+function toEmbedUrl(input: string): string {
+  try {
+    const u = new URL(input);
+
+    // youtube.com/watch?v=ID or youtu.be/ID
+    if (u.hostname.includes('youtube.com')) {
+      const id = u.searchParams.get('v');
+      if (id) return `https://www.youtube.com/embed/${id}`;
+      // already an /embed/ url or other youtube path
+      return input;
+    }
+    if (u.hostname.includes('youtu.be')) {
+      const id = u.pathname.replace('/', '');
+      return `https://www.youtube.com/embed/${id}`;
+    }
+
+    // vimeo.com/ID
+    if (u.hostname.includes('vimeo.com')) {
+      const id = u.pathname.replace('/', '');
+      return `https://player.vimeo.com/video/${id}`;
+    }
+
+    // Fallback: assume the URL is already embeddable (e.g. WeChat clip embed link)
+    return input;
+  } catch {
+    return input;
+  }
+}
+
+const embedUrl = toEmbedUrl(url);
+---
+
+<div class="embed-responsive">
+  <iframe
+    src={embedUrl}
+    title={title}
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</div>

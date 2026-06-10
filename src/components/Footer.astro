@@ -1,0 +1,61 @@
+---
+import { getEntry } from 'astro:content';
+import type { Lang } from '../i18n/utils';
+import { getLocalePath } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const settings = await getEntry('settings', `${lang}/site`);
+const { siteName, tagline, footer, nav } = settings!.data;
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <h3>{siteName}</h3>
+        <p>{tagline}</p>
+        {footer.facebook || footer.youtube ? (
+          <p>
+            {footer.facebook && <a href={footer.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>}
+            {footer.facebook && footer.youtube && ' · '}
+            {footer.youtube && <a href={footer.youtube} target="_blank" rel="noopener noreferrer">YouTube</a>}
+          </p>
+        ) : null}
+      </div>
+
+      <div>
+        <h3>{nav.contact}</h3>
+        <p>{footer.address}</p>
+        <p>
+          <a href={`tel:${footer.phone.replace(/\s+/g, '')}`}>{footer.phone}</a><br />
+          <a href={`mailto:${footer.email}`}>{footer.email}</a>
+        </p>
+      </div>
+
+      <div>
+        <h3>{nav.programs} / {nav.news}</h3>
+        <p>
+          <a href={getLocalePath(lang, 'programs')}>{nav.programs}</a><br />
+          <a href={getLocalePath(lang, 'news')}>{nav.news}</a><br />
+          <a href={getLocalePath(lang, 'events')}>{nav.events}</a><br />
+          <a href={getLocalePath(lang, 'admissions/process')}>{nav.admissions}</a>
+        </p>
+      </div>
+
+      {footer.mapEmbedUrl && (
+        <div>
+          <h3>{lang === 'en' ? 'Find Us' : 'Vị trí'}</h3>
+          <iframe src={footer.mapEmbedUrl} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      )}
+    </div>
+
+    <div class="site-footer__bottom">
+      {footer.copyright}
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,89 @@
+---
+import { getEntry } from 'astro:content';
+import type { Lang } from '../i18n/utils';
+import { getLocalePath, otherLang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const settings = await getEntry('settings', `${lang}/site`);
+const nav = settings!.data.nav;
+const currentPath = Astro.url.pathname;
+
+const other = otherLang(lang);
+// Swap the locale prefix while keeping the rest of the path
+const otherPath = currentPath.replace(`/${lang}`, `/${other}`) || `/${other}`;
+const enHref = lang === 'en' ? currentPath : otherPath;
+const zhHref = lang === 'zh' ? currentPath : otherPath;
+
+const links = [
+  { href: getLocalePath(lang, ''), label: nav.home },
+  {
+    href: getLocalePath(lang, 'about/history-mission'),
+    label: nav.about,
+    children: [
+      { href: getLocalePath(lang, 'about/history-mission'), label: nav.about },
+      { href: getLocalePath(lang, 'about/leadership'), label: lang === 'en' ? 'Leadership' : '领导团队' },
+      { href: getLocalePath(lang, 'about/facilities'), label: lang === 'en' ? 'Facilities' : '校园设施' },
+    ],
+  },
+  {
+    href: getLocalePath(lang, 'admissions/process'),
+    label: nav.admissions,
+    children: [
+      { href: getLocalePath(lang, 'admissions/process'), label: lang === 'en' ? 'Admissions Process' : '招生流程' },
+      { href: getLocalePath(lang, 'admissions/requirements'), label: lang === 'en' ? 'Requirements' : '申请材料要求' },
+      { href: getLocalePath(lang, 'admissions/tuition-fees'), label: lang === 'en' ? 'Tuition & Fees' : '学费信息' },
+    ],
+  },
+  { href: getLocalePath(lang, 'programs'), label: nav.programs },
+  { href: getLocalePath(lang, 'news'), label: nav.news },
+  { href: getLocalePath(lang, 'events'), label: nav.events },
+  { href: getLocalePath(lang, 'gallery'), label: nav.gallery },
+  { href: getLocalePath(lang, 'contact'), label: nav.contact },
+];
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href={getLocalePath(lang, '')} class="site-header__brand">
+      <span>{settings!.data.siteName}</span>
+    </a>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      &#9776;
+    </button>
+
+    <nav class="site-nav" id="site-nav">
+      <ul class="site-nav__list">
+        {links.map((link) => (
+          <li class={link.children ? 'has-dropdown' : ''}>
+            <a href={link.href} class={currentPath === link.href ? 'active' : ''}>{link.label}</a>
+            {link.children && (
+              <ul class="dropdown">
+                {link.children.map((child) => (
+                  <li><a href={child.href} class={currentPath === child.href ? 'active' : ''}>{child.label}</a></li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
+      <div class="lang-switch">
+        <a href={enHref} class={lang === 'en' ? 'active' : ''}>EN</a>
+        <a href={zhHref} class={lang === 'zh' ? 'active' : ''}>中文</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const nav = document.getElementById('site-nav');
+  toggle?.addEventListener('click', () => {
+    const isOpen = nav?.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(!!isOpen));
+  });
+</script>

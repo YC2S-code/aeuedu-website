@@ -1,0 +1,119 @@
+---
+import { getEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { getLangEntries, slugFromId } from '../../lib/content';
+import { useTranslations, getLocalePath, type Lang } from '../../i18n/utils';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'en' } }, { params: { lang: 'zh' } }];
+}
+
+const { lang } = Astro.params as { lang: Lang };
+const t = useTranslations(lang);
+
+const settings = await getEntry('settings', `${lang}/site`);
+const { siteName, tagline, home } = settings!.data;
+
+const programs = (await getLangEntries('programs', lang)).sort((a, b) => a.data.order - b.data.order).slice(0, 3);
+const news = (await getLangEntries('news', lang)).sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 3);
+const events = (await getLangEntries('events', lang)).sort((a, b) => a.data.date.getTime() - b.data.date.getTime()).slice(0, 2);
+
+const dateLocale = lang === 'zh' ? 'zh-CN' : 'en-US';
+
+const highlights =
+  lang === 'en'
+    ? [
+        { title: 'Experienced Educators', text: 'Qualified, caring teachers dedicated to every student\'s success.' },
+        { title: 'Bilingual Curriculum', text: 'Strong foundations in both English and Chinese from an early age.' },
+        { title: 'Modern Facilities', text: 'Safe, well-equipped campus designed for learning and growth.' },
+        { title: 'Global Pathways', text: 'Programs that prepare students for higher education worldwide.' },
+      ]
+    : [
+        { title: '经验丰富的教师团队', text: '专业且充满爱心的教师，致力于每一位学生的成功。' },
+        { title: '双语课程体系', text: '从小培养扎实的英语与中文基础。' },
+        { title: '现代化校园设施', text: '安全、设备齐全的校园，助力学习与成长。' },
+        { title: '全球升学路径', text: '帮助学生为未来海外升学做好充分准备的课程项目。' },
+      ];
+---
+
+<Layout lang={lang} title={siteName} description={tagline}>
+  <section class="hero">
+    <div class="container">
+      <h1>{home.heroTitle}</h1>
+      <p>{home.heroSubtitle}</p>
+      <a class="btn btn-primary" href={getLocalePath(lang, 'programs')}>{home.heroCta}</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">{home.highlightsTitle}</h2>
+      <div class="grid grid-3">
+        {highlights.map((h) => (
+          <div class="card">
+            <div class="card__body">
+              <h3>{h.title}</h3>
+              <p>{h.text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">{t('section.ourPrograms')}</h2>
+      <div class="grid grid-3">
+        {programs.map((program) => (
+          <div class="card">
+            {program.data.image && <img class="card__image" src={program.data.image} alt={program.data.title} />}
+            <div class="card__body">
+              <h3>{program.data.title}</h3>
+              <p>{program.data.summary}</p>
+              <a href={getLocalePath(lang, `programs/${slugFromId(program.id)}`)}>{t('action.learnMore')}</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">{t('section.latestNews')}</h2>
+      <div class="grid grid-3">
+        {news.map((article) => (
+          <div class="card">
+            {article.data.image && <img class="card__image" src={article.data.image} alt={article.data.title} />}
+            <div class="card__body">
+              <div class="card__meta">{article.data.date.toLocaleDateString(dateLocale)}</div>
+              <h3>{article.data.title}</h3>
+              <p>{article.data.summary}</p>
+              <a href={getLocalePath(lang, `news/${slugFromId(article.id)}`)}>{t('action.readMore')}</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">{t('section.upcomingEvents')}</h2>
+      <div class="grid grid-3">
+        {events.map((event) => (
+          <div class="card">
+            {event.data.image && <img class="card__image" src={event.data.image} alt={event.data.title} />}
+            <div class="card__body">
+              <div class="card__meta">{event.data.date.toLocaleDateString(dateLocale)}{event.data.location ? ` · ${event.data.location}` : ''}</div>
+              <h3>{event.data.title}</h3>
+              <p>{event.data.summary}</p>
+              <a href={getLocalePath(lang, `events/${slugFromId(event.id)}`)}>{t('action.learnMore')}</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
