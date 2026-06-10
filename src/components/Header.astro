@@ -19,7 +19,6 @@ const enHref = lang === 'en' ? currentPath : otherPath;
 const zhHref = lang === 'zh' ? currentPath : otherPath;
 
 const links = [
-  { href: getLocalePath(lang, ''), label: nav.home },
   {
     href: getLocalePath(lang, 'about/history-mission'),
     label: nav.about,
@@ -49,7 +48,7 @@ const links = [
 <header class="site-header">
   <div class="container site-header__inner">
     <a href={getLocalePath(lang, '')} class="site-header__brand">
-      <span>{settings!.data.siteName}</span>
+      <img src="/images/branding/aeu-logo.png" alt={settings!.data.siteName} class="site-header__logo" />
     </a>
 
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
