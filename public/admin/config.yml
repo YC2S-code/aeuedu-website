@@ -14,140 +14,140 @@ i18n:
 
 collections:
   - name: settings
-    label: Site Settings
+    label: "Site Settings / 网站设置"
     files:
       - name: site_en
-        label: "General Settings (English)"
+        label: "General Settings (English) / 通用设置（英文）"
         file: src/content/settings/en/site.yml
         fields:
-          - { label: Site Name, name: siteName, widget: string }
-          - { label: Tagline, name: tagline, widget: string }
-          - label: Navigation Labels
+          - { label: "Site Name / 网站名称", name: siteName, widget: string }
+          - { label: "Tagline / 标语", name: tagline, widget: string }
+          - label: "Navigation Labels / 导航标签"
             name: nav
             widget: object
             fields:
-              - { label: Contact, name: contact, widget: string }
-          - label: Footer
+              - { label: "Contact / 联系我们", name: contact, widget: string }
+          - label: "Footer / 页脚"
             name: footer
             widget: object
             fields:
-              - { label: Address, name: address, widget: string }
-              - { label: Phone, name: phone, widget: string }
-              - { label: Email, name: email, widget: string }
-              - { label: Google Map Embed URL, name: mapEmbedUrl, widget: string, required: false, hint: "Paste the 'src' from a Google Maps embed iframe" }
-              - { label: Facebook URL, name: facebook, widget: string, required: false }
-              - { label: YouTube URL, name: youtube, widget: string, required: false }
-              - { label: TikTok URL, name: tiktok, widget: string, required: false }
-              - { label: WeChat ID, name: wechat, widget: string, required: false }
-              - { label: WeChat QR Code, name: wechatQr, widget: image, required: false, hint: "Upload the official account QR code so visitors can scan to follow on WeChat" }
-              - { label: Copyright Text, name: copyright, widget: string }
-              - { label: Disclaimer, name: disclaimer, widget: text, required: false }
-          - label: Homepage
+              - { label: "Address / 地址", name: address, widget: string }
+              - { label: "Phone / 电话", name: phone, widget: string }
+              - { label: "Email / 邮箱", name: email, widget: string }
+              - { label: "Google Map Embed URL / 谷歌地图嵌入链接", name: mapEmbedUrl, widget: string, required: false, hint: "Paste the 'src' from a Google Maps embed iframe" }
+              - { label: "Facebook URL / Facebook链接", name: facebook, widget: string, required: false }
+              - { label: "YouTube URL / YouTube链接", name: youtube, widget: string, required: false }
+              - { label: "TikTok URL / TikTok链接", name: tiktok, widget: string, required: false }
+              - { label: "WeChat ID / 微信号", name: wechat, widget: string, required: false }
+              - { label: "WeChat QR Code / 微信二维码", name: wechatQr, widget: image, required: false, hint: "Upload the official account QR code so visitors can scan to follow on WeChat" }
+              - { label: "Copyright Text / 版权信息", name: copyright, widget: string }
+              - { label: "Disclaimer / 免责声明", name: disclaimer, widget: text, required: false }
+          - label: "Homepage / 首页"
             name: home
             widget: object
             fields:
-              - { label: Hero Title, name: heroTitle, widget: string }
-              - { label: Hero Subtitle, name: heroSubtitle, widget: markdown, buttons: [bold, italic, link], minimal: true }
-              - { label: Hero Image, name: heroImage, widget: image, required: false }
-              - { label: Hero Button Text, name: heroCta, widget: string }
-              - { label: "\"Why Choose Us\" Section Title", name: highlightsTitle, widget: string }
-              - label: "\"Why Choose Us\" Cards"
+              - { label: "Hero Title / 主标题", name: heroTitle, widget: string }
+              - { label: "Hero Subtitle / 副标题", name: heroSubtitle, widget: markdown, buttons: [bold, italic, link], minimal: true }
+              - { label: "Hero Image / 主图背景", name: heroImage, widget: image, required: false }
+              - { label: "Hero Button Text / 按钮文字", name: heroCta, widget: string }
+              - { label: "\"Why Choose Us\" Section Title / “为什么选择我们”板块标题", name: highlightsTitle, widget: string }
+              - label: "\"Why Choose Us\" Cards / “为什么选择我们”卡片"
                 name: highlights
                 widget: list
                 fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Text, name: text, widget: markdown, buttons: [bold, italic, link], minimal: true }
-          - label: Page Banners
+                  - { label: "Title / 标题", name: title, widget: string }
+                  - { label: "Text / 内容", name: text, widget: markdown, buttons: [bold, italic, link], minimal: true }
+          - label: "Page Banners / 页面横幅图"
             name: banners
             widget: object
             fields:
-              - { label: News Page Banner Image, name: news, widget: image, required: false }
-              - { label: Events Page Banner Image, name: events, widget: image, required: false }
+              - { label: "News Page Banner Image / 新闻与公告页横幅图", name: news, widget: image, required: false }
+              - { label: "Events Page Banner Image / 活动页横幅图", name: events, widget: image, required: false }
 
       - name: site_zh
-        label: "General Settings (中文)"
+        label: "General Settings (中文) / 通用设置（中文）"
         file: src/content/settings/zh/site.yml
         fields:
-          - { label: Site Name, name: siteName, widget: string }
-          - { label: Tagline, name: tagline, widget: string }
-          - label: Navigation Labels
+          - { label: "Site Name / 网站名称", name: siteName, widget: string }
+          - { label: "Tagline / 标语", name: tagline, widget: string }
+          - label: "Navigation Labels / 导航标签"
             name: nav
             widget: object
             fields:
-              - { label: Contact, name: contact, widget: string }
-          - label: Footer
+              - { label: "Contact / 联系我们", name: contact, widget: string }
+          - label: "Footer / 页脚"
             name: footer
             widget: object
             fields:
-              - { label: Address, name: address, widget: string }
-              - { label: Phone, name: phone, widget: string }
-              - { label: Email, name: email, widget: string }
-              - { label: Google Map Embed URL, name: mapEmbedUrl, widget: string, required: false, hint: "Paste the 'src' from a Google Maps embed iframe" }
-              - { label: Facebook URL, name: facebook, widget: string, required: false }
-              - { label: YouTube URL, name: youtube, widget: string, required: false }
-              - { label: TikTok URL, name: tiktok, widget: string, required: false }
-              - { label: WeChat ID, name: wechat, widget: string, required: false }
-              - { label: WeChat QR Code, name: wechatQr, widget: image, required: false, hint: "Upload the official account QR code so visitors can scan to follow on WeChat" }
-              - { label: Copyright Text, name: copyright, widget: string }
-              - { label: Disclaimer, name: disclaimer, widget: text, required: false }
-          - label: Homepage
+              - { label: "Address / 地址", name: address, widget: string }
+              - { label: "Phone / 电话", name: phone, widget: string }
+              - { label: "Email / 邮箱", name: email, widget: string }
+              - { label: "Google Map Embed URL / 谷歌地图嵌入链接", name: mapEmbedUrl, widget: string, required: false, hint: "Paste the 'src' from a Google Maps embed iframe" }
+              - { label: "Facebook URL / Facebook链接", name: facebook, widget: string, required: false }
+              - { label: "YouTube URL / YouTube链接", name: youtube, widget: string, required: false }
+              - { label: "TikTok URL / TikTok链接", name: tiktok, widget: string, required: false }
+              - { label: "WeChat ID / 微信号", name: wechat, widget: string, required: false }
+              - { label: "WeChat QR Code / 微信二维码", name: wechatQr, widget: image, required: false, hint: "Upload the official account QR code so visitors can scan to follow on WeChat" }
+              - { label: "Copyright Text / 版权信息", name: copyright, widget: string }
+              - { label: "Disclaimer / 免责声明", name: disclaimer, widget: text, required: false }
+          - label: "Homepage / 首页"
             name: home
             widget: object
             fields:
-              - { label: Hero Title, name: heroTitle, widget: string }
-              - { label: Hero Subtitle, name: heroSubtitle, widget: markdown, buttons: [bold, italic, link], minimal: true }
-              - { label: Hero Image, name: heroImage, widget: image, required: false }
-              - { label: Hero Button Text, name: heroCta, widget: string }
-              - { label: "\"Why Choose Us\" Section Title", name: highlightsTitle, widget: string }
-              - label: "\"Why Choose Us\" Cards"
+              - { label: "Hero Title / 主标题", name: heroTitle, widget: string }
+              - { label: "Hero Subtitle / 副标题", name: heroSubtitle, widget: markdown, buttons: [bold, italic, link], minimal: true }
+              - { label: "Hero Image / 主图背景", name: heroImage, widget: image, required: false }
+              - { label: "Hero Button Text / 按钮文字", name: heroCta, widget: string }
+              - { label: "\"Why Choose Us\" Section Title / “为什么选择我们”板块标题", name: highlightsTitle, widget: string }
+              - label: "\"Why Choose Us\" Cards / “为什么选择我们”卡片"
                 name: highlights
                 widget: list
                 fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Text, name: text, widget: markdown, buttons: [bold, italic, link], minimal: true }
-          - label: Page Banners
+                  - { label: "Title / 标题", name: title, widget: string }
+                  - { label: "Text / 内容", name: text, widget: markdown, buttons: [bold, italic, link], minimal: true }
+          - label: "Page Banners / 页面横幅图"
             name: banners
             widget: object
             fields:
-              - { label: News Page Banner Image, name: news, widget: image, required: false }
-              - { label: Events Page Banner Image, name: events, widget: image, required: false }
+              - { label: "News Page Banner Image / 新闻与公告页横幅图", name: news, widget: image, required: false }
+              - { label: "Events Page Banner Image / 活动页横幅图", name: events, widget: image, required: false }
 
   - name: pages
-    label: Site Pages
+    label: "Site Pages / 网站页面"
     folder: src/content/pages
     create: false
     slug: "{{slug}}"
     i18n: true
     fields:
-      - { label: Title, name: title, widget: string, i18n: true }
-      - { label: Banner Image, name: image, widget: image, required: false, hint: "Background image for the page header banner" }
-      - { label: Body, name: body, widget: markdown, i18n: true }
+      - { label: "Title / 标题", name: title, widget: string, i18n: true }
+      - { label: "Banner Image / 横幅图", name: image, widget: image, required: false, hint: "Background image for the page header banner" }
+      - { label: "Body / 正文", name: body, widget: markdown, i18n: true }
 
   - name: news
-    label: News
+    label: "News / 新闻与公告"
     folder: src/content/news
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     i18n: true
     fields:
-      - { label: Title, name: title, widget: string, i18n: true }
-      - { label: Date, name: date, widget: datetime, i18n: duplicate }
-      - { label: Image, name: image, widget: image, required: false, i18n: true }
-      - { label: Summary, name: summary, widget: markdown, buttons: [bold, italic, link], minimal: true, i18n: true }
-      - { label: "Video URL", name: video, widget: string, required: false, i18n: true, hint: "Paste a video link to embed on the article page. For English pages, YouTube/Vimeo work well. For Chinese pages, use Bilibili (or a self-hosted MP4 link) since YouTube/Vimeo are blocked in mainland China." }
-      - { label: Body, name: body, widget: markdown, i18n: true }
+      - { label: "Title / 标题", name: title, widget: string, i18n: true }
+      - { label: "Date / 日期", name: date, widget: datetime, i18n: duplicate }
+      - { label: "Image / 图片", name: image, widget: image, required: false, i18n: true }
+      - { label: "Summary / 摘要", name: summary, widget: markdown, buttons: [bold, italic, link], minimal: true, i18n: true }
+      - { label: "Video URL / 视频链接", name: video, widget: string, required: false, i18n: true, hint: "Paste a video link to embed on the article page. For English pages, YouTube/Vimeo work well. For Chinese pages, use Bilibili (or a self-hosted MP4 link) since YouTube/Vimeo are blocked in mainland China." }
+      - { label: "Body / 正文", name: body, widget: markdown, i18n: true }
 
   - name: events
-    label: Events
+    label: "Events / 活动"
     folder: src/content/events
     create: true
     slug: "{{slug}}"
     i18n: true
     fields:
-      - { label: Title, name: title, widget: string, i18n: true }
-      - { label: Date, name: date, widget: datetime, i18n: duplicate }
-      - { label: End Date, name: endDate, widget: datetime, required: false, i18n: duplicate }
-      - { label: Location, name: location, widget: string, required: false, i18n: true }
-      - { label: Image, name: image, widget: image, required: false, i18n: true }
-      - { label: Summary, name: summary, widget: markdown, buttons: [bold, italic, link], minimal: true, i18n: true }
-      - { label: Body, name: body, widget: markdown, i18n: true }
+      - { label: "Title / 标题", name: title, widget: string, i18n: true }
+      - { label: "Date / 开始日期", name: date, widget: datetime, i18n: duplicate }
+      - { label: "End Date / 结束日期", name: endDate, widget: datetime, required: false, i18n: duplicate }
+      - { label: "Location / 地点", name: location, widget: string, required: false, i18n: true }
+      - { label: "Image / 图片", name: image, widget: image, required: false, i18n: true }
+      - { label: "Summary / 摘要", name: summary, widget: markdown, buttons: [bold, italic, link], minimal: true, i18n: true }
+      - { label: "Body / 正文", name: body, widget: markdown, i18n: true }
