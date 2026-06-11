@@ -6,44 +6,62 @@ interface Props {
 
 const { url, title = 'Video' } = Astro.props;
 
-function toEmbedUrl(input: string): string {
+function toEmbed(input: string): { kind: 'iframe' | 'video'; src: string } {
   try {
     const u = new URL(input);
+
+    // Direct video file (self-hosted / CDN)
+    if (/\.(mp4|webm|ogg|mov)$/i.test(u.pathname)) {
+      return { kind: 'video', src: input };
+    }
 
     // youtube.com/watch?v=ID or youtu.be/ID
     if (u.hostname.includes('youtube.com')) {
       const id = u.searchParams.get('v');
-      if (id) return `https://www.youtube.com/embed/${id}`;
+      if (id) return { kind: 'iframe', src: `https://www.youtube.com/embed/${id}` };
       // already an /embed/ url or other youtube path
-      return input;
+      return { kind: 'iframe', src: input };
     }
     if (u.hostname.includes('youtu.be')) {
       const id = u.pathname.replace('/', '');
-      return `https://www.youtube.com/embed/${id}`;
+      return { kind: 'iframe', src: `https://www.youtube.com/embed/${id}` };
     }
 
     // vimeo.com/ID
     if (u.hostname.includes('vimeo.com')) {
       const id = u.pathname.replace('/', '');
-      return `https://player.vimeo.com/video/${id}`;
+      return { kind: 'iframe', src: `https://player.vimeo.com/video/${id}` };
+    }
+
+    // bilibili.com/video/BVxxxx (China-friendly)
+    if (u.hostname.includes('bilibili.com')) {
+      const match = u.pathname.match(/\/video\/(BV\w+)/);
+      if (match) {
+        return { kind: 'iframe', src: `https://player.bilibili.com/player.html?bvid=${match[1]}&high_quality=1&danmaku=0` };
+      }
+      return { kind: 'iframe', src: input };
     }
 
     // Fallback: assume the URL is already embeddable (e.g. WeChat clip embed link)
-    return input;
+    return { kind: 'iframe', src: input };
   } catch {
-    return input;
+    return { kind: 'iframe', src: input };
   }
 }
 
-const embedUrl = toEmbedUrl(url);
+const embed = toEmbed(url);
 ---
 
 <div class="embed-responsive">
-  <iframe
-    src={embedUrl}
-    title={title}
-    loading="lazy"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
+  {embed.kind === 'video' ? (
+    <video src={embed.src} title={title} controls preload="metadata" />
+  ) : (
+    <iframe
+      src={embed.src}
+      title={title}
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  )}
 </div>

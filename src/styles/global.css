@@ -133,8 +133,22 @@ a:hover {
 }
 
 .site-header__brand img {
-  height: 48px;
+  height: 72px;
   width: auto;
+}
+
+/* Center the logo on mobile & tablet, keep left-aligned on desktop */
+@media (max-width: 1024px) {
+  .site-header__inner {
+    position: relative;
+    justify-content: flex-end;
+  }
+
+  .site-header__brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 /* Hamburger toggle */
@@ -455,7 +469,8 @@ body.nav-open {
   background: #000;
 }
 
-.embed-responsive iframe {
+.embed-responsive iframe,
+.embed-responsive video {
   position: absolute;
   inset: 0;
   width: 100%;

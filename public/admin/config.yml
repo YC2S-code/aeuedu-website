@@ -105,7 +105,7 @@ collections:
       - { label: Date, name: date, widget: datetime, i18n: duplicate }
       - { label: Image, name: image, widget: image, required: false, i18n: true }
       - { label: Summary, name: summary, widget: text, i18n: true }
-      - { label: "Video URL (YouTube, Vimeo, etc.)", name: video, widget: string, required: false, i18n: duplicate, hint: "Paste a YouTube or Vimeo link to embed a video on the article page" }
+      - { label: "Video URL", name: video, widget: string, required: false, i18n: true, hint: "Paste a video link to embed on the article page. For English pages, YouTube/Vimeo work well. For Chinese pages, use Bilibili (or a self-hosted MP4 link) since YouTube/Vimeo are blocked in mainland China." }
       - { label: Body, name: body, widget: markdown, i18n: true }
 
   - name: events
