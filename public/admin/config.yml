@@ -133,6 +133,7 @@ collections:
       - { label: "Title / 标题", name: title, widget: string, i18n: true }
       - { label: "Date / 日期", name: date, widget: datetime, i18n: duplicate }
       - { label: "Image / 图片", name: image, widget: image, required: false, i18n: true }
+      - { label: "Category / 分类", name: category, widget: string, required: false, i18n: true }
       - { label: "Summary / 摘要", name: summary, widget: markdown, buttons: [bold, italic, link], minimal: true, i18n: true }
       - { label: "Video URL / 视频链接", name: video, widget: string, required: false, i18n: true, hint: "Paste a video link to embed on the article page. For English pages, YouTube/Vimeo work well. For Chinese pages, use Bilibili (or a self-hosted MP4 link) since YouTube/Vimeo are blocked in mainland China." }
       - { label: "Body / 正文", name: body, widget: markdown, i18n: true }
@@ -149,5 +150,6 @@ collections:
       - { label: "End Date / 结束日期", name: endDate, widget: datetime, required: false, i18n: duplicate }
       - { label: "Location / 地点", name: location, widget: string, required: false, i18n: true }
       - { label: "Image / 图片", name: image, widget: image, required: false, i18n: true }
+      - { label: "Category / 分类", name: category, widget: string, required: false, i18n: true }
       - { label: "Summary / 摘要", name: summary, widget: markdown, buttons: [bold, italic, link], minimal: true, i18n: true }
       - { label: "Body / 正文", name: body, widget: markdown, i18n: true }

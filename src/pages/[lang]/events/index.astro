@@ -2,7 +2,7 @@
 import { marked } from 'marked';
 import { getEntry } from 'astro:content';
 import Layout from '../../../layouts/Layout.astro';
-import { getLangEntries, slugFromId } from '../../../lib/content';
+import { getLangEntries, slugFromId, DEFAULT_ARTICLE_IMAGE } from '../../../lib/content';
 import { useTranslations, getLocalePath, type Lang } from '../../../i18n/utils';
 
 export function getStaticPaths() {
@@ -28,8 +28,9 @@ const bannerImage = settings!.data.banners?.events;
       <div class="grid grid-3">
         {events.map((event) => (
           <div class="card">
-            {event.data.image && <img class="card__image" src={event.data.image} alt={event.data.title} />}
+            <img class="card__image" src={event.data.image ?? DEFAULT_ARTICLE_IMAGE} alt={event.data.title} />
             <div class="card__body">
+              <span class="badge">{event.data.category ?? t('label.category.event')}</span>
               <div class="card__meta">
                 {event.data.date.toLocaleDateString(dateLocale)}
                 {event.data.location ? ` · ${event.data.location}` : ''}

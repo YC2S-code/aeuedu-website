@@ -2,7 +2,7 @@
 import { marked } from 'marked';
 import { getEntry } from 'astro:content';
 import Layout from '../../../layouts/Layout.astro';
-import { getLangEntries, slugFromId } from '../../../lib/content';
+import { getLangEntries, slugFromId, estimateReadingTime, DEFAULT_ARTICLE_IMAGE } from '../../../lib/content';
 import { useTranslations, getLocalePath, type Lang } from '../../../i18n/utils';
 
 export function getStaticPaths() {
@@ -28,9 +28,12 @@ const bannerImage = settings!.data.banners?.news;
       <div class="grid grid-3">
         {news.map((article) => (
           <div class="card">
-            {article.data.image && <img class="card__image" src={article.data.image} alt={article.data.title} />}
+            <img class="card__image" src={article.data.image ?? DEFAULT_ARTICLE_IMAGE} alt={article.data.title} />
             <div class="card__body">
-              <div class="card__meta">{article.data.date.toLocaleDateString(dateLocale)}</div>
+              <span class="badge">{article.data.category ?? t('label.category.news')}</span>
+              <div class="card__meta">
+                {article.data.date.toLocaleDateString(dateLocale)} · {estimateReadingTime(article.body ?? '', lang)} {t('label.minRead')}
+              </div>
               <h3>{article.data.title}</h3>
               <p set:html={marked.parseInline(article.data.summary)} />
               <a href={getLocalePath(lang, `news/${slugFromId(article.id)}`)}>{t('action.readMore')}</a>

@@ -7,6 +7,7 @@ const news = defineCollection({
     title: z.string(),
     date: z.coerce.date(),
     image: z.string().optional(),
+    category: z.string().optional(),
     summary: z.string(),
     video: z.string().optional(),
   }),
@@ -20,6 +21,7 @@ const events = defineCollection({
     endDate: z.coerce.date().optional(),
     location: z.string().optional(),
     image: z.string().optional(),
+    category: z.string().optional(),
     summary: z.string(),
   }),
 });

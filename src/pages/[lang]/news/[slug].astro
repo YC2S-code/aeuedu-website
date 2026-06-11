@@ -2,7 +2,7 @@
 import { render } from 'astro:content';
 import Layout from '../../../layouts/Layout.astro';
 import EmbedVideo from '../../../components/EmbedVideo.astro';
-import { getLangEntries, slugFromId, stripMarkdown } from '../../../lib/content';
+import { getLangEntries, slugFromId, stripMarkdown, estimateReadingTime, DEFAULT_ARTICLE_IMAGE } from '../../../lib/content';
 import { useTranslations, getLocalePath, type Lang } from '../../../i18n/utils';
 
 export async function getStaticPaths() {
@@ -22,13 +22,22 @@ const { entry } = Astro.props as { entry: Awaited<ReturnType<typeof getLangEntri
 const t = useTranslations(lang);
 const dateLocale = lang === 'zh' ? 'zh-CN' : 'en-US';
 const { Content } = await render(entry);
+const readingTime = estimateReadingTime(entry.body ?? '', lang);
+
+const related = (await getLangEntries('news', lang))
+  .filter((article) => article.id !== entry.id)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 3);
 ---
 
 <Layout lang={lang} title={entry.data.title} description={stripMarkdown(entry.data.summary)}>
   <div class:list={['page-header', { 'page-header--has-image': entry.data.image }]} style={entry.data.image ? `--page-header-image: url(${entry.data.image})` : undefined}>
     <div class="container">
+      <span class="badge">{entry.data.category ?? t('label.category.news')}</span>
       <h1>{entry.data.title}</h1>
-      <p class="card__meta">{t('label.publishedOn')} {entry.data.date.toLocaleDateString(dateLocale)}</p>
+      <p class="card__meta">
+        {t('label.publishedOn')} {entry.data.date.toLocaleDateString(dateLocale)} · {readingTime} {t('label.minRead')}
+      </p>
     </div>
   </div>
   <section class="section">
@@ -38,7 +47,77 @@ const { Content } = await render(entry);
       <div class="prose">
         <Content />
       </div>
+
+      <div class="share-buttons">
+        <span class="share-buttons__label">{t('action.share')}:</span>
+        <a class="share-button" target="_blank" rel="noopener noreferrer" data-share="facebook" aria-label="Share on Facebook" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.16 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.91h-2.33V22c4.78-.78 8.44-4.94 8.44-9.94z"/></svg>
+        </a>
+        <a class="share-button" target="_blank" rel="noopener noreferrer" data-share="linkedin" aria-label="Share on LinkedIn" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+        <a class="share-button" target="_blank" rel="noopener noreferrer" data-share="twitter" aria-label="Share on X" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.22-6.83-5.97 6.83H1.66l7.73-8.84L1.25 2.25h6.83l4.72 6.24 5.44-6.24zm-1.16 17.52h1.84L7.01 4.13H5.04l12.04 15.64z"/></svg>
+        </a>
+        <button type="button" class="share-button" data-share="copy" aria-label={t('action.copyLink')}>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.9 12a4 4 0 0 1 4-4h3v1.5h-3a2.5 2.5 0 0 0 0 5h3V16h-3a4 4 0 0 1-4-4zm6.1.75v-1.5h4v1.5h-4zM13.1 8h3a4 4 0 0 1 0 8h-3v-1.5h3a2.5 2.5 0 0 0 0-5h-3V8z"/></svg>
+        </button>
+        <span class="share-button__copied" data-copied-message hidden>{t('label.linkCopied')}</span>
+      </div>
+
       <p><a href={getLocalePath(lang, 'news')}>&larr; {t('action.backToList')}</a></p>
     </div>
   </section>
+
+  {related.length > 0 && (
+    <section class="section section-alt related-news">
+      <div class="container">
+        <h2 class="section-title">{t('section.relatedNews')}</h2>
+        <div class="grid grid-3">
+          {related.map((article) => (
+            <div class="card">
+              <img class="card__image" src={article.data.image ?? DEFAULT_ARTICLE_IMAGE} alt={article.data.title} />
+              <div class="card__body">
+                <span class="badge">{article.data.category ?? t('label.category.news')}</span>
+                <div class="card__meta">{article.data.date.toLocaleDateString(dateLocale)}</div>
+                <h3>{article.data.title}</h3>
+                <a href={getLocalePath(lang, `news/${slugFromId(article.id)}`)}>{t('action.readMore')}</a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 </Layout>
+
+<script>
+  const shareButtons = document.querySelectorAll<HTMLElement>('[data-share]');
+  shareButtons.forEach((button) => {
+    button.addEventListener('click', (event) => {
+      const url = window.location.href;
+      const title = document.title;
+      const type = button.dataset.share;
+
+      if (type === 'copy') {
+        navigator.clipboard.writeText(url).then(() => {
+          const message = button.parentElement?.querySelector('[data-copied-message]') as HTMLElement | null;
+          if (message) {
+            message.hidden = false;
+            setTimeout(() => (message.hidden = true), 2000);
+          }
+        });
+        return;
+      }
+
+      event.preventDefault();
+      const shareUrls: Record<string, string> = {
+        facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
+        linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
+        twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`,
+      };
+      const target = shareUrls[type ?? ''];
+      if (target) window.open(target, '_blank', 'noopener,noreferrer,width=600,height=500');
+    });
+  });
+</script>
