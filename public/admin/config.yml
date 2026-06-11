@@ -37,7 +37,9 @@ collections:
               - { label: Google Map Embed URL, name: mapEmbedUrl, widget: string, required: false, hint: "Paste the 'src' from a Google Maps embed iframe" }
               - { label: Facebook URL, name: facebook, widget: string, required: false }
               - { label: YouTube URL, name: youtube, widget: string, required: false }
+              - { label: WeChat ID, name: wechat, widget: string, required: false }
               - { label: Copyright Text, name: copyright, widget: string }
+              - { label: Disclaimer, name: disclaimer, widget: text, required: false }
           - label: Homepage
             name: home
             widget: object
@@ -69,7 +71,9 @@ collections:
               - { label: Google Map Embed URL, name: mapEmbedUrl, widget: string, required: false, hint: "Paste the 'src' from a Google Maps embed iframe" }
               - { label: Facebook URL, name: facebook, widget: string, required: false }
               - { label: YouTube URL, name: youtube, widget: string, required: false }
+              - { label: WeChat ID, name: wechat, widget: string, required: false }
               - { label: Copyright Text, name: copyright, widget: string }
+              - { label: Disclaimer, name: disclaimer, widget: text, required: false }
           - label: Homepage
             name: home
             widget: object

@@ -3,16 +3,18 @@ tagline: Developing Business Leaders with a Global Vision
 nav:
   contact: Contact
 footer:
-  address: "Sample address: 123 Example Boulevard, Phnom Penh"
+  address: "3rd Floor, The Gateway @ Phnom Penh (Guobin Tower), Phnom Penh, Cambodia"
   phone: "+855 12 345 678"
   email: "info@aeu.example"
-  mapEmbedUrl: "https://www.google.com/maps?q=Phnom+Penh&output=embed"
+  mapEmbedUrl: "https://www.google.com/maps?q=The+Gateway+Phnom+Penh&output=embed"
   facebook: "https://facebook.com/aeu.example"
   youtube: "https://youtube.com/@aeu.example"
+  wechat: "Sample WeChat ID: AEU_EMBA"
   copyright: "© 2026 AEU International Business School. All rights reserved."
+  disclaimer: "The content on this website is for reference only and is subject to change without notice. Program details, tuition, and admission requirements are governed by the official information published by AEU International Business School (AEUPS) and AME (Asia Management Education Co., Ltd.)."
 home:
   heroTitle: "AEU International Business School"
-  heroSubtitle: "Placeholder copy: bringing together leading faculty and business leaders to build Asia's premier EMBA and executive education platform. Final content to follow."
+  heroSubtitle: "Twenty years on this road, in search of a different room of people. AEU International Business School (AEUPS) — leading where it matters, building what comes next."
   heroImage: "/images/hero-placeholder.jpg"
-  heroCta: "Explore Programs"
-  highlightsTitle: "Why Choose AEU"
+  heroCta: "Explore the EMBA"
+  highlightsTitle: "What You'll Find at AEU"

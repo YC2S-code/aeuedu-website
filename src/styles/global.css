@@ -521,6 +521,23 @@ body.nav-open {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.site-footer__bottom p {
+  margin: 0 0 0.5em;
+}
+
+.site-footer__bottom p:last-child {
+  margin-bottom: 0;
+}
+
+.site-footer__disclaimer {
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.45);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .site-footer iframe {
   width: 100%;
   border: 0;

@@ -9,7 +9,7 @@ interface Props {
 
 const { lang } = Astro.props;
 const settings = await getEntry('settings', `${lang}/site`);
-const { siteName, tagline, footer, nav } = settings!.data;
+const { siteName, tagline, footer } = settings!.data;
 ---
 
 <footer class="site-footer">
@@ -18,32 +18,34 @@ const { siteName, tagline, footer, nav } = settings!.data;
       <div>
         <h3>{siteName}</h3>
         <p>{tagline}</p>
-        {footer.facebook || footer.youtube ? (
-          <p>
-            {footer.facebook && <a href={footer.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>}
-            {footer.facebook && footer.youtube && ' · '}
-            {footer.youtube && <a href={footer.youtube} target="_blank" rel="noopener noreferrer">YouTube</a>}
-          </p>
-        ) : null}
       </div>
 
       <div>
-        <h3>{nav.contact}</h3>
-        <p>{footer.address}</p>
+        <h3>{lang === 'zh' ? '社交媒体' : 'Social Media'}</h3>
         <p>
-          <a href={`tel:${footer.phone.replace(/\s+/g, '')}`}>{footer.phone}</a><br />
-          <a href={`mailto:${footer.email}`}>{footer.email}</a>
+          {footer.facebook && <a href={footer.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>}
+          {footer.facebook && <br />}
+          {footer.youtube && <a href={footer.youtube} target="_blank" rel="noopener noreferrer">YouTube</a>}
+          {footer.youtube && <br />}
+          {footer.wechat && <span>{lang === 'zh' ? '微信：' : 'WeChat: '}{footer.wechat}</span>}
         </p>
       </div>
 
       <div>
-        <h3>{lang === 'zh' ? '快速链接' : 'Quick Links'}</h3>
+        <h3>{lang === 'zh' ? '课程咨询' : 'Program Inquiry'}</h3>
         <p>
-          <a href={getLocalePath(lang, 'programs')}>{lang === 'zh' ? '课程项目' : 'Programs'}</a><br />
-          <a href={getLocalePath(lang, 'faculty')}>{lang === 'zh' ? '教授/企业咨询' : 'Faculty & Consulting'}</a><br />
-          <a href={getLocalePath(lang, 'alumni')}>{lang === 'zh' ? '商企校友' : 'Alumni'}</a><br />
-          <a href={getLocalePath(lang, 'news')}>{lang === 'zh' ? '活动/新闻' : 'News & Events'}</a><br />
-          <a href={getLocalePath(lang, 'about')}>{lang === 'zh' ? '我的亚欧' : 'About AEU'}</a>
+          <a href={getLocalePath(lang, 'programs/emba')}>{lang === 'zh' ? 'EMBA 高级工商管理硕士' : 'EMBA'}</a><br />
+          <a href={getLocalePath(lang, 'programs/pep')}>{lang === 'zh' ? '专业高管课程 PEP' : 'PEP'}</a><br />
+          <a href={getLocalePath(lang, 'contact')}>{lang === 'zh' ? '在线咨询' : 'Enquire Now'}</a>
+        </p>
+      </div>
+
+      <div>
+        <h3>{lang === 'zh' ? '联系亚欧' : 'Contact AEU'}</h3>
+        <p>{footer.address}</p>
+        <p>
+          <a href={`tel:${footer.phone.replace(/\s+/g, '')}`}>{footer.phone}</a><br />
+          <a href={`mailto:${footer.email}`}>{footer.email}</a>
         </p>
       </div>
 
@@ -56,7 +58,8 @@ const { siteName, tagline, footer, nav } = settings!.data;
     </div>
 
     <div class="site-footer__bottom">
-      {footer.copyright}
+      {footer.disclaimer && <p class="site-footer__disclaimer">{footer.disclaimer}</p>}
+      <p>{footer.copyright}</p>
     </div>
   </div>
 </footer>
