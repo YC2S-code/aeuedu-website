@@ -68,6 +68,12 @@ const settings = defineCollection({
         )
         .optional(),
     }),
+    banners: z
+      .object({
+        news: z.string().optional(),
+        events: z.string().optional(),
+      })
+      .optional(),
   }),
 });
 

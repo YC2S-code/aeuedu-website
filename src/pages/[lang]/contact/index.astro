@@ -16,7 +16,7 @@ const { Content } = await render(entry!);
 ---
 
 <Layout lang={lang} title={t('page.contact.title')}>
-  <div class="page-header">
+  <div class:list={['page-header', { 'page-header--has-image': entry!.data.image }]} style={entry!.data.image ? `--page-header-image: url(${entry!.data.image})` : undefined}>
     <div class="container">
       <h1>{t('page.contact.title')}</h1>
     </div>

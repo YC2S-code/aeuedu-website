@@ -57,6 +57,12 @@ collections:
                 fields:
                   - { label: Title, name: title, widget: string }
                   - { label: Text, name: text, widget: markdown, buttons: [bold, italic, link], minimal: true }
+          - label: Page Banners
+            name: banners
+            widget: object
+            fields:
+              - { label: News Page Banner Image, name: news, widget: image, required: false }
+              - { label: Events Page Banner Image, name: events, widget: image, required: false }
 
       - name: site_zh
         label: "General Settings (中文)"
@@ -99,6 +105,12 @@ collections:
                 fields:
                   - { label: Title, name: title, widget: string }
                   - { label: Text, name: text, widget: markdown, buttons: [bold, italic, link], minimal: true }
+          - label: Page Banners
+            name: banners
+            widget: object
+            fields:
+              - { label: News Page Banner Image, name: news, widget: image, required: false }
+              - { label: Events Page Banner Image, name: events, widget: image, required: false }
 
   - name: pages
     label: Site Pages
@@ -108,6 +120,7 @@ collections:
     i18n: true
     fields:
       - { label: Title, name: title, widget: string, i18n: true }
+      - { label: Banner Image, name: image, widget: image, required: false, hint: "Background image for the page header banner" }
       - { label: Body, name: body, widget: markdown, i18n: true }
 
   - name: news

@@ -374,6 +374,24 @@ body.nav-open {
   margin: 0;
 }
 
+.page-header--has-image {
+  --page-header-image: none;
+  position: relative;
+  background:
+    linear-gradient(135deg, rgba(30, 58, 95, 0.55) 0%, rgba(20, 40, 63, 0.6) 100%),
+    var(--page-header-image) center / cover no-repeat;
+  border-bottom: none;
+  padding: clamp(3rem, 8vw, 5rem) 0;
+}
+
+.page-header--has-image h1 {
+  color: #fff;
+}
+
+.page-header--has-image .card__meta {
+  color: rgba(255, 255, 255, 0.85);
+}
+
 /* Sections */
 .section {
   padding: clamp(2.5rem, 6vw, 4.5rem) 0;

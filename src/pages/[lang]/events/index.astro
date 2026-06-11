@@ -1,5 +1,6 @@
 ---
 import { marked } from 'marked';
+import { getEntry } from 'astro:content';
 import Layout from '../../../layouts/Layout.astro';
 import { getLangEntries, slugFromId } from '../../../lib/content';
 import { useTranslations, getLocalePath, type Lang } from '../../../i18n/utils';
@@ -12,10 +13,12 @@ const { lang } = Astro.params as { lang: Lang };
 const t = useTranslations(lang);
 const dateLocale = lang === 'zh' ? 'zh-CN' : 'en-US';
 const events = (await getLangEntries('events', lang)).sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
+const settings = await getEntry('settings', `${lang}/site`);
+const bannerImage = settings!.data.banners?.events;
 ---
 
 <Layout lang={lang} title={t('page.events.title')}>
-  <div class="page-header">
+  <div class:list={['page-header', { 'page-header--has-image': bannerImage }]} style={bannerImage ? `--page-header-image: url(${bannerImage})` : undefined}>
     <div class="container">
       <h1>{t('page.events.title')}</h1>
     </div>

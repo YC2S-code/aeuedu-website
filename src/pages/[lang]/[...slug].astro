@@ -39,7 +39,7 @@ const { Content } = await render(entry!);
 ---
 
 <Layout lang={lang} title={entry!.data.title}>
-  <div class="page-header">
+  <div class:list={['page-header', { 'page-header--has-image': entry!.data.image }]} style={entry!.data.image ? `--page-header-image: url(${entry!.data.image})` : undefined}>
     <div class="container">
       <h1>{entry!.data.title}</h1>
     </div>
