@@ -3,16 +3,16 @@ tagline: 培养具有全球视野的商业领袖
 nav:
   contact: 联系我们
 footer:
-  youtube: https://youtube.com/@aeu.example
-  facebook: https://facebook.com/aeu.example
+  youtube: ""
+  facebook: https://facebook.com/aeuedu
   wechat: 亚欧国际EMBA
-  wechatQr: /images/social/wechat-qr.jpg
-  tiktok: ""
   copyright: © 2026 亚欧大学国际工商学院. 保留所有权利。
+  wechatQr: /images/social/wechat-qr.jpg
   phone: +855-86 661 882
   mapEmbedUrl: https://www.google.com/maps?q=The+Gateway+Phnom+Penh&output=embed
   address: 柬埔寨金边国宾大厦（The Gateway @ Phnom Penh）Phum 10, Sangkat Phsar Depo, Russian
     Federation Blvd (110), Phnom Penh, Kingdom of Cambodia
+  tiktok: ""
   disclaimer: 本网站内容仅供参考，如有更新恕不另行通知。课程详情、学费及录取要求以亚欧大学国际商学院（AEUPS）及雅凡·高级管理教育有限公司（AME）最终公布的官方信息为准。
   email: info@aeuedu.com
 home:
