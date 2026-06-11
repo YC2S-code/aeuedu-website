@@ -1,20 +1,21 @@
-siteName: 亚欧国际工商学院
+siteName: 亚欧大学国际工商学院 | AEUPS
 tagline: 培养具有全球视野的商业领袖
 nav:
   contact: 联系我们
 footer:
-  address: "柬埔寨金边国宾大厦（The Gateway @ Phnom Penh）3楼"
-  phone: "+855 12 345 678"
-  email: "info@aeu.example"
-  mapEmbedUrl: "https://www.google.com/maps?q=The+Gateway+Phnom+Penh&output=embed"
-  facebook: "https://facebook.com/aeu.example"
-  youtube: "https://youtube.com/@aeu.example"
-  wechat: "示例微信号：AEU_EMBA"
-  copyright: "© 2026 亚欧国际工商学院. 保留所有权利。"
-  disclaimer: "本网站内容仅供参考，如有更新恕不另行通知。课程详情、学费及录取要求以亚欧大学国际商学院（AEUPS）及雅凡·高级管理教育有限公司（AME）最终公布的官方信息为准。"
+  youtube: https://youtube.com/@aeu.example
+  facebook: https://facebook.com/aeu.example
+  wechat: 微信服务号/视频号：亚欧国际EMBA
+  copyright: © 2026 亚欧大学国际工商学院. 保留所有权利。
+  phone: +855-86 661 882
+  mapEmbedUrl: https://www.google.com/maps?q=The+Gateway+Phnom+Penh&output=embed
+  address: 柬埔寨金边国宾大厦（The Gateway @ Phnom Penh）Phum 10, Sangkat Phsar Depo, Russian
+    Federation Blvd (110), Phnom Penh, Kingdom of Cambodia
+  disclaimer: 本网站内容仅供参考，如有更新恕不另行通知。课程详情、学费及录取要求以亚欧大学国际商学院（AEUPS）及雅凡·高级管理教育有限公司（AME）最终公布的官方信息为准。
+  email: info@aeuedu.com
 home:
-  heroTitle: "亚欧大学国际商学院"
-  heroSubtitle: "二十年的路，换一群同行的人。亚欧大学国际商学院（AEUPS），与你一起领航当下，共建未来。"
-  heroImage: "/images/hero-placeholder.jpg"
-  heroCta: "了解 EMBA 课程"
-  highlightsTitle: "你会在亚欧，遇见什么"
+  heroTitle: 亚欧大学国际商学院
+  heroSubtitle: 二十年的路，换一群同行的人。亚欧大学国际商学院（AEUPS），与你一起领航当下，共建未来。
+  heroImage: /images/hero-placeholder.jpg
+  heroCta: 了解 EMBA 课程
+  highlightsTitle: 你会在亚欧，遇见什么
