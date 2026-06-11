@@ -19,20 +19,7 @@ const events = (await getLangEntries('events', lang)).sort((a, b) => a.data.date
 
 const dateLocale = lang === 'zh' ? 'zh-CN' : 'en-US';
 
-const highlights =
-  lang === 'en'
-    ? [
-        { title: "Faculty Who've Been in the Room", text: 'Professors from leading global business schools — and from the real arenas of business. Western frameworks, Eastern instinct, both at once.' },
-        { title: 'A Different Kind of Classroom', text: "An EMBA isn't one more credential. It's a different room of people — entrepreneurs who built their businesses with their own hands." },
-        { title: 'A Circle for Life', text: 'Founders, successors, and veterans of the business world — a circle that learns and walks forward together, starting here.' },
-        { title: 'ASEAN Is Your Classroom', text: 'Anchored by the RCEP gateway, study trips take you into real markets — so perspective and connections both land.' },
-      ]
-    : [
-        { title: '中西合璧的师资', text: '教授来自全球知名商学院，也来自真实的商业战场——西方的框架，东方的直觉，缺一不可。' },
-        { title: '一间不一样的教室', text: 'EMBA，不是多一个学位，而是换一群同行的人。这里坐着的，是把企业一手做起来的人。' },
-        { title: '一辈子的圈子', text: '把生意做起来的人，接过家业的人，在生意场上摸爬多年的人——一个一起学、一起走的圈子，从这里开始。' },
-        { title: '东盟，就是你的课堂', text: '依托 RCEP 区域入口，研学走进真实市场，让视野和人脉，一起落地。' },
-      ];
+const highlights = home.highlights ?? [];
 ---
 
 <Layout lang={lang} title={siteName} description={tagline}>

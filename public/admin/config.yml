@@ -51,6 +51,12 @@ collections:
               - { label: Hero Image, name: heroImage, widget: image, required: false }
               - { label: Hero Button Text, name: heroCta, widget: string }
               - { label: "\"Why Choose Us\" Section Title", name: highlightsTitle, widget: string }
+              - label: "\"Why Choose Us\" Cards"
+                name: highlights
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Text, name: text, widget: text }
 
       - name: site_zh
         label: "General Settings (中文)"
@@ -87,6 +93,12 @@ collections:
               - { label: Hero Image, name: heroImage, widget: image, required: false }
               - { label: Hero Button Text, name: heroCta, widget: string }
               - { label: "\"Why Choose Us\" Section Title", name: highlightsTitle, widget: string }
+              - label: "\"Why Choose Us\" Cards"
+                name: highlights
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Text, name: text, widget: text }
 
   - name: pages
     label: Site Pages

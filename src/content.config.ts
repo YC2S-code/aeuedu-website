@@ -59,6 +59,14 @@ const settings = defineCollection({
       heroImage: z.string().optional(),
       heroCta: z.string(),
       highlightsTitle: z.string(),
+      highlights: z
+        .array(
+          z.object({
+            title: z.string(),
+            text: z.string(),
+          })
+        )
+        .optional(),
     }),
   }),
 });

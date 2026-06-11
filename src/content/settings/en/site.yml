@@ -20,3 +20,12 @@ home:
   heroImage: "/images/hero-placeholder.jpg"
   heroCta: "Explore the EMBA"
   highlightsTitle: "What You'll Find at AEU"
+  highlights:
+    - title: "Faculty Who've Been in the Room"
+      text: "Professors from leading global business schools — and from the real arenas of business. Western frameworks, Eastern instinct, both at once."
+    - title: "A Different Kind of Classroom"
+      text: "An EMBA isn't one more credential. It's a different room of people — entrepreneurs who built their businesses with their own hands."
+    - title: "A Circle for Life"
+      text: "Founders, successors, and veterans of the business world — a circle that learns and walks forward together, starting here."
+    - title: "ASEAN Is Your Classroom"
+      text: "Anchored by the RCEP gateway, study trips take you into real markets — so perspective and connections both land."
