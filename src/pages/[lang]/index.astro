@@ -14,7 +14,6 @@ const t = useTranslations(lang);
 const settings = await getEntry('settings', `${lang}/site`);
 const { siteName, tagline, home } = settings!.data;
 
-const programs = (await getLangEntries('programs', lang)).sort((a, b) => a.data.order - b.data.order).slice(0, 3);
 const news = (await getLangEntries('news', lang)).sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 3);
 const events = (await getLangEntries('events', lang)).sort((a, b) => a.data.date.getTime() - b.data.date.getTime()).slice(0, 2);
 
@@ -23,16 +22,16 @@ const dateLocale = lang === 'zh' ? 'zh-CN' : 'en-US';
 const highlights =
   lang === 'en'
     ? [
-        { title: 'Experienced Educators', text: 'Qualified, caring teachers dedicated to every student\'s success.' },
-        { title: 'Bilingual Curriculum', text: 'Strong foundations in both English and Chinese from an early age.' },
-        { title: 'Modern Facilities', text: 'Safe, well-equipped campus designed for learning and growth.' },
-        { title: 'Global Pathways', text: 'Programs that prepare students for higher education worldwide.' },
+        { title: 'World-Class Faculty', text: 'Placeholder copy: leading professors and industry experts from top global business schools.' },
+        { title: 'EMBA & Executive Education', text: 'Placeholder copy: programs designed for senior managers and entrepreneurs.' },
+        { title: 'Business Alumni Network', text: 'Placeholder copy: a powerful network of alumni across Asia and Europe.' },
+        { title: 'Industry & Policy Impact', text: 'Placeholder copy: research and initiatives that shape national strategy and ESG practice.' },
       ]
     : [
-        { title: '经验丰富的教师团队', text: '专业且充满爱心的教师，致力于每一位学生的成功。' },
-        { title: '双语课程体系', text: '从小培养扎实的英语与中文基础。' },
-        { title: '现代化校园设施', text: '安全、设备齐全的校园，助力学习与成长。' },
-        { title: '全球升学路径', text: '帮助学生为未来海外升学做好充分准备的课程项目。' },
+        { title: '顶尖师资阵容', text: '示例文字：汇聚来自全球知名商学院的教授与行业专家。' },
+        { title: 'EMBA 与高管教育', text: '示例文字：专为企业高管与创业者设计的课程项目。' },
+        { title: '商企校友网络', text: '示例文字：覆盖亚欧地区的强大校友网络与资源平台。' },
+        { title: '产业与政策影响力', text: '示例文字：聚焦国家战略与 ESG 实践的研究与项目。' },
       ];
 ---
 
@@ -54,24 +53,6 @@ const highlights =
             <div class="card__body">
               <h3>{h.title}</h3>
               <p>{h.text}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">{t('section.ourPrograms')}</h2>
-      <div class="grid grid-3">
-        {programs.map((program) => (
-          <div class="card">
-            {program.data.image && <img class="card__image" src={program.data.image} alt={program.data.title} />}
-            <div class="card__body">
-              <h3>{program.data.title}</h3>
-              <p>{program.data.summary}</p>
-              <a href={getLocalePath(lang, `programs/${slugFromId(program.id)}`)}>{t('action.learnMore')}</a>
             </div>
           </div>
         ))}

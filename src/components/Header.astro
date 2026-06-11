@@ -9,7 +9,6 @@ interface Props {
 
 const { lang } = Astro.props;
 const settings = await getEntry('settings', `${lang}/site`);
-const nav = settings!.data.nav;
 const currentPath = Astro.url.pathname;
 
 const other = otherLang(lang);
@@ -18,31 +17,76 @@ const otherPath = currentPath.replace(`/${lang}`, `/${other}`) || `/${other}`;
 const enHref = lang === 'en' ? currentPath : otherPath;
 const zhHref = lang === 'zh' ? currentPath : otherPath;
 
-const links = [
+type NavLink = {
+  href: string;
+  label: string;
+  children?: NavLink[];
+};
+
+const links: NavLink[] = [
   {
-    href: getLocalePath(lang, 'about/history-mission'),
-    label: nav.about,
+    href: getLocalePath(lang, 'programs'),
+    label: lang === 'zh' ? '课程项目' : 'Programs',
     children: [
-      { href: getLocalePath(lang, 'about/history-mission'), label: nav.about },
-      { href: getLocalePath(lang, 'about/leadership'), label: lang === 'en' ? 'Leadership' : '领导团队' },
-      { href: getLocalePath(lang, 'about/facilities'), label: lang === 'en' ? 'Facilities' : '校园设施' },
+      { href: getLocalePath(lang, 'programs/emba'), label: lang === 'zh' ? '硕士课程 - EMBA' : 'EMBA' },
+      {
+        href: getLocalePath(lang, 'programs/pep'),
+        label: lang === 'zh' ? '专业高管课程 - PEP' : 'PEP (Executive Education)',
+        children: [
+          { href: getLocalePath(lang, 'programs/pep/open'), label: lang === 'zh' ? '公开课' : 'Open Programs' },
+          { href: getLocalePath(lang, 'programs/pep/custom'), label: lang === 'zh' ? '定制课程' : 'Custom Programs' },
+        ],
+      },
     ],
   },
   {
-    href: getLocalePath(lang, 'admissions/process'),
-    label: nav.admissions,
+    href: getLocalePath(lang, 'faculty'),
+    label: lang === 'zh' ? '教授/企业咨询' : 'Faculty & Consulting',
     children: [
-      { href: getLocalePath(lang, 'admissions/process'), label: lang === 'en' ? 'Admissions Process' : '招生流程' },
-      { href: getLocalePath(lang, 'admissions/requirements'), label: lang === 'en' ? 'Requirements' : '申请材料要求' },
-      { href: getLocalePath(lang, 'admissions/tuition-fees'), label: lang === 'en' ? 'Tuition & Fees' : '学费信息' },
+      { href: getLocalePath(lang, 'faculty/professors'), label: lang === 'zh' ? '教授阵容' : 'Faculty' },
+      { href: getLocalePath(lang, 'faculty/lecturers'), label: lang === 'zh' ? '课堂讲师' : 'Adjunct Lecturers' },
+      { href: getLocalePath(lang, 'faculty/consulting'), label: lang === 'zh' ? '企业咨询' : 'Corporate Consulting' },
     ],
   },
-  { href: getLocalePath(lang, 'programs'), label: nav.programs },
-  { href: getLocalePath(lang, 'news'), label: nav.news },
-  { href: getLocalePath(lang, 'events'), label: nav.events },
-  { href: getLocalePath(lang, 'gallery'), label: nav.gallery },
-  { href: getLocalePath(lang, 'contact'), label: nav.contact },
+  {
+    href: getLocalePath(lang, 'alumni'),
+    label: lang === 'zh' ? '商企校友' : 'Alumni',
+    children: [
+      { href: getLocalePath(lang, 'alumni/network'), label: lang === 'zh' ? '校友网络' : 'Alumni Network' },
+      { href: getLocalePath(lang, 'alumni/stories'), label: lang === 'zh' ? '校友' : 'Alumni Stories' },
+    ],
+  },
+  {
+    href: getLocalePath(lang, 'impact'),
+    label: lang === 'zh' ? '影响力' : 'Impact',
+    children: [
+      { href: getLocalePath(lang, 'impact/national-strategy'), label: lang === 'zh' ? '国家战略' : 'National Strategy' },
+      { href: getLocalePath(lang, 'impact/esg'), label: 'ESG' },
+    ],
+  },
+  {
+    href: getLocalePath(lang, 'news'),
+    label: lang === 'zh' ? '活动/新闻' : 'News & Events',
+    children: [
+      { href: getLocalePath(lang, 'news'), label: lang === 'zh' ? '最新动态' : 'Latest News' },
+      { href: getLocalePath(lang, 'follow-us'), label: lang === 'zh' ? '关注亚欧' : 'Follow AEU' },
+    ],
+  },
+  {
+    href: getLocalePath(lang, 'about'),
+    label: lang === 'zh' ? '我的亚欧' : 'About AEU',
+    children: [
+      { href: getLocalePath(lang, 'about/stories'), label: lang === 'zh' ? '亚欧故事' : 'AEU Stories' },
+      { href: getLocalePath(lang, 'about/research-center'), label: lang === 'zh' ? '产业研究中心' : 'Industry Research Center' },
+      { href: getLocalePath(lang, 'about/investment-center'), label: lang === 'zh' ? '创业投资发展中心' : 'Entrepreneurship & Investment Center' },
+      { href: getLocalePath(lang, 'contact'), label: lang === 'zh' ? '联系' : 'Contact' },
+    ],
+  },
 ];
+
+function isActive(href: string) {
+  return currentPath === href || currentPath.startsWith(`${href}/`);
+}
 ---
 
 <header class="site-header">
@@ -51,28 +95,60 @@ const links = [
       <img src="/images/branding/aeu-logo.png" alt={settings!.data.siteName} class="site-header__logo" />
     </a>
 
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      &#9776;
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-drawer">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
     </button>
+  </div>
 
-    <nav class="site-nav" id="site-nav">
-      <ul class="site-nav__list">
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <div class="nav-drawer" id="nav-drawer">
+    <nav class="nav-drawer__nav" aria-label="Main navigation">
+      <ul class="nav-drawer__list">
         {links.map((link) => (
-          <li class={link.children ? 'has-dropdown' : ''}>
-            <a href={link.href} class={currentPath === link.href ? 'active' : ''}>{link.label}</a>
+          <li class="nav-drawer__item">
+            <div class="nav-drawer__row">
+              <a href={link.href} class={isActive(link.href) ? 'active' : ''}>{link.label}</a>
+              {link.children && (
+                <button class="nav-drawer__caret" aria-expanded="false" aria-label="Expand submenu">
+                  <span class="nav-drawer__chevron"></span>
+                </button>
+              )}
+            </div>
             {link.children && (
-              <ul class="dropdown">
+              <ul class="nav-drawer__submenu">
                 {link.children.map((child) => (
-                  <li><a href={child.href} class={currentPath === child.href ? 'active' : ''}>{child.label}</a></li>
+                  <li class="nav-drawer__item">
+                    <div class="nav-drawer__row">
+                      <a href={child.href} class={isActive(child.href) ? 'active' : ''}>{child.label}</a>
+                      {child.children && (
+                        <button class="nav-drawer__caret" aria-expanded="false" aria-label="Expand submenu">
+                          <span class="nav-drawer__chevron"></span>
+                        </button>
+                      )}
+                    </div>
+                    {child.children && (
+                      <ul class="nav-drawer__submenu nav-drawer__submenu--sub">
+                        {child.children.map((grandchild) => (
+                          <li>
+                            <a href={grandchild.href} class={isActive(grandchild.href) ? 'active' : ''}>{grandchild.label}</a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
                 ))}
               </ul>
             )}
           </li>
         ))}
       </ul>
+
       <div class="lang-switch">
-        <a href={enHref} class={lang === 'en' ? 'active' : ''}>EN</a>
         <a href={zhHref} class={lang === 'zh' ? 'active' : ''}>中文</a>
+        <a href={enHref} class={lang === 'en' ? 'active' : ''}>EN</a>
       </div>
     </nav>
   </div>
@@ -80,9 +156,41 @@ const links = [
 
 <script>
   const toggle = document.getElementById('nav-toggle');
-  const nav = document.getElementById('site-nav');
+  const drawer = document.getElementById('nav-drawer');
+  const overlay = document.getElementById('nav-overlay');
+
+  function closeDrawer() {
+    drawer?.classList.remove('is-open');
+    overlay?.classList.remove('is-open');
+    toggle?.setAttribute('aria-expanded', 'false');
+    toggle?.classList.remove('is-active');
+    document.body.classList.remove('nav-open');
+  }
+
+  function openDrawer() {
+    drawer?.classList.add('is-open');
+    overlay?.classList.add('is-open');
+    toggle?.setAttribute('aria-expanded', 'true');
+    toggle?.classList.add('is-active');
+    document.body.classList.add('nav-open');
+  }
+
   toggle?.addEventListener('click', () => {
-    const isOpen = nav?.classList.toggle('is-open');
-    toggle.setAttribute('aria-expanded', String(!!isOpen));
+    if (drawer?.classList.contains('is-open')) {
+      closeDrawer();
+    } else {
+      openDrawer();
+    }
+  });
+
+  overlay?.addEventListener('click', closeDrawer);
+
+  document.querySelectorAll('.nav-drawer__caret').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.nav-drawer__item');
+      const submenu = item?.querySelector(':scope > .nav-drawer__submenu');
+      const isOpen = submenu?.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', String(!!isOpen));
+    });
   });
 </script>

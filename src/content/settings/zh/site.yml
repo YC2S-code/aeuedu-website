@@ -1,25 +1,18 @@
-siteName: AEUEDU
-tagline: 以教育成就未来领袖
+siteName: 亚欧国际工商学院
+tagline: 培养具有全球视野的商业领袖
 nav:
-  home: 首页
-  about: 关于我们
-  admissions: 招生信息
-  programs: 课程项目
-  news: 新闻资讯
-  events: 活动
-  gallery: 相册
   contact: 联系我们
 footer:
-  address: "越南胡志明市第一郡教育大道123号"
-  phone: "+84 28 1234 5678"
-  email: "info@aeuedu.example"
-  mapEmbedUrl: "https://www.google.com/maps?q=Ho+Chi+Minh+City&output=embed"
-  facebook: "https://facebook.com/aeuedu"
-  youtube: "https://youtube.com/@aeuedu"
-  copyright: "© 2026 AEUEDU. 保留所有权利。"
+  address: "示例地址：金边市示例大道123号"
+  phone: "+855 12 345 678"
+  email: "info@aeu.example"
+  mapEmbedUrl: "https://www.google.com/maps?q=Phnom+Penh&output=embed"
+  facebook: "https://facebook.com/aeu.example"
+  youtube: "https://youtube.com/@aeu.example"
+  copyright: "© 2026 亚欧国际工商学院. 保留所有权利。"
 home:
-  heroTitle: "欢迎来到 AEUEDU"
-  heroSubtitle: "在充满关怀的环境中，培养学生成长为自信、有能力的世界公民。"
+  heroTitle: "亚欧国际工商学院"
+  heroSubtitle: "示例文字：汇聚顶尖师资与商界领袖，打造亚洲领先的 EMBA 与高管教育平台。具体内容稍后补充。"
   heroImage: "/images/hero-placeholder.jpg"
-  heroCta: "探索课程项目"
-  highlightsTitle: "为什么选择 AEUEDU"
+  heroCta: "了解课程项目"
+  highlightsTitle: "为什么选择亚欧"

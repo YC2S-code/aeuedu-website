@@ -1,0 +1,54 @@
+---
+import { getEntry, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import type { Lang } from '../../i18n/utils';
+
+export function getStaticPaths() {
+  const slugs = [
+    'programs',
+    'programs/emba',
+    'programs/pep',
+    'programs/pep/open',
+    'programs/pep/custom',
+    'faculty',
+    'faculty/professors',
+    'faculty/lecturers',
+    'faculty/consulting',
+    'alumni',
+    'alumni/network',
+    'alumni/stories',
+    'impact',
+    'impact/national-strategy',
+    'impact/esg',
+    'follow-us',
+    'about',
+    'about/stories',
+    'about/research-center',
+    'about/investment-center',
+  ];
+
+  return ['en', 'zh'].flatMap((lang) =>
+    slugs.map((slug) => ({ params: { lang, slug }, props: { entryId: `${lang}/${slug.replace(/\//g, '-')}` } })),
+  );
+}
+
+const { lang } = Astro.params as { lang: Lang };
+const { entryId } = Astro.props as { entryId: string };
+const entry = await getEntry('pages', entryId);
+const { Content } = await render(entry!);
+---
+
+<Layout lang={lang} title={entry!.data.title}>
+  <div class="page-header">
+    <div class="container">
+      <h1>{entry!.data.title}</h1>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="prose">
+        <Content />
+      </div>
+    </div>
+  </section>
+</Layout>

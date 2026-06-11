@@ -1,25 +1,18 @@
-siteName: AEUEDU
-tagline: Empowering Future Leaders Through Education
+siteName: AEU International Business School
+tagline: Developing Business Leaders with a Global Vision
 nav:
-  home: Home
-  about: About
-  admissions: Admissions
-  programs: Programs
-  news: News
-  events: Events
-  gallery: Gallery
   contact: Contact
 footer:
-  address: "123 Education Avenue, District 1, Ho Chi Minh City, Vietnam"
-  phone: "+84 28 1234 5678"
-  email: "info@aeuedu.example"
-  mapEmbedUrl: "https://www.google.com/maps?q=Ho+Chi+Minh+City&output=embed"
-  facebook: "https://facebook.com/aeuedu"
-  youtube: "https://youtube.com/@aeuedu"
-  copyright: "© 2026 AEUEDU. All rights reserved."
+  address: "Sample address: 123 Example Boulevard, Phnom Penh"
+  phone: "+855 12 345 678"
+  email: "info@aeu.example"
+  mapEmbedUrl: "https://www.google.com/maps?q=Phnom+Penh&output=embed"
+  facebook: "https://facebook.com/aeu.example"
+  youtube: "https://youtube.com/@aeu.example"
+  copyright: "© 2026 AEU International Business School. All rights reserved."
 home:
-  heroTitle: "Welcome to AEUEDU"
-  heroSubtitle: "A nurturing environment where students grow into confident, capable global citizens."
+  heroTitle: "AEU International Business School"
+  heroSubtitle: "Placeholder copy: bringing together leading faculty and business leaders to build Asia's premier EMBA and executive education platform. Final content to follow."
   heroImage: "/images/hero-placeholder.jpg"
   heroCta: "Explore Programs"
-  highlightsTitle: "Why Choose AEUEDU"
+  highlightsTitle: "Why Choose AEU"

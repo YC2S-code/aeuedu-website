@@ -1,16 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
-const programs = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/programs' }),
-  schema: z.object({
-    title: z.string(),
-    summary: z.string(),
-    image: z.string().optional(),
-    order: z.number().default(0),
-  }),
-});
-
 const news = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/news' }),
   schema: z.object({
@@ -48,13 +38,6 @@ const settings = defineCollection({
     siteName: z.string(),
     tagline: z.string(),
     nav: z.object({
-      home: z.string(),
-      about: z.string(),
-      admissions: z.string(),
-      programs: z.string(),
-      news: z.string(),
-      events: z.string(),
-      gallery: z.string(),
       contact: z.string(),
     }),
     footer: z.object({
@@ -76,4 +59,4 @@ const settings = defineCollection({
   }),
 });
 
-export const collections = { programs, news, events, pages, settings };
+export const collections = { news, events, pages, settings };

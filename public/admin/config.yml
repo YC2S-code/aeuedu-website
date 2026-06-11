@@ -26,13 +26,6 @@ collections:
             name: nav
             widget: object
             fields:
-              - { label: Home, name: home, widget: string }
-              - { label: About, name: about, widget: string }
-              - { label: Admissions, name: admissions, widget: string }
-              - { label: Programs, name: programs, widget: string }
-              - { label: News, name: news, widget: string }
-              - { label: Events, name: events, widget: string }
-              - { label: Gallery, name: gallery, widget: string }
               - { label: Contact, name: contact, widget: string }
           - label: Footer
             name: footer
@@ -65,13 +58,6 @@ collections:
             name: nav
             widget: object
             fields:
-              - { label: Home, name: home, widget: string }
-              - { label: About, name: about, widget: string }
-              - { label: Admissions, name: admissions, widget: string }
-              - { label: Programs, name: programs, widget: string }
-              - { label: News, name: news, widget: string }
-              - { label: Events, name: events, widget: string }
-              - { label: Gallery, name: gallery, widget: string }
               - { label: Contact, name: contact, widget: string }
           - label: Footer
             name: footer
@@ -96,122 +82,12 @@ collections:
 
   - name: pages
     label: Site Pages
-    files:
-      - name: about-history-mission_en
-        label: "About: History & Mission (English)"
-        file: src/content/pages/en/about-history-mission.md
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
-      - name: about-history-mission_zh
-        label: "About: History & Mission (中文)"
-        file: src/content/pages/zh/about-history-mission.md
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
-
-      - name: about-leadership_en
-        label: "About: Leadership (English)"
-        file: src/content/pages/en/about-leadership.md
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
-      - name: about-leadership_zh
-        label: "About: Leadership (中文)"
-        file: src/content/pages/zh/about-leadership.md
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
-
-      - name: about-facilities_en
-        label: "About: Facilities (English)"
-        file: src/content/pages/en/about-facilities.md
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
-      - name: about-facilities_zh
-        label: "About: Facilities (中文)"
-        file: src/content/pages/zh/about-facilities.md
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
-
-      - name: admissions-process_en
-        label: "Admissions: Process (English)"
-        file: src/content/pages/en/admissions-process.md
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
-      - name: admissions-process_zh
-        label: "Admissions: Process (中文)"
-        file: src/content/pages/zh/admissions-process.md
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
-
-      - name: admissions-requirements_en
-        label: "Admissions: Requirements (English)"
-        file: src/content/pages/en/admissions-requirements.md
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
-      - name: admissions-requirements_zh
-        label: "Admissions: Requirements (中文)"
-        file: src/content/pages/zh/admissions-requirements.md
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
-
-      - name: admissions-tuition-fees_en
-        label: "Admissions: Tuition & Fees (English)"
-        file: src/content/pages/en/admissions-tuition-fees.md
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
-      - name: admissions-tuition-fees_zh
-        label: "Admissions: Tuition & Fees (中文)"
-        file: src/content/pages/zh/admissions-tuition-fees.md
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
-
-      - name: gallery_en
-        label: "Gallery Page (English)"
-        file: src/content/pages/en/gallery.md
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
-      - name: gallery_zh
-        label: "Gallery Page (中文)"
-        file: src/content/pages/zh/gallery.md
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
-
-      - name: contact_en
-        label: "Contact Page (English)"
-        file: src/content/pages/en/contact.md
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
-      - name: contact_zh
-        label: "Contact Page (中文)"
-        file: src/content/pages/zh/contact.md
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
-
-  - name: programs
-    label: Programs
-    folder: src/content/programs
-    create: true
+    folder: src/content/pages
+    create: false
     slug: "{{slug}}"
     i18n: true
     fields:
       - { label: Title, name: title, widget: string, i18n: true }
-      - { label: Summary, name: summary, widget: text, i18n: true }
-      - { label: Image, name: image, widget: image, required: false, i18n: true }
-      - { label: Display Order, name: order, widget: number, default: 0, i18n: duplicate }
       - { label: Body, name: body, widget: markdown, i18n: true }
 
   - name: news
