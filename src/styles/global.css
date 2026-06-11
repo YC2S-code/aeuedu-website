@@ -558,6 +558,26 @@ body.nav-open {
   margin-right: auto;
 }
 
+.site-footer__qr {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.site-footer__qr img {
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+  background: #fff;
+  padding: 4px;
+}
+
+.site-footer__qr span {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
 .site-footer iframe {
   width: 100%;
   border: 0;

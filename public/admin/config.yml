@@ -37,7 +37,9 @@ collections:
               - { label: Google Map Embed URL, name: mapEmbedUrl, widget: string, required: false, hint: "Paste the 'src' from a Google Maps embed iframe" }
               - { label: Facebook URL, name: facebook, widget: string, required: false }
               - { label: YouTube URL, name: youtube, widget: string, required: false }
+              - { label: TikTok URL, name: tiktok, widget: string, required: false }
               - { label: WeChat ID, name: wechat, widget: string, required: false }
+              - { label: WeChat QR Code, name: wechatQr, widget: image, required: false, hint: "Upload the official account QR code so visitors can scan to follow on WeChat" }
               - { label: Copyright Text, name: copyright, widget: string }
               - { label: Disclaimer, name: disclaimer, widget: text, required: false }
           - label: Homepage
@@ -71,7 +73,9 @@ collections:
               - { label: Google Map Embed URL, name: mapEmbedUrl, widget: string, required: false, hint: "Paste the 'src' from a Google Maps embed iframe" }
               - { label: Facebook URL, name: facebook, widget: string, required: false }
               - { label: YouTube URL, name: youtube, widget: string, required: false }
+              - { label: TikTok URL, name: tiktok, widget: string, required: false }
               - { label: WeChat ID, name: wechat, widget: string, required: false }
+              - { label: WeChat QR Code, name: wechatQr, widget: image, required: false, hint: "Upload the official account QR code so visitors can scan to follow on WeChat" }
               - { label: Copyright Text, name: copyright, widget: string }
               - { label: Disclaimer, name: disclaimer, widget: text, required: false }
           - label: Homepage

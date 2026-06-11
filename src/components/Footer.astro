@@ -27,8 +27,16 @@ const { siteName, tagline, footer } = settings!.data;
           {footer.facebook && <br />}
           {footer.youtube && <a href={footer.youtube} target="_blank" rel="noopener noreferrer">YouTube</a>}
           {footer.youtube && <br />}
+          {footer.tiktok && <a href={footer.tiktok} target="_blank" rel="noopener noreferrer">TikTok</a>}
+          {footer.tiktok && <br />}
           {footer.wechat && <span>{lang === 'zh' ? '微信：' : 'WeChat: '}{footer.wechat}</span>}
         </p>
+        {footer.wechatQr && (
+          <div class="site-footer__qr">
+            <img src={footer.wechatQr} alt={lang === 'zh' ? '微信公众号二维码' : 'WeChat Official Account QR Code'} width="100" height="100" loading="lazy" />
+            <span>{lang === 'zh' ? '扫码关注公众号' : 'Scan to follow on WeChat'}</span>
+          </div>
+        )}
       </div>
 
       <div>
