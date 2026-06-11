@@ -47,7 +47,7 @@ collections:
             widget: object
             fields:
               - { label: Hero Title, name: heroTitle, widget: string }
-              - { label: Hero Subtitle, name: heroSubtitle, widget: text }
+              - { label: Hero Subtitle, name: heroSubtitle, widget: markdown, buttons: [bold, italic, link], minimal: true }
               - { label: Hero Image, name: heroImage, widget: image, required: false }
               - { label: Hero Button Text, name: heroCta, widget: string }
               - { label: "\"Why Choose Us\" Section Title", name: highlightsTitle, widget: string }
@@ -89,7 +89,7 @@ collections:
             widget: object
             fields:
               - { label: Hero Title, name: heroTitle, widget: string }
-              - { label: Hero Subtitle, name: heroSubtitle, widget: text }
+              - { label: Hero Subtitle, name: heroSubtitle, widget: markdown, buttons: [bold, italic, link], minimal: true }
               - { label: Hero Image, name: heroImage, widget: image, required: false }
               - { label: Hero Button Text, name: heroCta, widget: string }
               - { label: "\"Why Choose Us\" Section Title", name: highlightsTitle, widget: string }
@@ -120,7 +120,7 @@ collections:
       - { label: Title, name: title, widget: string, i18n: true }
       - { label: Date, name: date, widget: datetime, i18n: duplicate }
       - { label: Image, name: image, widget: image, required: false, i18n: true }
-      - { label: Summary, name: summary, widget: text, i18n: true }
+      - { label: Summary, name: summary, widget: markdown, buttons: [bold, italic, link], minimal: true, i18n: true }
       - { label: "Video URL", name: video, widget: string, required: false, i18n: true, hint: "Paste a video link to embed on the article page. For English pages, YouTube/Vimeo work well. For Chinese pages, use Bilibili (or a self-hosted MP4 link) since YouTube/Vimeo are blocked in mainland China." }
       - { label: Body, name: body, widget: markdown, i18n: true }
 
@@ -136,5 +136,5 @@ collections:
       - { label: End Date, name: endDate, widget: datetime, required: false, i18n: duplicate }
       - { label: Location, name: location, widget: string, required: false, i18n: true }
       - { label: Image, name: image, widget: image, required: false, i18n: true }
-      - { label: Summary, name: summary, widget: text, i18n: true }
+      - { label: Summary, name: summary, widget: markdown, buttons: [bold, italic, link], minimal: true, i18n: true }
       - { label: Body, name: body, widget: markdown, i18n: true }

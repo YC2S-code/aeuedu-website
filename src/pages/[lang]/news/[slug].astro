@@ -2,7 +2,7 @@
 import { render } from 'astro:content';
 import Layout from '../../../layouts/Layout.astro';
 import EmbedVideo from '../../../components/EmbedVideo.astro';
-import { getLangEntries, slugFromId } from '../../../lib/content';
+import { getLangEntries, slugFromId, stripMarkdown } from '../../../lib/content';
 import { useTranslations, getLocalePath, type Lang } from '../../../i18n/utils';
 
 export async function getStaticPaths() {
@@ -24,7 +24,7 @@ const dateLocale = lang === 'zh' ? 'zh-CN' : 'en-US';
 const { Content } = await render(entry);
 ---
 
-<Layout lang={lang} title={entry.data.title} description={entry.data.summary}>
+<Layout lang={lang} title={entry.data.title} description={stripMarkdown(entry.data.summary)}>
   <div class="page-header">
     <div class="container">
       <h1>{entry.data.title}</h1>

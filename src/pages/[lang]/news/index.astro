@@ -1,4 +1,5 @@
 ---
+import { marked } from 'marked';
 import Layout from '../../../layouts/Layout.astro';
 import { getLangEntries, slugFromId } from '../../../lib/content';
 import { useTranslations, getLocalePath, type Lang } from '../../../i18n/utils';
@@ -28,7 +29,7 @@ const news = (await getLangEntries('news', lang)).sort((a, b) => b.data.date.get
             <div class="card__body">
               <div class="card__meta">{article.data.date.toLocaleDateString(dateLocale)}</div>
               <h3>{article.data.title}</h3>
-              <p>{article.data.summary}</p>
+              <p set:html={marked.parseInline(article.data.summary)} />
               <a href={getLocalePath(lang, `news/${slugFromId(article.id)}`)}>{t('action.readMore')}</a>
             </div>
           </div>

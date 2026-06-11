@@ -11,3 +11,11 @@ export async function getLangEntries<C extends CollectionKey>(collection: C, lan
 export function slugFromId(id: string): string {
   return id.split('/').slice(1).join('/');
 }
+
+/** Strip markdown formatting characters for use in plain-text contexts (e.g. meta descriptions). */
+export function stripMarkdown(text: string): string {
+  return text
+    .replace(/\[(.*?)\]\(.*?\)/g, '$1')
+    .replace(/[*_`#>]/g, '')
+    .trim();
+}

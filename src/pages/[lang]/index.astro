@@ -27,7 +27,7 @@ const highlights = home.highlights ?? [];
   <section class="hero" style={home.heroImage ? `--hero-image: url(${home.heroImage})` : undefined}>
     <div class="container">
       <h1>{home.heroTitle}</h1>
-      <p>{home.heroSubtitle}</p>
+      <p set:html={marked.parseInline(home.heroSubtitle)} />
       <a class="btn btn-primary" href={getLocalePath(lang, 'programs')}>{home.heroCta}</a>
     </div>
   </section>
@@ -58,7 +58,7 @@ const highlights = home.highlights ?? [];
             <div class="card__body">
               <div class="card__meta">{article.data.date.toLocaleDateString(dateLocale)}</div>
               <h3>{article.data.title}</h3>
-              <p>{article.data.summary}</p>
+              <p set:html={marked.parseInline(article.data.summary)} />
               <a href={getLocalePath(lang, `news/${slugFromId(article.id)}`)}>{t('action.readMore')}</a>
             </div>
           </div>
@@ -77,7 +77,7 @@ const highlights = home.highlights ?? [];
             <div class="card__body">
               <div class="card__meta">{event.data.date.toLocaleDateString(dateLocale)}{event.data.location ? ` · ${event.data.location}` : ''}</div>
               <h3>{event.data.title}</h3>
-              <p>{event.data.summary}</p>
+              <p set:html={marked.parseInline(event.data.summary)} />
               <a href={getLocalePath(lang, `events/${slugFromId(event.id)}`)}>{t('action.learnMore')}</a>
             </div>
           </div>
