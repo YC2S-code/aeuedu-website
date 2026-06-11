@@ -56,7 +56,7 @@ collections:
                 widget: list
                 fields:
                   - { label: Title, name: title, widget: string }
-                  - { label: Text, name: text, widget: text }
+                  - { label: Text, name: text, widget: markdown, buttons: [bold, italic, link], minimal: true }
 
       - name: site_zh
         label: "General Settings (中文)"
@@ -98,7 +98,7 @@ collections:
                 widget: list
                 fields:
                   - { label: Title, name: title, widget: string }
-                  - { label: Text, name: text, widget: text }
+                  - { label: Text, name: text, widget: markdown, buttons: [bold, italic, link], minimal: true }
 
   - name: pages
     label: Site Pages
