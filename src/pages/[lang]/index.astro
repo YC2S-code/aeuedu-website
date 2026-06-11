@@ -36,7 +36,7 @@ const highlights =
 ---
 
 <Layout lang={lang} title={siteName} description={tagline}>
-  <section class="hero">
+  <section class="hero" style={home.heroImage ? `--hero-image: url(${home.heroImage})` : undefined}>
     <div class="container">
       <h1>{home.heroTitle}</h1>
       <p>{home.heroSubtitle}</p>
