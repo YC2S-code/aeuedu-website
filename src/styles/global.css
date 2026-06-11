@@ -117,7 +117,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-block: 0.85rem;
+  padding-block: 1.25rem;
   gap: 1rem;
 }
 
@@ -344,11 +344,11 @@ body.nav-open {
   --hero-image: none;
   position: relative;
   background:
-    linear-gradient(135deg, rgba(30, 58, 95, 0.88) 0%, rgba(20, 40, 63, 0.92) 100%),
+    linear-gradient(135deg, rgba(30, 58, 95, 0.55) 0%, rgba(20, 40, 63, 0.6) 100%),
     var(--hero-image) center / cover no-repeat,
     linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: #fff;
-  padding: clamp(3rem, 8vw, 6rem) 0;
+  padding: clamp(4.5rem, 12vw, 9rem) 0;
   text-align: center;
 }
 
