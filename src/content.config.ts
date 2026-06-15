@@ -33,6 +33,8 @@ const pages = defineCollection({
   schema: z.object({
     title: z.string(),
     image: z.string().optional(),
+    parent: z.enum(['programs', 'faculty', 'alumni', 'impact', 'news', 'about']).optional(),
+    navLabel: z.string().optional(),
   }),
 });
 

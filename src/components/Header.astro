@@ -1,5 +1,5 @@
 ---
-import { getEntry } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
 import type { Lang } from '../i18n/utils';
 import { getLocalePath, otherLang } from '../i18n/utils';
 
@@ -10,6 +10,20 @@ interface Props {
 const { lang } = Astro.props;
 const settings = await getEntry('settings', `${lang}/site`);
 const currentPath = Astro.url.pathname;
+
+// Pages created in the CMS can opt into a main nav section via their `parent` field
+const allPages = await getCollection('pages');
+const navPagesByParent = new Map<string, { href: string; label: string }[]>();
+for (const entry of allPages) {
+  const [entryLang, ...rest] = entry.id.split('/');
+  if (entryLang !== lang || !entry.data.parent) continue;
+  const list = navPagesByParent.get(entry.data.parent) ?? [];
+  list.push({
+    href: getLocalePath(lang, rest.join('/')),
+    label: entry.data.navLabel || entry.data.title,
+  });
+  navPagesByParent.set(entry.data.parent, list);
+}
 
 const other = otherLang(lang);
 // Swap the locale prefix while keeping the rest of the path
@@ -23,8 +37,9 @@ type NavLink = {
   children?: NavLink[];
 };
 
-const links: NavLink[] = [
+const links: (NavLink & { key?: string })[] = [
   {
+    key: 'programs',
     href: getLocalePath(lang, 'programs'),
     label: lang === 'zh' ? '课程项目' : 'Programs',
     children: [
@@ -40,6 +55,7 @@ const links: NavLink[] = [
     ],
   },
   {
+    key: 'faculty',
     href: getLocalePath(lang, 'faculty'),
     label: lang === 'zh' ? '教授/企业咨询' : 'Faculty & Consulting',
     children: [
@@ -49,6 +65,7 @@ const links: NavLink[] = [
     ],
   },
   {
+    key: 'alumni',
     href: getLocalePath(lang, 'alumni'),
     label: lang === 'zh' ? '商企校友' : 'Alumni',
     children: [
@@ -57,6 +74,7 @@ const links: NavLink[] = [
     ],
   },
   {
+    key: 'impact',
     href: getLocalePath(lang, 'impact'),
     label: lang === 'zh' ? '影响力' : 'Impact',
     children: [
@@ -65,6 +83,7 @@ const links: NavLink[] = [
     ],
   },
   {
+    key: 'news',
     href: getLocalePath(lang, 'news'),
     label: lang === 'zh' ? '活动/新闻' : 'News & Events',
     children: [
@@ -73,6 +92,7 @@ const links: NavLink[] = [
     ],
   },
   {
+    key: 'about',
     href: getLocalePath(lang, 'about'),
     label: lang === 'zh' ? '我的亚欧' : 'About AEU',
     children: [
@@ -83,6 +103,14 @@ const links: NavLink[] = [
     ],
   },
 ];
+
+// Append CMS-created pages to the matching main nav section's submenu
+for (const link of links) {
+  const extra = link.key ? navPagesByParent.get(link.key) : undefined;
+  if (extra?.length) {
+    link.children = [...(link.children ?? []), ...extra];
+  }
+}
 
 function isActive(href: string) {
   return currentPath === href || currentPath.startsWith(`${href}/`);

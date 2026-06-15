@@ -1,9 +1,9 @@
 ---
-import { getEntry, render } from 'astro:content';
+import { getCollection, getEntry, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import type { Lang } from '../../i18n/utils';
 
-export function getStaticPaths() {
+export async function getStaticPaths() {
   const slugs = [
     'programs',
     'programs/emba',
@@ -27,9 +27,25 @@ export function getStaticPaths() {
     'about/investment-center',
   ];
 
-  return ['en', 'zh'].flatMap((lang) =>
+  const knownIds = new Set(
+    ['en', 'zh'].flatMap((lang) => slugs.map((slug) => `${lang}/${slug.replace(/\//g, '-')}`)),
+  );
+
+  const knownPaths = ['en', 'zh'].flatMap((lang) =>
     slugs.map((slug) => ({ params: { lang, slug }, props: { entryId: `${lang}/${slug.replace(/\//g, '-')}` } })),
   );
+
+  // Pages created in the CMS that aren't part of the fixed nested routes above
+  // get a flat route based on their filename slug, e.g. /en/my-new-page/
+  const allPages = await getCollection('pages');
+  const extraPaths = allPages
+    .filter((entry) => !knownIds.has(entry.id))
+    .map((entry) => {
+      const [lang, ...rest] = entry.id.split('/');
+      return { params: { lang, slug: rest.join('/') }, props: { entryId: entry.id } };
+    });
+
+  return [...knownPaths, ...extraPaths];
 }
 
 const { lang } = Astro.params as { lang: Lang };

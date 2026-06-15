@@ -73,11 +73,25 @@ collections:
   - name: pages
     label: "Site Pages / 网站页面"
     folder: src/content/pages
-    create: false
+    create: true
     slug: "{{slug}}"
     i18n: true
     fields:
       - { label: "Title / 标题", name: title, widget: string, i18n: true }
+      - label: "Show in Navigation Menu / 显示在导航菜单"
+        name: parent
+        widget: select
+        required: false
+        i18n: duplicate
+        hint: "Choose which main menu this page should appear under. Leave empty to keep this page out of the navigation menu (it will still have its own page)."
+        options:
+          - { label: "Programs / 课程项目", value: programs }
+          - { label: "Faculty & Consulting / 教授/企业咨询", value: faculty }
+          - { label: "Alumni / 商企校友", value: alumni }
+          - { label: "Impact / 影响力", value: impact }
+          - { label: "News & Events / 活动/新闻", value: news }
+          - { label: "About AEU / 我的亚欧", value: about }
+      - { label: "Navigation Label / 导航菜单文字", name: navLabel, widget: string, required: false, i18n: true, hint: "Short label shown in the navigation menu. If left empty, the page Title above is used." }
       - { label: "Banner Image / 横幅图", name: image, widget: image, required: false, hint: "Background image for the page header banner" }
       - { label: "Body / 正文", name: body, widget: markdown, i18n: true }
 
