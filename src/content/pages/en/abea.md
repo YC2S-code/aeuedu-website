@@ -1,6 +1,6 @@
 ---
 title: ABEA
 parent: alumni
-navLabel: ""
+navLabel: Alumni
 ---
 test
