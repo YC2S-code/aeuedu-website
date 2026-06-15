@@ -50,8 +50,8 @@ const highlights = home.highlights ?? [];
     <div class="container">
       <h2 class="section-title">{home.highlightsTitle}</h2>
       <div class="grid grid-3">
-        {highlights.map((h) => (
-          <div class="card">
+        {highlights.map((h, i) => (
+          <div class="card" data-reveal style={`transition-delay: ${(i % 3) * 80}ms`}>
             <div class="card__body">
               <h3>{h.title}</h3>
               <p set:html={marked.parseInline(h.text)} />
@@ -67,8 +67,8 @@ const highlights = home.highlights ?? [];
       <div class="container">
         <h2 class="section-title">{t('section.pins')}</h2>
         <div class="pins-grid">
-          {pinnedNews.map((article) => (
-            <a class="pin-card" href={getLocalePath(lang, `news/${slugFromId(article.id)}`)}>
+          {pinnedNews.map((article, i) => (
+            <a class="pin-card" data-reveal style={`transition-delay: ${i * 80}ms`} href={getLocalePath(lang, `news/${slugFromId(article.id)}`)}>
               <img class="pin-card__image" src={article.data.image ?? DEFAULT_ARTICLE_IMAGE} alt={article.data.title} />
               <div class="pin-card__body">
                 <span class="badge">{newsCategoryLabel(t, article.data.category)}</span>
@@ -87,8 +87,8 @@ const highlights = home.highlights ?? [];
     <div class="container">
       <h2 class="section-title">{t('section.latestNews')}</h2>
       <div class="grid grid-3 grid-feature-news">
-        {news.map((article) => (
-          <div class="card">
+        {news.map((article, i) => (
+          <div class="card" data-reveal style={`transition-delay: ${(i % 3) * 80}ms`}>
             <a href={getLocalePath(lang, `news/${slugFromId(article.id)}`)}>
               <img class="card__image" src={article.data.image ?? DEFAULT_ARTICLE_IMAGE} alt={article.data.title} />
             </a>
@@ -109,8 +109,8 @@ const highlights = home.highlights ?? [];
     <div class="container">
       <h2 class="section-title">{t('section.upcomingEvents')}</h2>
       <div class="grid grid-3">
-        {events.map((event) => (
-          <div class="card">
+        {events.map((event, i) => (
+          <div class="card" data-reveal style={`transition-delay: ${(i % 3) * 80}ms`}>
             <a href={getLocalePath(lang, `events/${slugFromId(event.id)}`)}>
               <img class="card__image" src={event.data.image ?? DEFAULT_ARTICLE_IMAGE} alt={event.data.title} />
             </a>
@@ -126,3 +126,22 @@ const highlights = home.highlights ?? [];
     </div>
   </section>
 </Layout>
+
+<script>
+  const items = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    items.forEach((el) => el.classList.add('reveal'));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    items.forEach((el) => observer.observe(el));
+  }
+</script>
