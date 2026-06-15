@@ -1,5 +1,6 @@
 ---
 title: EMBA
+parent: programs
 ---
 
 ## AEU Cambodia 2026 Cohort — Executive MBA

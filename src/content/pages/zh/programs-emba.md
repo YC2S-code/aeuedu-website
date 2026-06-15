@@ -1,5 +1,6 @@
 ---
 title: EMBA 高级工商管理硕士
+parent: programs
 ---
 
 ## 柬埔寨亚欧大学 2026 级 EMBA 高级工商管理硕士学位课程
