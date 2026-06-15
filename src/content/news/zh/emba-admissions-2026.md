@@ -4,6 +4,7 @@ date: 2026-06-08
 image: /images/uploads/heropage_banner.jpg
 category: announcement
 featured: true
+pinned: true
 summary: 2026年秋季EMBA课程招生通道已开放，欢迎企业创始人与高级管理者提交申请，名额有限，先到先得。
 ---
 

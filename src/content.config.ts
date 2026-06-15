@@ -9,6 +9,7 @@ const news = defineCollection({
     image: z.string().optional(),
     category: z.enum(['news', 'announcement', 'event', 'alumni', 'article']).optional(),
     featured: z.boolean().optional(),
+    pinned: z.boolean().optional(),
     summary: z.string(),
     video: z.string().optional(),
   }),

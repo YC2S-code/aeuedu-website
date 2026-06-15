@@ -4,6 +4,7 @@ date: 2026-06-08
 image: /images/uploads/heropage_banner.jpg
 category: announcement
 featured: true
+pinned: true
 summary: Applications for the 2026 Fall EMBA cohort are now open. Founders and senior executives are encouraged to apply early — places are limited.
 ---
 

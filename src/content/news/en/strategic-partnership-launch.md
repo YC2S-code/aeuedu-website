@@ -4,6 +4,7 @@ date: 2026-06-10
 image: /images/uploads/heropage_banner.jpg
 category: news
 featured: true
+pinned: true
 summary: The partnership will offer EMBA and PEP students hands-on industry projects, mentorship, and expanded career opportunities across the region.
 ---
 

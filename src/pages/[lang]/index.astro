@@ -16,16 +16,21 @@ const settings = await getEntry('settings', `${lang}/site`);
 const { siteName, tagline, home } = settings!.data;
 
 const allNews = await getLangEntries('news', lang);
+const pinnedNews = allNews
+  .filter((article) => article.data.pinned)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 2);
+
 const featuredNews = allNews.filter((article) => article.data.featured);
 const news = (featuredNews.length > 0 ? featuredNews : allNews)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0, 4);
+  .slice(0, 6);
 
 const allEvents = await getLangEntries('events', lang);
 const featuredEvents = allEvents.filter((event) => event.data.featured);
 const events = (featuredEvents.length > 0 ? featuredEvents : allEvents)
   .sort((a, b) => a.data.date.getTime() - b.data.date.getTime())
-  .slice(0, 4);
+  .slice(0, 2);
 
 const dateLocale = lang === 'zh' ? 'zh-CN' : 'en-US';
 
@@ -57,17 +62,40 @@ const highlights = home.highlights ?? [];
     </div>
   </section>
 
+  {pinnedNews.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">{t('section.pins')}</h2>
+        <div class="pins-grid">
+          {pinnedNews.map((article) => (
+            <a class="pin-card" href={getLocalePath(lang, `news/${slugFromId(article.id)}`)}>
+              <img class="pin-card__image" src={article.data.image ?? DEFAULT_ARTICLE_IMAGE} alt={article.data.title} />
+              <div class="pin-card__body">
+                <span class="badge">{newsCategoryLabel(t, article.data.category)}</span>
+                <div class="card__meta">{article.data.date.toLocaleDateString(dateLocale)}</div>
+                <h3>{article.data.title}</h3>
+                <p set:html={marked.parseInline(article.data.summary)} />
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
   <section class="section">
     <div class="container">
       <h2 class="section-title">{t('section.latestNews')}</h2>
-      <div class="grid grid-3">
+      <div class="grid grid-3 grid-feature-news">
         {news.map((article) => (
           <div class="card">
-            <img class="card__image" src={article.data.image ?? DEFAULT_ARTICLE_IMAGE} alt={article.data.title} />
+            <a href={getLocalePath(lang, `news/${slugFromId(article.id)}`)}>
+              <img class="card__image" src={article.data.image ?? DEFAULT_ARTICLE_IMAGE} alt={article.data.title} />
+            </a>
             <div class="card__body">
               <span class="badge">{newsCategoryLabel(t, article.data.category)}</span>
               <div class="card__meta">{article.data.date.toLocaleDateString(dateLocale)}</div>
-              <h3>{article.data.title}</h3>
+              <h3><a href={getLocalePath(lang, `news/${slugFromId(article.id)}`)}>{article.data.title}</a></h3>
               <p set:html={marked.parseInline(article.data.summary)} />
               <a href={getLocalePath(lang, `news/${slugFromId(article.id)}`)}>{t('action.readMore')}</a>
             </div>
@@ -83,10 +111,12 @@ const highlights = home.highlights ?? [];
       <div class="grid grid-3">
         {events.map((event) => (
           <div class="card">
-            <img class="card__image" src={event.data.image ?? DEFAULT_ARTICLE_IMAGE} alt={event.data.title} />
+            <a href={getLocalePath(lang, `events/${slugFromId(event.id)}`)}>
+              <img class="card__image" src={event.data.image ?? DEFAULT_ARTICLE_IMAGE} alt={event.data.title} />
+            </a>
             <div class="card__body">
               <div class="card__meta">{event.data.date.toLocaleDateString(dateLocale)}{event.data.location ? ` · ${event.data.location}` : ''}</div>
-              <h3>{event.data.title}</h3>
+              <h3><a href={getLocalePath(lang, `events/${slugFromId(event.id)}`)}>{event.data.title}</a></h3>
               <p set:html={marked.parseInline(event.data.summary)} />
               <a href={getLocalePath(lang, `events/${slugFromId(event.id)}`)}>{t('action.learnMore')}</a>
             </div>

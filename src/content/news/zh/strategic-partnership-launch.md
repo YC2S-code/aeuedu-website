@@ -4,6 +4,7 @@ date: 2026-06-10
 image: /images/uploads/heropage_banner.jpg
 category: news
 featured: true
+pinned: true
 summary: 双方将在高管培训、行业实践项目与人才输送方面展开深度合作，为学员提供更多真实商业场景的学习机会。
 ---
 

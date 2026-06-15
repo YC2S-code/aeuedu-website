@@ -118,7 +118,8 @@ collections:
           - { label: "Event / 活动", value: event }
           - { label: "Alumni / 校友", value: alumni }
           - { label: "Article / 文章", value: article }
-      - { label: 'Show in Homepage Feature News / 显示在首页"最新资讯"', name: featured, widget: boolean, required: false, default: false, i18n: duplicate, hint: "Up to 4 featured articles show on the homepage Feature News section, sorted by latest date if more than 4 are selected." }
+      - { label: 'Show in Homepage Feature News / 显示在首页"精选资讯"', name: featured, widget: boolean, required: false, default: false, i18n: duplicate, hint: "Up to 6 featured articles show on the homepage Feature News section, sorted by latest date if more than 6 are selected." }
+      - { label: 'PINS Article / 置顶文章', name: pinned, widget: boolean, required: false, default: false, i18n: duplicate, hint: "Up to 2 pinned news/announcement articles show in the Pins section at the top of the homepage, above Feature News." }
       - { label: "Summary / 摘要", name: summary, widget: markdown, buttons: [bold, italic, link], minimal: true, i18n: true }
       - { label: "Video URL / 视频链接", name: video, widget: string, required: false, i18n: true, hint: "Paste a video link to embed on the article page. For English pages, YouTube/Vimeo work well. For Chinese pages, use Bilibili (or a self-hosted MP4 link) since YouTube/Vimeo are blocked in mainland China." }
       - { label: "Body / 正文", name: body, widget: markdown, i18n: true }
