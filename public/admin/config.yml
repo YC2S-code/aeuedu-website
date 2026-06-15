@@ -76,6 +76,11 @@ collections:
     create: true
     slug: "{{slug}}"
     i18n: true
+    summary: "{{title}} / {{i18n.zh.title}}"
+    sortable_fields: ['title', 'parent']
+    view_groups:
+      - label: "Main Navigation Section / 主导航分类"
+        field: parent
     fields:
       - { label: "Title / 标题", name: title, widget: string, i18n: true }
       - label: "Show in Navigation Menu / 显示在导航菜单"
@@ -87,7 +92,7 @@ collections:
         options:
           - { label: "Programs / 课程项目", value: programs }
           - { label: "Faculty & Consulting / 教授/企业咨询", value: faculty }
-          - { label: "Alumni / 商企校友", value: alumni }
+          - { label: "Alumni / 亚欧人", value: alumni }
           - { label: "Impact / 影响力", value: impact }
           - { label: "News & Events / 活动/新闻", value: news }
           - { label: "About AEU / 我的亚欧", value: about }
