@@ -1,4 +1,4 @@
-siteName: 亚欧大学国际工商学院 | AEUPS
+siteName: 亞歐大學國際商學院 | AEUPS
 tagline: 培养具有全球视野的商业领袖
 nav:
   contact: 联系我们
@@ -12,12 +12,12 @@ footer:
   mapEmbedUrl: https://www.google.com/maps?q=The+Gateway+Phnom+Penh&output=embed
   address: 柬埔寨金边国宾大厦（The Gateway @ Phnom Penh）Phum 10, Sangkat Phsar Depo, Russian
     Federation Blvd (110), Phnom Penh, Kingdom of Cambodia
-  tiktok: ""
+  tiktok: https://www.tiktok.com/@aeuedu
   disclaimer: 本网站内容仅供参考，如有更新恕不另行通知。课程详情、学费及录取要求以亚欧大学国际商学院（AEUPS）及雅凡·高级管理教育有限公司（AME）最终公布的官方信息为准。
   email: info@aeuedu.com
 home:
   heroTitle: 亚欧大学国际商学院
-  heroSubtitle: 二十年的路，换一群同行的人。亚欧大学国际商学院（AEUPS），与你一起领航当下，共建未来。
+  heroSubtitle: 我们志在成为东盟地区最具影响力的**高端管理教育与商业生态平台**。以高等**教育为纽带**,**连接理念同行的企业与人才,共创未来。**
   heroImage: /images/uploads/heropage_banner.jpg
   heroCta: 了解 EMBA 课程
   highlightsTitle: 你会在亚欧，遇见什么
