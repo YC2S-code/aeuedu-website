@@ -531,6 +531,13 @@ body.nav-open {
   margin-top: 1.6em;
 }
 
+.prose img {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius);
+  margin: 1.5rem 0;
+}
+
 .prose table {
   width: 100%;
   border-collapse: collapse;
