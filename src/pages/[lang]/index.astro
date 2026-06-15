@@ -2,7 +2,7 @@
 import { getEntry } from 'astro:content';
 import { marked } from 'marked';
 import Layout from '../../layouts/Layout.astro';
-import { getLangEntries, slugFromId } from '../../lib/content';
+import { getLangEntries, slugFromId, DEFAULT_ARTICLE_IMAGE, newsCategoryLabel } from '../../lib/content';
 import { useTranslations, getLocalePath, type Lang } from '../../i18n/utils';
 
 export function getStaticPaths() {
@@ -15,8 +15,17 @@ const t = useTranslations(lang);
 const settings = await getEntry('settings', `${lang}/site`);
 const { siteName, tagline, home } = settings!.data;
 
-const news = (await getLangEntries('news', lang)).sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 3);
-const events = (await getLangEntries('events', lang)).sort((a, b) => a.data.date.getTime() - b.data.date.getTime()).slice(0, 2);
+const allNews = await getLangEntries('news', lang);
+const featuredNews = allNews.filter((article) => article.data.featured);
+const news = (featuredNews.length > 0 ? featuredNews : allNews)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 4);
+
+const allEvents = await getLangEntries('events', lang);
+const featuredEvents = allEvents.filter((event) => event.data.featured);
+const events = (featuredEvents.length > 0 ? featuredEvents : allEvents)
+  .sort((a, b) => a.data.date.getTime() - b.data.date.getTime())
+  .slice(0, 4);
 
 const dateLocale = lang === 'zh' ? 'zh-CN' : 'en-US';
 
@@ -54,8 +63,9 @@ const highlights = home.highlights ?? [];
       <div class="grid grid-3">
         {news.map((article) => (
           <div class="card">
-            {article.data.image && <img class="card__image" src={article.data.image} alt={article.data.title} />}
+            <img class="card__image" src={article.data.image ?? DEFAULT_ARTICLE_IMAGE} alt={article.data.title} />
             <div class="card__body">
+              <span class="badge">{newsCategoryLabel(t, article.data.category)}</span>
               <div class="card__meta">{article.data.date.toLocaleDateString(dateLocale)}</div>
               <h3>{article.data.title}</h3>
               <p set:html={marked.parseInline(article.data.summary)} />
@@ -73,7 +83,7 @@ const highlights = home.highlights ?? [];
       <div class="grid grid-3">
         {events.map((event) => (
           <div class="card">
-            {event.data.image && <img class="card__image" src={event.data.image} alt={event.data.title} />}
+            <img class="card__image" src={event.data.image ?? DEFAULT_ARTICLE_IMAGE} alt={event.data.title} />
             <div class="card__body">
               <div class="card__meta">{event.data.date.toLocaleDateString(dateLocale)}{event.data.location ? ` · ${event.data.location}` : ''}</div>
               <h3>{event.data.title}</h3>

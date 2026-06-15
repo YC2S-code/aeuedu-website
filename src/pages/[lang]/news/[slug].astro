@@ -2,7 +2,7 @@
 import { render } from 'astro:content';
 import Layout from '../../../layouts/Layout.astro';
 import EmbedVideo from '../../../components/EmbedVideo.astro';
-import { getLangEntries, slugFromId, stripMarkdown, estimateReadingTime, DEFAULT_ARTICLE_IMAGE } from '../../../lib/content';
+import { getLangEntries, slugFromId, stripMarkdown, estimateReadingTime, DEFAULT_ARTICLE_IMAGE, newsCategoryLabel } from '../../../lib/content';
 import { useTranslations, getLocalePath, type Lang } from '../../../i18n/utils';
 
 export async function getStaticPaths() {
@@ -33,7 +33,7 @@ const related = (await getLangEntries('news', lang))
 <Layout lang={lang} title={entry.data.title} description={stripMarkdown(entry.data.summary)}>
   <div class:list={['page-header', { 'page-header--has-image': entry.data.image }]} style={entry.data.image ? `--page-header-image: url(${entry.data.image})` : undefined}>
     <div class="container">
-      <span class="badge">{entry.data.category ?? t('label.category.news')}</span>
+      <span class="badge">{newsCategoryLabel(t, entry.data.category)}</span>
       <h1>{entry.data.title}</h1>
       <p class="card__meta">
         {t('label.publishedOn')} {entry.data.date.toLocaleDateString(dateLocale)} · {readingTime} {t('label.minRead')}
@@ -78,7 +78,7 @@ const related = (await getLangEntries('news', lang))
             <div class="card">
               <img class="card__image" src={article.data.image ?? DEFAULT_ARTICLE_IMAGE} alt={article.data.title} />
               <div class="card__body">
-                <span class="badge">{article.data.category ?? t('label.category.news')}</span>
+                <span class="badge">{newsCategoryLabel(t, article.data.category)}</span>
                 <div class="card__meta">{article.data.date.toLocaleDateString(dateLocale)}</div>
                 <h3>{article.data.title}</h3>
                 <a href={getLocalePath(lang, `news/${slugFromId(article.id)}`)}>{t('action.readMore')}</a>

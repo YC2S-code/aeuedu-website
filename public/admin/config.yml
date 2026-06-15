@@ -50,8 +50,8 @@ collections:
               - { label: "Hero Subtitle / 副标题", name: heroSubtitle, widget: markdown, buttons: [bold, italic, link], minimal: true }
               - { label: "Hero Image / 主图背景", name: heroImage, widget: image, required: false }
               - { label: "Hero Button Text / 按钮文字", name: heroCta, widget: string }
-              - { label: "\"Why Choose Us\" Section Title / “为什么选择我们”板块标题", name: highlightsTitle, widget: string }
-              - label: "\"Why Choose Us\" Cards / “为什么选择我们”卡片"
+              - { label: "Promotion Column Title / 推广台标题", name: highlightsTitle, widget: string }
+              - label: "Promotion Column Cards / 推广台卡片"
                 name: highlights
                 widget: list
                 fields:
@@ -98,8 +98,8 @@ collections:
               - { label: "Hero Subtitle / 副标题", name: heroSubtitle, widget: markdown, buttons: [bold, italic, link], minimal: true }
               - { label: "Hero Image / 主图背景", name: heroImage, widget: image, required: false }
               - { label: "Hero Button Text / 按钮文字", name: heroCta, widget: string }
-              - { label: "\"Why Choose Us\" Section Title / “为什么选择我们”板块标题", name: highlightsTitle, widget: string }
-              - label: "\"Why Choose Us\" Cards / “为什么选择我们”卡片"
+              - { label: "Promotion Column Title / 推广台标题", name: highlightsTitle, widget: string }
+              - label: "Promotion Column Cards / 推广台卡片"
                 name: highlights
                 widget: list
                 fields:
@@ -132,8 +132,19 @@ collections:
     fields:
       - { label: "Title / 标题", name: title, widget: string, i18n: true }
       - { label: "Date / 日期", name: date, widget: datetime, i18n: duplicate }
-      - { label: "Image / 图片", name: image, widget: image, required: false, i18n: true }
-      - { label: "Category / 分类", name: category, widget: string, required: false, i18n: true }
+      - { label: "Banner Image / 横幅图", name: image, widget: image, required: true, i18n: true, hint: "Recommended size: 1200 x 675px (16:9). Used as the article banner, card thumbnail, and Feature News image on the homepage." }
+      - label: "Category / 分类"
+        name: category
+        widget: select
+        i18n: duplicate
+        default: news
+        options:
+          - { label: "News / 新闻", value: news }
+          - { label: "Announcement / 公告", value: announcement }
+          - { label: "Event / 活动", value: event }
+          - { label: "Alumni / 校友", value: alumni }
+          - { label: "Article / 文章", value: article }
+      - { label: 'Show in Homepage Feature News / 显示在首页"最新资讯"', name: featured, widget: boolean, required: false, default: false, i18n: duplicate, hint: "Up to 4 featured articles show on the homepage Feature News section, sorted by latest date if more than 4 are selected." }
       - { label: "Summary / 摘要", name: summary, widget: markdown, buttons: [bold, italic, link], minimal: true, i18n: true }
       - { label: "Video URL / 视频链接", name: video, widget: string, required: false, i18n: true, hint: "Paste a video link to embed on the article page. For English pages, YouTube/Vimeo work well. For Chinese pages, use Bilibili (or a self-hosted MP4 link) since YouTube/Vimeo are blocked in mainland China." }
       - { label: "Body / 正文", name: body, widget: markdown, i18n: true }
@@ -149,7 +160,8 @@ collections:
       - { label: "Date / 开始日期", name: date, widget: datetime, i18n: duplicate }
       - { label: "End Date / 结束日期", name: endDate, widget: datetime, required: false, i18n: duplicate }
       - { label: "Location / 地点", name: location, widget: string, required: false, i18n: true }
-      - { label: "Image / 图片", name: image, widget: image, required: false, i18n: true }
+      - { label: "Banner Image / 横幅图", name: image, widget: image, required: true, i18n: true, hint: "Recommended size: 1200 x 675px (16:9). Used as the event banner, card thumbnail, and Upcoming Events image on the homepage." }
       - { label: "Category / 分类", name: category, widget: string, required: false, i18n: true }
+      - { label: 'Show in Homepage Upcoming Events / 显示在首页"近期活动"', name: featured, widget: boolean, required: false, default: false, i18n: duplicate, hint: "Up to 4 featured events show on the homepage Upcoming Events section, sorted by soonest date if more than 4 are selected." }
       - { label: "Summary / 摘要", name: summary, widget: markdown, buttons: [bold, italic, link], minimal: true, i18n: true }
       - { label: "Body / 正文", name: body, widget: markdown, i18n: true }

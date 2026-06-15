@@ -7,7 +7,8 @@ const news = defineCollection({
     title: z.string(),
     date: z.coerce.date(),
     image: z.string().optional(),
-    category: z.string().optional(),
+    category: z.enum(['news', 'announcement', 'event', 'alumni', 'article']).optional(),
+    featured: z.boolean().optional(),
     summary: z.string(),
     video: z.string().optional(),
   }),
@@ -22,6 +23,7 @@ const events = defineCollection({
     location: z.string().optional(),
     image: z.string().optional(),
     category: z.string().optional(),
+    featured: z.boolean().optional(),
     summary: z.string(),
   }),
 });

@@ -1,5 +1,13 @@
 import { getCollection, type CollectionKey } from 'astro:content';
-import type { Lang } from '../i18n/utils';
+import type { Lang, useTranslations } from '../i18n/utils';
+
+const NEWS_CATEGORIES = ['news', 'announcement', 'event', 'alumni', 'article'] as const;
+export type NewsCategory = (typeof NEWS_CATEGORIES)[number];
+
+/** Translate a news article's category, defaulting to "news" if unset. */
+export function newsCategoryLabel(t: ReturnType<typeof useTranslations>, category: NewsCategory | undefined): string {
+  return t(`label.category.${category ?? 'news'}` as Parameters<typeof t>[0]);
+}
 
 /** Get all entries of a collection that belong to the given language. */
 export async function getLangEntries<C extends CollectionKey>(collection: C, lang: Lang) {

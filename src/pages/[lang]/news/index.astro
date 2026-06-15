@@ -2,7 +2,7 @@
 import { marked } from 'marked';
 import { getEntry } from 'astro:content';
 import Layout from '../../../layouts/Layout.astro';
-import { getLangEntries, slugFromId, estimateReadingTime, DEFAULT_ARTICLE_IMAGE } from '../../../lib/content';
+import { getLangEntries, slugFromId, estimateReadingTime, DEFAULT_ARTICLE_IMAGE, newsCategoryLabel } from '../../../lib/content';
 import { useTranslations, getLocalePath, type Lang } from '../../../i18n/utils';
 
 export function getStaticPaths() {
@@ -30,7 +30,7 @@ const bannerImage = settings!.data.banners?.news;
           <div class="card">
             <img class="card__image" src={article.data.image ?? DEFAULT_ARTICLE_IMAGE} alt={article.data.title} />
             <div class="card__body">
-              <span class="badge">{article.data.category ?? t('label.category.news')}</span>
+              <span class="badge">{newsCategoryLabel(t, article.data.category)}</span>
               <div class="card__meta">
                 {article.data.date.toLocaleDateString(dateLocale)} · {estimateReadingTime(article.body ?? '', lang)} {t('label.minRead')}
               </div>
