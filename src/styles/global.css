@@ -509,63 +509,18 @@ body.nav-open {
   }
 }
 
-/* Pins section */
-.pins-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.75rem;
-}
-
-.pin-card {
+/* Category badge */
+.card__badges {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 
-.pin-card__media {
-  position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-}
-
-.pin-card__image {
-  display: block;
-  width: 100%;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
-  transition: transform 400ms var(--ease-out);
-}
-
-.pin-card__media:hover .pin-card__image {
-  transform: scale(1.05);
-}
-
-.pin-card__badge {
-  position: absolute;
-  top: 0.85rem;
-  left: 0.85rem;
+.card__badges .badge {
   margin-bottom: 0;
 }
 
-.pin-card__body {
-  padding-top: 0.9rem;
-}
-
-.pin-card__body h3 {
-  margin: 0;
-}
-
-.pin-card__body h3 a {
-  color: var(--color-text);
-  text-decoration: none;
-}
-
-.pin-card__body h3 a:hover {
-  color: var(--color-primary);
-  text-decoration: underline;
-}
-
-/* Category badge */
 .badge {
   display: inline-block;
   padding: 0.2rem 0.7rem;
@@ -578,6 +533,10 @@ body.nav-open {
   letter-spacing: 0.05em;
   margin-bottom: 0.6rem;
   align-self: flex-start;
+}
+
+.badge--pinned {
+  background: var(--color-accent);
 }
 
 /* Share buttons */

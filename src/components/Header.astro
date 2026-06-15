@@ -221,4 +221,17 @@ function isActive(href: string) {
       btn.setAttribute('aria-expanded', String(!!isOpen));
     });
   });
+
+  // Top-level nav items are menu groupings rather than standalone pages,
+  // so clicking the label expands its submenu instead of navigating away.
+  document.querySelectorAll('.nav-drawer__list > .nav-drawer__item > .nav-drawer__row').forEach((row) => {
+    const link = row.querySelector('a');
+    const caret = row.querySelector('.nav-drawer__caret');
+    if (link && caret) {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        (caret as HTMLElement).click();
+      });
+    }
+  });
 </script>

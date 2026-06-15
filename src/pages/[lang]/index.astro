@@ -66,15 +66,21 @@ const highlights = home.highlights ?? [];
     <section class="section section-pins">
       <div class="container">
         <h2 class="section-title">{t('section.pins')}</h2>
-        <div class="pins-grid">
+        <div class="grid grid-3">
           {pinnedNews.map((article, i) => (
-            <div class="pin-card" data-reveal style={`transition-delay: ${i * 80}ms`}>
-              <div class="pin-card__media">
-                <img class="pin-card__image" src={article.data.image ?? DEFAULT_ARTICLE_IMAGE} alt={article.data.title} />
-                <span class="badge pin-card__badge">{newsCategoryLabel(t, article.data.category)}</span>
-              </div>
-              <div class="pin-card__body">
+            <div class="card" data-reveal style={`transition-delay: ${i * 80}ms`}>
+              <a href={getLocalePath(lang, `news/${slugFromId(article.id)}`)}>
+                <img class="card__image" src={article.data.image ?? DEFAULT_ARTICLE_IMAGE} alt={article.data.title} />
+              </a>
+              <div class="card__body">
+                <div class="card__badges">
+                  <span class="badge">{newsCategoryLabel(t, article.data.category)}</span>
+                  <span class="badge badge--pinned">{t('label.pinned')}</span>
+                </div>
+                <div class="card__meta">{article.data.date.toLocaleDateString(dateLocale)}</div>
                 <h3><a href={getLocalePath(lang, `news/${slugFromId(article.id)}`)}>{article.data.title}</a></h3>
+                <p set:html={marked.parseInline(article.data.summary)} />
+                <a href={getLocalePath(lang, `news/${slugFromId(article.id)}`)}>{t('action.readMore')}</a>
               </div>
             </div>
           ))}
