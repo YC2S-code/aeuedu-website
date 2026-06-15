@@ -1,5 +1,5 @@
 ---
-title: 商企校友总会
+title: 商企校友总会 (ABEA)
 parent: alumni
-navLabel: 校友
+navLabel: ""
 ---
