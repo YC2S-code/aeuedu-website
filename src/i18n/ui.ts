@@ -16,7 +16,7 @@ export const ui = {
     'label.location': 'Location',
     'label.date': 'Date',
     'section.pins': 'Pinned',
-    'section.latestNews': 'Feature News',
+    'section.latestNews': 'Featured News',
     'section.upcomingEvents': 'Upcoming Events',
     'section.ourPrograms': 'Our Programs',
     'page.programs.title': 'Programs & Academics',
