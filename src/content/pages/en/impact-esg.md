@@ -1,5 +1,6 @@
 ---
 title: ESG
+titleZh: ESG
 parent: impact
 ---
 

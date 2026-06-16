@@ -1,5 +1,6 @@
 ---
 title: AEU Stories
+titleZh: 亚欧故事
 parent: about
 navLabel: AEU Stories
 ---

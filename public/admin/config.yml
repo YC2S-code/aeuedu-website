@@ -76,13 +76,14 @@ collections:
     create: true
     slug: "{{slug}}"
     i18n: true
-    summary: "{{title}} / {{i18n.zh.title}}"
+    summary: "{{title}} / {{titleZh}}"
     sortable_fields: ['title', 'parent']
     view_groups:
       - label: "Main Navigation Section / 主导航分类"
         field: parent
     fields:
-      - { label: "Title / 标题", name: title, widget: string, i18n: true }
+      - { label: "Title / 标题 (English)", name: title, widget: string, i18n: true }
+      - { label: "中文标题 (Chinese Title)", name: titleZh, widget: string, required: false, i18n: false, hint: "用于在管理页面列表中同时显示中英文标题。" }
       - label: "Show in Navigation Menu / 显示在导航菜单"
         name: parent
         widget: select

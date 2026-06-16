@@ -1,5 +1,6 @@
 ---
 title: Entrepreneurship & Investment Center
+titleZh: 创业投资发展中心
 parent: about
 navLabel: Investment Center
 ---

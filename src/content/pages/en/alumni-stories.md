@@ -1,5 +1,6 @@
 ---
 title: Alumni Stories
+titleZh: 校友故事
 parent: alumni
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Open Programs
+titleZh: 公开课
 parent: programs
 ---
 

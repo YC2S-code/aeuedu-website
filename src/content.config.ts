@@ -33,6 +33,7 @@ const pages = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/pages' }),
   schema: z.object({
     title: z.string(),
+    titleZh: z.string().optional(),
     image: z.string().optional(),
     parent: z.enum(['programs', 'faculty', 'alumni', 'impact', 'news', 'about']).optional(),
     navLabel: z.string().optional(),
