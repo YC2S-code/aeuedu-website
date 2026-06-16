@@ -11,15 +11,19 @@ const { lang } = Astro.props;
 const settings = await getEntry('settings', `${lang}/site`);
 const currentPath = Astro.url.pathname;
 
-// Pages created in the CMS can opt into a main nav section via their `parent` field
+// Nav children are driven entirely by CMS pages with a `parent` field set.
+// URL = /lang/parent/slug, where slug strips a leading "<parent>-" prefix from
+// the filename so "alumni-network.md" becomes /alumni/network, not /alumni/alumni-network.
 const allPages = await getCollection('pages');
 const navPagesByParent = new Map<string, { href: string; label: string }[]>();
 for (const entry of allPages) {
   const [entryLang, ...rest] = entry.id.split('/');
   if (entryLang !== lang || !entry.data.parent) continue;
+  const basename = rest.join('/');
+  const pageSlug = basename.replace(new RegExp(`^${entry.data.parent}-`), '');
   const list = navPagesByParent.get(entry.data.parent) ?? [];
   list.push({
-    href: getLocalePath(lang, rest.join('/')),
+    href: getLocalePath(lang, `${entry.data.parent}/${pageSlug}`),
     label: entry.data.navLabel || entry.data.title,
   });
   navPagesByParent.set(entry.data.parent, list);
@@ -37,50 +41,29 @@ type NavLink = {
   children?: NavLink[];
 };
 
+// Top-level sections are fixed; their children come entirely from CMS pages.
+// "Latest News" and "Contact" are the only hardcoded children because they
+// point to dedicated Astro pages that aren't content-collection entries.
 const links: (NavLink & { key?: string })[] = [
   {
     key: 'programs',
     href: getLocalePath(lang, 'programs'),
     label: lang === 'zh' ? '课程项目' : 'Programs',
-    children: [
-      { href: getLocalePath(lang, 'programs/emba'), label: lang === 'zh' ? '硕士课程 - EMBA' : 'EMBA' },
-      {
-        href: getLocalePath(lang, 'programs/pep'),
-        label: lang === 'zh' ? '专业高管课程 - PEP' : 'PEP (Executive Education)',
-        children: [
-          { href: getLocalePath(lang, 'programs/pep/open'), label: lang === 'zh' ? '公开课' : 'Open Programs' },
-          { href: getLocalePath(lang, 'programs/pep/custom'), label: lang === 'zh' ? '定制课程' : 'Custom Programs' },
-        ],
-      },
-    ],
   },
   {
     key: 'faculty',
     href: getLocalePath(lang, 'faculty'),
     label: lang === 'zh' ? '教授/企业咨询' : 'Faculty & Consulting',
-    children: [
-      { href: getLocalePath(lang, 'faculty/professors'), label: lang === 'zh' ? '教授阵容' : 'Faculty' },
-      { href: getLocalePath(lang, 'faculty/lecturers'), label: lang === 'zh' ? '课堂讲师' : 'Adjunct Lecturers' },
-      { href: getLocalePath(lang, 'faculty/consulting'), label: lang === 'zh' ? '企业咨询' : 'Corporate Consulting' },
-    ],
   },
   {
     key: 'alumni',
     href: getLocalePath(lang, 'alumni'),
     label: lang === 'zh' ? '亚欧人' : 'Alumni',
-    children: [
-      { href: getLocalePath(lang, 'alumni/network'), label: lang === 'zh' ? '校友网络' : 'Alumni Network' },
-      { href: getLocalePath(lang, 'alumni/stories'), label: lang === 'zh' ? '校友' : 'Alumni Stories' },
-    ],
   },
   {
     key: 'impact',
     href: getLocalePath(lang, 'impact'),
     label: lang === 'zh' ? '影响力' : 'Impact',
-    children: [
-      { href: getLocalePath(lang, 'impact/national-strategy'), label: lang === 'zh' ? '国家战略' : 'National Strategy' },
-      { href: getLocalePath(lang, 'impact/esg'), label: 'ESG' },
-    ],
   },
   {
     key: 'news',
@@ -88,7 +71,6 @@ const links: (NavLink & { key?: string })[] = [
     label: lang === 'zh' ? '活动/新闻' : 'News & Events',
     children: [
       { href: getLocalePath(lang, 'news'), label: lang === 'zh' ? '最新动态' : 'Latest News' },
-      { href: getLocalePath(lang, 'follow-us'), label: lang === 'zh' ? '关注亚欧' : 'Follow AEU' },
     ],
   },
   {
@@ -96,19 +78,16 @@ const links: (NavLink & { key?: string })[] = [
     href: getLocalePath(lang, 'about'),
     label: lang === 'zh' ? '我的亚欧' : 'About AEU',
     children: [
-      { href: getLocalePath(lang, 'about/stories'), label: lang === 'zh' ? '亚欧故事' : 'AEU Stories' },
-      { href: getLocalePath(lang, 'about/research-center'), label: lang === 'zh' ? '产业研究中心' : 'Industry Research Center' },
-      { href: getLocalePath(lang, 'about/investment-center'), label: lang === 'zh' ? '创业投资发展中心' : 'Entrepreneurship & Investment Center' },
       { href: getLocalePath(lang, 'contact'), label: lang === 'zh' ? '联系' : 'Contact' },
     ],
   },
 ];
 
-// Append CMS-created pages to the matching main nav section's submenu
+// Populate each section's children from CMS pages tagged with that parent
 for (const link of links) {
-  const extra = link.key ? navPagesByParent.get(link.key) : undefined;
-  if (extra?.length) {
-    link.children = [...(link.children ?? []), ...extra];
+  const cms = link.key ? navPagesByParent.get(link.key) : undefined;
+  if (cms?.length) {
+    link.children = [...cms, ...(link.children ?? [])];
   }
 }
 

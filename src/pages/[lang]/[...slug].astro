@@ -4,48 +4,18 @@ import Layout from '../../layouts/Layout.astro';
 import type { Lang } from '../../i18n/utils';
 
 export async function getStaticPaths() {
-  const slugs = [
-    'programs',
-    'programs/emba',
-    'programs/pep',
-    'programs/pep/open',
-    'programs/pep/custom',
-    'faculty',
-    'faculty/professors',
-    'faculty/lecturers',
-    'faculty/consulting',
-    'alumni',
-    'alumni/network',
-    'alumni/stories',
-    'impact',
-    'impact/national-strategy',
-    'impact/esg',
-    'follow-us',
-    'about',
-    'about/stories',
-    'about/research-center',
-    'about/investment-center',
-  ];
-
-  const knownIds = new Set(
-    ['en', 'zh'].flatMap((lang) => slugs.map((slug) => `${lang}/${slug.replace(/\//g, '-')}`)),
-  );
-
-  const knownPaths = ['en', 'zh'].flatMap((lang) =>
-    slugs.map((slug) => ({ params: { lang, slug }, props: { entryId: `${lang}/${slug.replace(/\//g, '-')}` } })),
-  );
-
-  // Pages created in the CMS that aren't part of the fixed nested routes above
-  // get a flat route based on their filename slug, e.g. /en/my-new-page/
   const allPages = await getCollection('pages');
-  const extraPaths = allPages
-    .filter((entry) => !knownIds.has(entry.id))
-    .map((entry) => {
-      const [lang, ...rest] = entry.id.split('/');
-      return { params: { lang, slug: rest.join('/') }, props: { entryId: entry.id } };
-    });
-
-  return [...knownPaths, ...extraPaths];
+  return allPages.map((entry) => {
+    const [lang, ...rest] = entry.id.split('/');
+    const basename = rest.join('/');
+    // Pages with parent get URL /lang/parent/slug.
+    // Strip leading "<parent>-" prefix from basename if present (handles legacy
+    // filenames like alumni-network.md → alumni/network).
+    const urlSlug = entry.data.parent
+      ? `${entry.data.parent}/${basename.replace(new RegExp(`^${entry.data.parent}-`), '')}`
+      : basename;
+    return { params: { lang, slug: urlSlug }, props: { entryId: entry.id } };
+  });
 }
 
 const { lang } = Astro.params as { lang: Lang };
