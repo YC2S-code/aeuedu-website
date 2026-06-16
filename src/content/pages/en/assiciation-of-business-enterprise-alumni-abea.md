@@ -1,6 +1,6 @@
 ---
 title: Assiciation of Business & Enterprise Alumni (ABEA)
 parent: alumni
-navLabel: ""
+navLabel: test one
 ---
 test
