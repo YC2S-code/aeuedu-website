@@ -70,7 +70,6 @@ collections:
             fields:
               - { label: "News Page Banner Image / 新闻页横幅图 (optional)", name: news, widget: image, required: false, i18n: duplicate }
               - { label: "Events Page Banner Image / 活动页横幅图 (optional)", name: events, widget: image, required: false, i18n: duplicate }
-              - { label: "活动页横幅图（选填）", name: events, widget: image, required: false }
 
   - name: pages
     label: "Site Pages / 网站页面"
