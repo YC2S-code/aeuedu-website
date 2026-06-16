@@ -13,8 +13,9 @@ const { lang } = Astro.params as { lang: Lang };
 const t = useTranslations(lang);
 const dateLocale = lang === 'zh' ? 'zh-CN' : 'en-US';
 const news = (await getLangEntries('news', lang)).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
-const settings = await getEntry('settings', `${lang}/site`);
-const bannerImage = settings!.data.banners?.news;
+const _siteEntry = await getEntry('settings', 'site');
+  const settings = _siteEntry!.data[lang as 'en' | 'zh'];
+const bannerImage = settings.banners?.news;
 ---
 
 <Layout lang={lang} title={t('page.news.title')}>

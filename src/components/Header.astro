@@ -8,7 +8,8 @@ interface Props {
 }
 
 const { lang } = Astro.props;
-const settings = await getEntry('settings', `${lang}/site`);
+const _siteEntry = await getEntry('settings', 'site');
+  const settings = _siteEntry!.data[lang as 'en' | 'zh'];
 const currentPath = Astro.url.pathname;
 
 // Nav children are driven entirely by CMS pages with a `parent` field set.
@@ -99,7 +100,7 @@ function isActive(href: string) {
 <header class="site-header">
   <div class="container site-header__inner">
     <a href={getLocalePath(lang, '')} class="site-header__brand">
-      <img src="/images/branding/aeu-logo.png" alt={settings!.data.siteName} class="site-header__logo" />
+      <img src="/images/branding/aeu-logo.png" alt={settings.siteName} class="site-header__logo" />
     </a>
 
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-drawer">

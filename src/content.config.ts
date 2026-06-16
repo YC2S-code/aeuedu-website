@@ -40,49 +40,37 @@ const pages = defineCollection({
   }),
 });
 
-const settings = defineCollection({
-  loader: glob({ pattern: '**/*.yml', base: './src/content/settings' }),
-  schema: z.object({
-    siteName: z.string(),
-    tagline: z.string(),
-    nav: z.object({
-      contact: z.string(),
-    }),
-    footer: z.object({
-      address: z.string(),
-      phone: z.string(),
-      email: z.string(),
-      mapEmbedUrl: z.string().optional(),
-      facebook: z.string().optional(),
-      youtube: z.string().optional(),
-      tiktok: z.string().optional(),
-      wechat: z.string().optional(),
-      wechatQr: z.string().optional(),
-      copyright: z.string(),
-      disclaimer: z.string().optional(),
-    }),
-    home: z.object({
-      heroTitle: z.string(),
-      heroSubtitle: z.string(),
-      heroImage: z.string().optional(),
-      heroCta: z.string(),
-      highlightsTitle: z.string(),
-      highlights: z
-        .array(
-          z.object({
-            title: z.string(),
-            text: z.string(),
-          })
-        )
-        .optional(),
-    }),
-    banners: z
-      .object({
-        news: z.string().optional(),
-        events: z.string().optional(),
-      })
-      .optional(),
+const siteLocale = z.object({
+  siteName: z.string(),
+  tagline: z.string(),
+  nav: z.object({ contact: z.string() }),
+  footer: z.object({
+    address: z.string(),
+    phone: z.string(),
+    email: z.string(),
+    mapEmbedUrl: z.string().optional(),
+    facebook: z.string().optional(),
+    youtube: z.string().optional(),
+    tiktok: z.string().optional(),
+    wechat: z.string().optional(),
+    wechatQr: z.string().optional(),
+    copyright: z.string(),
+    disclaimer: z.string().optional(),
   }),
+  home: z.object({
+    heroTitle: z.string(),
+    heroSubtitle: z.string(),
+    heroImage: z.string().optional(),
+    heroCta: z.string(),
+    highlightsTitle: z.string(),
+    highlights: z.array(z.object({ title: z.string(), text: z.string() })).optional(),
+  }),
+  banners: z.object({ news: z.string().optional(), events: z.string().optional() }).optional(),
+});
+
+const settings = defineCollection({
+  loader: glob({ pattern: 'site.yml', base: './src/content/settings' }),
+  schema: z.object({ en: siteLocale, zh: siteLocale }),
 });
 
 export const collections = { news, events, pages, settings };

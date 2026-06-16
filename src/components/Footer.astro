@@ -8,8 +8,9 @@ interface Props {
 }
 
 const { lang } = Astro.props;
-const settings = await getEntry('settings', `${lang}/site`);
-const { siteName, tagline, footer } = settings!.data;
+const _siteEntry = await getEntry('settings', 'site');
+  const settings = _siteEntry!.data[lang as 'en' | 'zh'];
+const { siteName, tagline, footer } = settings;
 ---
 
 <footer class="site-footer">

@@ -10,8 +10,9 @@ export function getStaticPaths() {
 const { lang } = Astro.params as { lang: Lang };
 const t = useTranslations(lang);
 const entry = await getEntry('pages', `${lang}/contact`);
-const settings = await getEntry('settings', `${lang}/site`);
-const { footer } = settings!.data;
+const _siteEntry = await getEntry('settings', 'site');
+  const settings = _siteEntry!.data[lang as 'en' | 'zh'];
+const { footer } = settings;
 const { Content } = await render(entry!);
 ---
 

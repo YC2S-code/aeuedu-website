@@ -15,59 +15,64 @@ i18n:
 collections:
   - name: settings
     label: "Site Settings / 网站设置"
+    i18n:
+      structure: single_file
+      locales: [en, zh]
+      default_locale: en
     files:
-      - name: site_en
-        label: "🇬🇧 English Settings"
-        file: src/content/settings/en/site.yml
-        fields: &settings_fields
-          - { label: "Site Name / 网站名称", name: siteName, widget: string }
-          - { label: "Tagline / 标语", name: tagline, widget: string }
+      - name: site
+        label: "General Settings / 通用设置"
+        file: src/content/settings/site.yml
+        i18n: true
+        fields:
+          - { label: "Site Name / 网站名称", name: siteName, widget: string, i18n: true }
+          - { label: "Tagline / 标语", name: tagline, widget: string, i18n: true }
           - label: "Navigation Labels / 导航标签"
             name: nav
             widget: object
+            i18n: true
             fields:
-              - { label: "Contact / 联系", name: contact, widget: string }
+              - { label: "Contact / 联系", name: contact, widget: string, i18n: true }
           - label: "Footer / 页脚"
             name: footer
             widget: object
+            i18n: true
             fields:
-              - { label: "Address / 地址", name: address, widget: string }
-              - { label: "Phone / 电话", name: phone, widget: string }
-              - { label: "Email / 邮箱", name: email, widget: string }
-              - { label: "Google Map URL (optional)", name: mapEmbedUrl, widget: string, required: false, hint: "Paste the 'src' from a Google Maps embed iframe" }
-              - { label: "Facebook URL (optional)", name: facebook, widget: string, required: false }
-              - { label: "YouTube URL (optional)", name: youtube, widget: string, required: false }
-              - { label: "TikTok URL (optional)", name: tiktok, widget: string, required: false }
-              - { label: "WeChat ID / 微信号 (optional)", name: wechat, widget: string, required: false }
-              - { label: "WeChat QR Code / 微信二维码 (optional)", name: wechatQr, widget: image, required: false, hint: "Upload the official account QR code so visitors can scan to follow" }
-              - { label: "Copyright Text / 版权信息", name: copyright, widget: string }
-              - { label: "Disclaimer / 免责声明 (optional)", name: disclaimer, widget: text, required: false }
+              - { label: "Address / 地址", name: address, widget: string, i18n: true }
+              - { label: "Phone / 电话", name: phone, widget: string, i18n: duplicate }
+              - { label: "Email / 邮箱", name: email, widget: string, i18n: duplicate }
+              - { label: "Google Map URL (optional)", name: mapEmbedUrl, widget: string, required: false, i18n: duplicate, hint: "Paste the 'src' from a Google Maps embed iframe" }
+              - { label: "Facebook URL (optional)", name: facebook, widget: string, required: false, i18n: duplicate }
+              - { label: "YouTube URL (optional)", name: youtube, widget: string, required: false, i18n: duplicate }
+              - { label: "TikTok URL (optional)", name: tiktok, widget: string, required: false, i18n: duplicate }
+              - { label: "WeChat ID / 微信号 (optional)", name: wechat, widget: string, required: false, i18n: duplicate }
+              - { label: "WeChat QR Code / 微信二维码 (optional)", name: wechatQr, widget: image, required: false, i18n: duplicate, hint: "Upload the official account QR code" }
+              - { label: "Copyright Text / 版权信息", name: copyright, widget: string, i18n: true }
+              - { label: "Disclaimer / 免责声明 (optional)", name: disclaimer, widget: text, required: false, i18n: true }
           - label: "Homepage / 首页"
             name: home
             widget: object
+            i18n: true
             fields:
-              - { label: "Hero Title / 主标题", name: heroTitle, widget: string }
-              - { label: "Hero Subtitle / 副标题", name: heroSubtitle, widget: markdown, buttons: [bold, italic, link], minimal: true }
-              - { label: "Hero Image / 主图背景 (optional)", name: heroImage, widget: image, required: false }
-              - { label: "Hero Button Text / 按钮文字", name: heroCta, widget: string }
-              - { label: "Highlights Title / 推广台标题", name: highlightsTitle, widget: string }
+              - { label: "Hero Title / 主标题", name: heroTitle, widget: string, i18n: true }
+              - { label: "Hero Subtitle / 副标题", name: heroSubtitle, widget: markdown, buttons: [bold, italic, link], minimal: true, i18n: true }
+              - { label: "Hero Image / 主图背景 (optional)", name: heroImage, widget: image, required: false, i18n: duplicate }
+              - { label: "Hero Button Text / 按钮文字", name: heroCta, widget: string, i18n: true }
+              - { label: "Highlights Title / 推广台标题", name: highlightsTitle, widget: string, i18n: true }
               - label: "Highlight Cards / 推广台卡片"
                 name: highlights
                 widget: list
+                i18n: true
                 fields:
-                  - { label: "Title / 标题", name: title, widget: string }
-                  - { label: "Text / 内容", name: text, widget: markdown, buttons: [bold, italic, link], minimal: true }
+                  - { label: "Title / 标题", name: title, widget: string, i18n: true }
+                  - { label: "Text / 内容", name: text, widget: markdown, buttons: [bold, italic, link], minimal: true, i18n: true }
           - label: "Page Banners / 页面横幅图"
             name: banners
             widget: object
+            i18n: true
             fields:
-              - { label: "News Page Banner (optional)", name: news, widget: image, required: false }
-              - { label: "Events Page Banner (optional)", name: events, widget: image, required: false }
-
-      - name: site_zh
-        label: "🇨🇳 中文设置 Chinese Settings"
-        file: src/content/settings/zh/site.yml
-        fields: *settings_fields
+              - { label: "News Page Banner (optional)", name: news, widget: image, required: false, i18n: duplicate }
+              - { label: "Events Page Banner (optional)", name: events, widget: image, required: false, i18n: duplicate }
 
   - name: pages
     label: "Site Pages / 网站页面"

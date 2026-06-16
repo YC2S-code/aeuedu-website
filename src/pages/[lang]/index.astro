@@ -12,8 +12,9 @@ export function getStaticPaths() {
 const { lang } = Astro.params as { lang: Lang };
 const t = useTranslations(lang);
 
-const settings = await getEntry('settings', `${lang}/site`);
-const { siteName, tagline, home } = settings!.data;
+const _siteEntry = await getEntry('settings', 'site');
+  const settings = _siteEntry!.data[lang as 'en' | 'zh'];
+const { siteName, tagline, home } = settings;
 
 const allNews = await getLangEntries('news', lang);
 const pinnedNews = allNews
