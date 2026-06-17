@@ -68,7 +68,12 @@ const { siteName, tagline, footer } = settings;
 
     <div class="site-footer__bottom">
       {footer.disclaimer && <p class="site-footer__disclaimer">{footer.disclaimer}</p>}
-      <p>{footer.copyright}</p>
+      <p>
+        {footer.copyright}
+        <a href={getLocalePath(lang, 'privacy')} class="site-footer__policy-link">
+          {lang === 'zh' ? '隐私政策与免责声明' : 'Privacy Policy & Disclaimer'}
+        </a>
+      </p>
     </div>
   </div>
 </footer>
