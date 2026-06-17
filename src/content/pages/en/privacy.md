@@ -5,7 +5,7 @@ titleZh: 隐私政策与免责声明
 
 *Last updated: June 2026*
 
-AEU International Business School (AEUPS), operated by AME (Asia Management Education Co., Ltd.), is committed to protecting your personal information. This policy explains how we collect, use, and safeguard data when you visit our website or interact with our programs.
+Asia Euro University Postgraduate School (AEUPS), operating as AEU International Business School and managed by AME (Asia Management Education Co., Ltd.), is committed to protecting your personal information. This policy explains how we collect, use, and safeguard data when you visit our website or interact with our programs.
 
 ---
 
@@ -103,8 +103,8 @@ AEU International Business School shall not be liable for any loss or damage ari
 
 If you have questions about this policy or wish to exercise your rights, please contact:
 
-**AEU International Business School (AEUPS)**  
-AME — Asia Management Education Co., Ltd.  
+**Asia Euro University Postgraduate School (AEUPS)**  
+AEU International Business School — managed by AME (Asia Management Education Co., Ltd.)  
 3rd Floor, The Gateway @ Phnom Penh (Guobin Tower)  
 Phnom Penh, Kingdom of Cambodia  
 Email: info@aeuedu.com  
