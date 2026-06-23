@@ -1,5 +1,5 @@
 ---
-title: PEP (Executive Education)
+title: ELP - Executive Leadership Program
 titleZh: 专业高管课程 - PEP
 parent: programs
 navLabel: PEP

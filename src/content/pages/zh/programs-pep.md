@@ -1,5 +1,5 @@
 ---
-title: 专业高管课程 - PEP
+title: ""
 parent: programs
 navLabel: 专业高管课程
 ---
