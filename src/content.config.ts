@@ -63,7 +63,7 @@ const siteLocale = z.object({
     heroImage: z.string().optional(),
     heroCta: z.string(),
     highlightsTitle: z.string(),
-    highlights: z.array(z.object({ title: z.string(), text: z.string() })).optional(),
+    highlights: z.array(z.object({ title: z.string(), text: z.string(), image: z.string().optional() })).optional(),
   }),
   banners: z.object({ news: z.string().optional(), events: z.string().optional() }).optional(),
 });

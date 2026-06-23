@@ -64,6 +64,7 @@ collections:
                 widget: list
                 i18n: true
                 fields:
+                  - { label: "Image / 图片 (500×200 recommended)", name: image, widget: image, required: false, i18n: duplicate }
                   - { label: "Title / 标题", name: title, widget: string, i18n: true }
                   - { label: "Text / 内容", name: text, widget: markdown, buttons: [bold, italic, link], minimal: true, i18n: true }
           - label: "Page Banners / 页面横幅图"

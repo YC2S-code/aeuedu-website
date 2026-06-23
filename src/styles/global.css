@@ -460,6 +460,11 @@ body.nav-open {
   transform: scale(1.05);
 }
 
+.card__image--highlight {
+  aspect-ratio: 10 / 4;
+  overflow: hidden;
+}
+
 .card__body {
   padding: 1.25rem 1.4rem 1.5rem;
   display: flex;
