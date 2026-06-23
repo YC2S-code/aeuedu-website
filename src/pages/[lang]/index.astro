@@ -17,11 +17,6 @@ const _siteEntry = await getEntry('settings', 'site');
 const { siteName, tagline, home } = settings;
 
 const allNews = await getLangEntries('news', lang);
-const pinnedNews = allNews
-  .filter((article) => article.data.pinned)
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0, 2);
-
 const featuredNews = allNews.filter((article) => article.data.featured);
 const news = (featuredNews.length > 0 ? featuredNews : allNews)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
@@ -64,32 +59,6 @@ const highlights = home.highlights ?? [];
     </div>
   </section>
 
-  {pinnedNews.length > 0 && (
-    <section class="section section-pins">
-      <div class="container">
-        <h2 class="section-title">{t('section.pins')}</h2>
-        <div class="grid grid-3">
-          {pinnedNews.map((article, i) => (
-            <div class="card" data-reveal style={`transition-delay: ${i * 80}ms`}>
-              <a href={getLocalePath(lang, `news/${slugFromId(article.id)}`)}>
-                <img class="card__image" src={article.data.image ?? DEFAULT_ARTICLE_IMAGE} alt={article.data.title} />
-              </a>
-              <div class="card__body">
-                <div class="card__badges">
-                  <span class="badge">{newsCategoryLabel(t, article.data.category)}</span>
-                  <span class="badge badge--pinned">{t('label.pinned')}</span>
-                </div>
-                <div class="card__meta">{article.data.date.toLocaleDateString(dateLocale)}</div>
-                <h3><a href={getLocalePath(lang, `news/${slugFromId(article.id)}`)}>{article.data.title}</a></h3>
-                <p set:html={marked.parseInline(article.data.summary)} />
-                <a href={getLocalePath(lang, `news/${slugFromId(article.id)}`)}>{t('action.readMore')}</a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )}
 
   <section class="section">
     <div class="container">
