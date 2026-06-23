@@ -24,20 +24,32 @@ en:
       building what comes next.
     heroImage: /images/uploads/heropage_banner.jpg
     heroCta: Explore the EMBA
-    highlightsTitle: What You'll Find at AEU
+    highlightsTitle: Where knowledge is common, judgment is rare. We build the latter.
     highlights:
-      - title: Faculty Who've Been in the Room
-        text: Professors from leading global business schools — and from the real arenas
-          of business. Western frameworks, Eastern instinct, both at once.
-      - title: A Different Kind of Classroom
-        text: An EMBA isn't one more credential. It's a different room of people —
-          entrepreneurs who built their businesses with their own hands.
-      - title: A Circle for Life
-        text: Founders, successors, and veterans of the business world — a circle that
-          learns and walks forward together, starting here.
-      - title: ASEAN Is Your Classroom
-        text: Anchored by the RCEP gateway, study trips take you into real markets — so
-          perspective and connections both land.
+      - title: FROM KNOWLEDGE TO JUDGMENT
+        text: >-
+          We are not content with the transfer of knowledge. Every course, every
+          case, is built toward one end: **to change the quality of your
+          decisions**.
+
+
+          *When most institutions still teach what to know, we train how to decide.*
+      - title: FROM CONNECTION TO CONTINUITY
+        text: >-
+          Graduation is not an exit — it is the moment you enter ABEA (Alumni
+          Network). No roster, no directory. Only those still moving in the same
+          direction, with a place to return to and a reason to continue.
+
+
+          *What is built here is measured not in a single encounter, but in a long arc.*
+      - title: FROM EDUCATION TO INDUSTRY
+        text: >-
+          Education is the entry point, not the destination. What is learned
+          must ultimately reach enterprise and capital — judgment tested in
+          class, proven where decisions are real.
+
+
+          *From learning to a system where action and outcome are the only measures.*
   banners:
     news: ""
     events: ""
@@ -64,16 +76,23 @@ zh:
     heroSubtitle: 我们志在成为东盟地区最具影响力的**高端管理教育与商业生态平台**。以高等**教育为纽带**,**连接理念同行的企业与人才,共创未来。**
     heroImage: /images/uploads/heropage_banner.jpg
     heroCta: 了解 EMBA 课程
-    highlightsTitle: 你会在亚欧，遇见什么
+    highlightsTitle: 知者众，断者寡，我们造就的是后者。
     highlights:
-      - title: 中西合璧的师资
-        text: 教授来自全球知名商学院，也来自真实的商业战场——西方的框架，东方的直觉，缺一不可。
-      - title: 一间不一样的教室
-        text: EMBA，不是多一个学位，而是换一群同行的人。这里坐着的，是把企业一手做起来的人。
-      - title: 一辈子的圈子
-        text: 把生意做起来的人，接过家业的人，在生意场上摸爬多年的人——一个一起学、一起走的圈子，从这里开始。
-      - title: 东盟，就是你的课堂
-        text: 依托 RCEP 区域入口，研学走进真实市场，让视野和人脉，一起落地。
+      - title: 01 从知识到判断
+        text: |-
+          我们不满足于知识的传递。每一门课程、每一个案例，都以「**改变决策质量**」为终极目标。
+
+          *当大多数机构仍在传授知识时，我们选择让知识转化为判断力。*
+      - title: 02 从链接到延续
+        text: |-
+          毕业不是终点，而是加入ABEA（校友网络圈子）的真正起点。这里没有名录，只有仍在同行的人——有处可去，有时可续。
+
+          *此中往来，不计一时之交，而图长久之势。*
+      - title: 03 从教育到产业
+        text: |-
+          教育是入口，不是终点。所学之处，终要延伸至企业运营与资本对接——课堂所验之断，见于真实决策之局。
+
+          *以教育为入口，延伸至商业行动与结果的实战系统。*
   banners:
     news: ""
     events: ""
