@@ -1,6 +1,6 @@
 ---
 title: ELP - Executive Leadership Program
-titleZh: 专业高管课程 - PEP
+titleZh: ""
 parent: programs
 navLabel: PEP
 ---
