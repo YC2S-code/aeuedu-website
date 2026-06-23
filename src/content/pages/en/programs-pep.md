@@ -2,7 +2,7 @@
 title: ELP - Executive Leadership Program
 titleZh: ""
 parent: programs
-navLabel: PEP
+navLabel: ELP
 ---
 
 Details about our Professional Executive Programs (PEP) are coming soon.
