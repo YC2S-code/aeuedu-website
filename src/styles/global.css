@@ -601,10 +601,14 @@ body.nav-open {
   margin-bottom: 1.4em;
 }
 
-.prose br {
-  display: block;
-  content: "";
-  margin-top: 1em;
+.prose p:empty {
+  display: none;
+}
+
+.prose p.spacer,
+.prose p:has(> *:only-child[data-spacer]) {
+  height: 1.5rem;
+  margin: 0;
 }
 
 .prose h2 {
