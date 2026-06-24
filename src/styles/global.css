@@ -377,7 +377,7 @@ body.nav-open {
 /* Page header (interior pages) */
 .page-header {
   background: var(--color-bg-alt);
-  padding: 2.5rem 0;
+  padding: 1rem 0;
   border-bottom: 1px solid var(--color-border);
 }
 
