@@ -53,12 +53,9 @@ ELP 由亚欧大学国际商学院主办，课程结业后颁发机构级结业�
 
 - - -
 
-<span style="color: #d4a017">培养具有战略眼光、经营能力 和领导魅力的新一代企业家。</span>
-
 #### 长远愿景 · LONG-TERM VISION
 
-**培养具有战略眼光、经营能力
-和领导魅力的新一代企业家。**
+<span style="color: #d4a017">培养具有战略眼光、经营能力 和领导魅力的新一代企业家。</span>
 
 ![](/images/uploads/elp-banner-2.jpg)
 
