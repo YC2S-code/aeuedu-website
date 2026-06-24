@@ -3,6 +3,8 @@ title: EMBA - 高级工商管理硕士
 parent: programs
 navLabel: EMBA
 image: /images/uploads/pagebanner_emba.tiff
+videoYoutube: null
+videoBilibili: null
 ---
 # 以学问淬炼商道，以视野重塑格局
 
@@ -20,9 +22,7 @@ image: /images/uploads/pagebanner_emba.tiff
 
 亚欧大学已获柬埔寨教育部（MoEYS）正式批准授权，并列入中国教育部留学服务中心（CSCSE）历史认证查询记录，学历具备完整的跨境可查验性。课程以中文为主要教学语言，以东南亚政商生态为真实战场，将地缘战略、宏观经济研判、企业传承与AI时代的领导力，系统性融入每一个学习模块。这里没有填鸭式的知识灌输，没有脱离现实的案例堆砌——有的是与同量级决策者的真实碰撞，有的是在不确定中反复锻造判断力的思维历练。**以学术严谨为基石，以地缘商业智识为坐标，以同侪精英圈层为底气，我们不培养职业学生——我们锻造能够在动荡中找到方向、在不确定中构建秩序的商业领袖。**
 
-
-
-
+<br>
 
 # **这间屋子，就是回报**
 
