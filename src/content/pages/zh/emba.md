@@ -3,8 +3,6 @@ title: EMBA - 高级工商管理硕士
 parent: programs
 navLabel: EMBA
 image: /images/uploads/pagebanner_emba.tiff
-videoYoutube: null
-videoBilibili: null
 ---
 # 以学问淬炼商道，以视野重塑格局
 
