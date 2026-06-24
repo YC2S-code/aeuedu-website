@@ -30,6 +30,8 @@ image: /images/uploads/pagebanner_emba.tiff
 >
 > **而是一张能穿越时间、行业与边界的信任地图。**
 
+![](/images/uploads/emb-why-cambodia.tiff)
+
 **区位与准入优势 · Why Cambodia**
 
 为什么是柬埔寨——通往东盟最近的那扇门
