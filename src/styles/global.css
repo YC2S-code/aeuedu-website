@@ -597,6 +597,16 @@ body.nav-open {
   max-width: 100%;
 }
 
+.prose p {
+  margin-bottom: 1.4em;
+}
+
+.prose br {
+  display: block;
+  content: "";
+  margin-top: 1em;
+}
+
 .prose h2 {
   margin-top: 1.6em;
 }
