@@ -37,6 +37,8 @@ const pages = defineCollection({
     image: z.string().optional(),
     parent: z.enum(['programs', 'faculty', 'alumni', 'impact', 'news', 'about']).optional(),
     navLabel: z.string().optional(),
+    videoYoutube: z.string().optional(),
+    videoBilibili: z.string().optional(),
   }),
 });
 

@@ -22,6 +22,20 @@ const { lang } = Astro.params as { lang: Lang };
 const { entryId } = Astro.props as { entryId: string };
 const entry = await getEntry('pages', entryId);
 const { Content } = await render(entry!);
+
+function youtubeEmbedUrl(url: string): string | null {
+  const m = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([A-Za-z0-9_-]{11})/);
+  return m ? `https://www.youtube.com/embed/${m[1]}` : null;
+}
+
+function bilibiliEmbedUrl(url: string): string | null {
+  const m = url.match(/bilibili\.com\/video\/(BV[A-Za-z0-9]+)/);
+  return m ? `https://player.bilibili.com/player.html?bvid=${m[1]}&autoplay=0` : null;
+}
+
+const videoUrl = lang === 'zh'
+  ? (entry!.data.videoBilibili ? bilibiliEmbedUrl(entry!.data.videoBilibili) : (entry!.data.videoYoutube ? youtubeEmbedUrl(entry!.data.videoYoutube) : null))
+  : (entry!.data.videoYoutube ? youtubeEmbedUrl(entry!.data.videoYoutube) : (entry!.data.videoBilibili ? bilibiliEmbedUrl(entry!.data.videoBilibili) : null));
 ---
 
 <Layout lang={lang} title={entry!.data.title}>
@@ -37,6 +51,11 @@ const { Content } = await render(entry!);
   </div>
   <section class="section">
     <div class="container">
+      {videoUrl && (
+        <div class="embed-responsive" style="max-width: 760px; margin-bottom: 2rem;">
+          <iframe src={videoUrl} allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" />
+        </div>
+      )}
       <div class="prose">
         <Content />
       </div>
