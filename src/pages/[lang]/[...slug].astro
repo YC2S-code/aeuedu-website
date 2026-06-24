@@ -25,11 +25,16 @@ const { Content } = await render(entry!);
 ---
 
 <Layout lang={lang} title={entry!.data.title}>
-  <div class:list={['page-header', { 'page-header--has-image': entry!.data.image }]} style={entry!.data.image ? `--page-header-image: url(${entry!.data.image})` : undefined}>
+  <div class="page-header">
     <div class="container">
       <h1>{entry!.data.title}</h1>
     </div>
   </div>
+  {entry!.data.image && (
+    <div class="page-banner">
+      <img src={entry!.data.image} alt={entry!.data.title} class="page-banner__img" />
+    </div>
+  )}
   <section class="section">
     <div class="container">
       <div class="prose">
