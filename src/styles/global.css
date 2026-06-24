@@ -401,7 +401,7 @@ body.nav-open {
 
 /* Sections */
 .section {
-  padding: clamp(2.5rem, 6vw, 4.5rem) 0;
+  padding: clamp(1.5rem, 3vw, 2.5rem) 0;
 }
 
 .section-alt {
@@ -594,7 +594,7 @@ body.nav-open {
 
 /* Content / Markdown body */
 .prose {
-  max-width: 760px;
+  max-width: 100%;
 }
 
 .prose h2 {
