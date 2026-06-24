@@ -109,7 +109,7 @@ collections:
         widget: markdown
         i18n: true
         buttons: [bold, italic, code, link, heading-one, heading-two, heading-three, quote, bulleted-list, numbered-list]
-        editor_components: []
+        editor_components: [image]
 
   - name: news
     label: "News / 新闻与公告"
