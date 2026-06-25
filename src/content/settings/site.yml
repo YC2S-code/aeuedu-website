@@ -20,9 +20,9 @@ en:
   home:
     heroTitle: AEU Postgraduate School
     heroSubtitle: Twenty years on this road, in search of a different room of
-      people. AEU Postgraduate School (AEUPS) — leading where it matters,
-      building what comes next.
-    heroImage: /images/uploads/heropage_banner.jpg
+      people. AEU Postgraduate School (AEUPS) — **leading where it matters,
+      building what comes next.**
+    heroImage: /images/uploads/heropage_banner2.jpg
     heroCta: Explore the EMBA
     highlightsTitle: Where knowledge is common, judgment is rare. We build the latter.
     highlights:
@@ -34,7 +34,7 @@ en:
 
 
           ***When most institutions still teach what to know, we train how to decide.***
-        image: /images/uploads/pagesmall-banner-01.tiff
+        image: /images/uploads/pagesmall-banner-01.jpg
       - title: FROM CONNECTION TO CONTINUITY
         text: >-
           Graduation is not an exit — it is the moment you enter ABEA (Alumni
@@ -43,7 +43,7 @@ en:
 
 
           ***What is built here is measured not in a single encounter, but in a long arc.***
-        image: /images/uploads/pagesmall-banner-02.tiff
+        image: /images/uploads/pagesmall-banner-02.jpg
       - title: FROM EDUCATION TO INDUSTRY
         text: >-
           Education is the entry point, not the destination. What is learned
@@ -52,7 +52,7 @@ en:
 
 
           ***From learning to a system where action and outcome are the only measures.***
-        image: /images/uploads/pagesmall-banner-03.tiff
+        image: /images/uploads/pagesmall-banner-03.jpg
   banners:
     news: ""
     events: ""
@@ -77,7 +77,7 @@ zh:
   home:
     heroTitle: 亚欧大学国际商学院
     heroSubtitle: 我们志在成为东盟地区最具影响力的**高端管理教育与商业生态平台**。以高等**教育为纽带**,**连接理念同行的企业与人才,共创未来。**
-    heroImage: /images/uploads/heropage_banner.jpg
+    heroImage: /images/uploads/heropage_banner2.jpg
     heroCta: 了解 EMBA 课程
     highlightsTitle: 知者众，断者寡，我们造就的是后者。
     highlights:
