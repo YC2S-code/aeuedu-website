@@ -111,7 +111,7 @@ collections:
           - { label: "News & Events / 活动/新闻", value: news }
           - { label: "About AEU / 我的亚欧", value: about }
       - { label: "Navigation Label / 导航菜单文字", name: navLabel, widget: string, required: false, i18n: true, hint: "Short label shown in the navigation menu. If left empty, the page Title above is used." }
-      - { label: "Banner Image / 横幅图", name: image, widget: image, required: false, i18n: duplicate, media_library: { config: { multiple: false } }, hint: "✅ JPG, PNG, WebP, SVG only. ❌ Do NOT upload TIFF, PSD or PDF — they cause slow loading. Recommended size: 1920 x 600px." }
+      - { label: "Banner Image / 横幅图", name: image, widget: image, required: false, i18n: duplicate, media_library: { config: { multiple: false } }, hint: "✅ JPG, PNG, WebP, GIF only. ❌ No TIFF/PSD/PDF. Recommended size: 1920 x 600px." }
       - { label: "YouTube Video URL", name: videoYoutube, widget: string, required: false, i18n: duplicate, hint: "Paste the full YouTube URL e.g. https://www.youtube.com/watch?v=xxxxxx — shown on EN pages." }
       - { label: "Bilibili Video URL / B站视频链接", name: videoBilibili, widget: string, required: false, i18n: duplicate, hint: "粘贴B站视频链接 e.g. https://www.bilibili.com/video/BVxxxxxx — 显示在中文页面。" }
       - { label: "Body / 正文", name: body, widget: markdown, i18n: true }
@@ -127,7 +127,7 @@ collections:
     fields:
       - { label: "Title / 标题", name: title, widget: string, i18n: true }
       - { label: "Date / 日期", name: date, widget: datetime, i18n: duplicate }
-      - { label: "Banner Image / 横幅图", name: image, widget: image, required: true, i18n: true, hint: "✅ JPG, PNG, WebP only. ❌ No TIFF/PSD/PDF. Recommended: 1200 x 675px (16:9)." }
+      - { label: "Banner Image / 横幅图", name: image, widget: image, required: true, i18n: true, hint: "✅ JPG, PNG, WebP, GIF only. ❌ No TIFF/PSD/PDF. Recommended: 1200 x 675px (16:9)." }
       - label: "Category / 分类"
         name: category
         widget: select
@@ -158,7 +158,7 @@ collections:
       - { label: "Date / 开始日期", name: date, widget: datetime, i18n: duplicate }
       - { label: "End Date / 结束日期", name: endDate, widget: datetime, required: false, i18n: duplicate }
       - { label: "Location / 地点", name: location, widget: string, required: false, i18n: true }
-      - { label: "Banner Image / 横幅图", name: image, widget: image, required: true, i18n: true, hint: "✅ JPG, PNG, WebP only. ❌ No TIFF/PSD/PDF. Recommended: 1200 x 675px (16:9)." }
+      - { label: "Banner Image / 横幅图", name: image, widget: image, required: true, i18n: true, hint: "✅ JPG, PNG, WebP, GIF only. ❌ No TIFF/PSD/PDF. Recommended: 1200 x 675px (16:9)." }
       - { label: "Category / 分类", name: category, widget: string, required: false, i18n: true }
       - { label: 'Show in Homepage Upcoming Events / 显示在首页"近期活动"', name: featured, widget: boolean, required: false, default: false, i18n: duplicate, hint: "Up to 4 featured events show on the homepage Upcoming Events section, sorted by soonest date if more than 4 are selected." }
       - { label: "Summary / 摘要", name: summary, widget: markdown, buttons: [bold, italic, link], minimal: true, i18n: true }
