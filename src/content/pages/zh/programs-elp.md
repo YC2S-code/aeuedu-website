@@ -3,8 +3,6 @@ title: 卓越企业家领袖班（ELP）
 parent: programs
 navLabel: ELP 领袖班
 image: /images/uploads/pagebanner_elp.jpg
-videoYoutube: null
-videoBilibili: null
 ---
 ## **不只是学习，而是一次领袖的自我重建**
 
