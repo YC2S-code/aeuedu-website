@@ -2,7 +2,7 @@
 title: 卓越企业家领袖班（ELP）
 parent: programs
 navLabel: ELP 领袖班
-image: /images/uploads/pagebanner_elp.tiff
+image: /images/uploads/pagebanner_elp.jpg
 videoYoutube: null
 videoBilibili: null
 ---
