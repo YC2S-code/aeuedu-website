@@ -4,13 +4,6 @@ backend:
 
 local_backend: true
 
-media_library:
-  name: default
-  config:
-    multiple: false
-
-# Allowed upload formats — JPG, PNG, WebP, SVG, GIF only
-# TIFF, PSD, PDF are not allowed
 
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
