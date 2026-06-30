@@ -83,7 +83,7 @@ collections:
     slug: "{{slug}}"
     i18n: true
     summary: "{{title}} / {{titleZh}} — {{published}}"
-    sortable_fields: ['title', 'parent', 'published']
+    sortable_fields: ['title', 'navLabel', 'parent', 'published']
     view_groups:
       - label: "Main Navigation Section / 主导航分类"
         field: parent
