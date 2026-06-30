@@ -10,6 +10,8 @@ videoBilibili: null
 
 亚欧（Asia Euro）的故事，始于2002年。一群深耕东南亚的教育者，以一个组织的形态，开始了对区域管理教育的系统性探索。三年后，这个探索有了国家的名分。
 
+![](/images/uploads/banner_aboutus.jpg)
+
 **2005 · 国家子令**
 
 亚欧大学（Asia Euro University）由柬埔寨王国国家子令正式设立——成为受国家法律命名与保护的学术主体，具备完整学位颁授资格。
