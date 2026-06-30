@@ -39,6 +39,7 @@ const pages = defineCollection({
     navLabel: z.string().nullish(),
     videoYoutube: z.string().nullish(),
     videoBilibili: z.string().nullish(),
+    published: z.boolean().default(true),
   }),
 });
 

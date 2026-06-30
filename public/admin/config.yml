@@ -82,14 +82,15 @@ collections:
     create: true
     slug: "{{slug}}"
     i18n: true
-    summary: "{{title}} / {{titleZh}}"
-    sortable_fields: ['title', 'parent']
+    summary: "{{title}} / {{titleZh}} — {{published}}"
+    sortable_fields: ['title', 'parent', 'published']
     view_groups:
       - label: "Main Navigation Section / 主导航分类"
         field: parent
     fields:
       - { label: "Title / 标题 (English)", name: title, widget: string, i18n: true }
       - { label: "中文标题 (Chinese Title)", name: titleZh, widget: string, required: false, i18n: false, hint: "用于在管理页面列表中同时显示中英文标题。" }
+      - { label: "Published / 发布上线", name: published, widget: boolean, default: true, i18n: duplicate, hint: "Turn OFF to hide this page from the live site and navigation menu without deleting it. / 关闭后此页面将从网站和导航菜单中隐藏，但不会被删除。" }
       - label: "Show in Navigation Menu / 显示在导航菜单"
         name: parent
         widget: select

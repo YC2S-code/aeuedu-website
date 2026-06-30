@@ -4,7 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 import type { Lang } from '../../i18n/utils';
 
 export async function getStaticPaths() {
-  const allPages = await getCollection('pages');
+  const allPages = await getCollection('pages', (entry) => entry.data.published);
   return allPages.map((entry) => {
     const [lang, ...rest] = entry.id.split('/');
     const basename = rest.join('/');

@@ -15,7 +15,7 @@ const currentPath = Astro.url.pathname;
 // Nav children are driven entirely by CMS pages with a `parent` field set.
 // URL = /lang/parent/slug, where slug strips a leading "<parent>-" prefix from
 // the filename so "alumni-network.md" becomes /alumni/network, not /alumni/alumni-network.
-const allPages = await getCollection('pages');
+const allPages = await getCollection('pages', (entry) => entry.data.published);
 const navPagesByParent = new Map<string, { href: string; label: string }[]>();
 for (const entry of allPages) {
   const [entryLang, ...rest] = entry.id.split('/');
