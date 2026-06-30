@@ -5,6 +5,7 @@ navLabel: 亚欧故事
 image: null
 videoYoutube: null
 videoBilibili: null
+published: true
 ---
 # 有一种公信力，不是设计出来的，是熬出来的。
 

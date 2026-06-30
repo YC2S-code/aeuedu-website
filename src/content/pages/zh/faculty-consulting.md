@@ -1,6 +1,7 @@
 ---
 title: 企业咨询
 parent: faculty
+published: true
 ---
 
 企业咨询服务详情即将更新。

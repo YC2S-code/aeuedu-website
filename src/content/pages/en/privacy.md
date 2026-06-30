@@ -1,6 +1,7 @@
 ---
 title: Privacy Policy & Disclaimer
 titleZh: 隐私政策与免责声明
+published: true
 ---
 
 *Last updated: June 2026*

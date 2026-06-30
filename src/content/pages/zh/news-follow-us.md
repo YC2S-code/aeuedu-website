@@ -1,6 +1,7 @@
 ---
 title: 关注亚欧
 parent: news
+published: true
 ---
 
 关注我们的官方社交媒体及微信账号，获取最新资讯。
