@@ -1,5 +1,5 @@
 ---
-import { getEntry } from 'astro:content';
+import { getEntry, getCollection } from 'astro:content';
 import { marked } from 'marked';
 import Layout from '../../layouts/Layout.astro';
 import { getLangEntries, slugFromId, DEFAULT_ARTICLE_IMAGE, newsCategoryLabel } from '../../lib/content';
@@ -31,6 +31,28 @@ const events = (featuredEvents.length > 0 ? featuredEvents : allEvents)
 const dateLocale = lang === 'zh' ? 'zh-CN' : 'en-US';
 
 const highlights = home.highlights ?? [];
+
+// Resolve hero CTA URL from page slug to language-correct path
+let heroUrl = getLocalePath(lang, 'programs');
+if (home.heroCtaUrl) {
+  const raw = home.heroCtaUrl;
+  if (raw.startsWith('http') || raw.startsWith('/')) {
+    // Legacy absolute URL saved before dropdown — use as-is
+    heroUrl = raw;
+  } else {
+    const allPages = await getCollection('pages', (e) => e.data.published);
+    const slug = raw.replace(/^(en|zh)\//, ''); // strip locale prefix if present
+    const target = allPages.find((e) => e.id === `${lang}/${slug}`);
+    if (target) {
+      const [, ...rest] = target.id.split('/');
+      const basename = rest.join('/');
+      const urlSlug = target.data.parent
+        ? `${target.data.parent}/${basename.replace(new RegExp(`^${target.data.parent}-`), '')}`
+        : basename;
+      heroUrl = `/${lang}/${urlSlug}`;
+    }
+  }
+}
 ---
 
 <Layout lang={lang} title={siteName} description={tagline}>
@@ -38,7 +60,7 @@ const highlights = home.highlights ?? [];
     <div class="container">
       <h1>{home.heroTitle}</h1>
       <p set:html={marked.parseInline(home.heroSubtitle)} />
-      <a class="btn btn-primary" href={home.heroCtaUrl ?? getLocalePath(lang, 'programs')}>{home.heroCta}</a>
+      <a class="btn btn-primary" href={heroUrl}>{home.heroCta}</a>
     </div>
   </section>
 

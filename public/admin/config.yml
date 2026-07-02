@@ -59,7 +59,16 @@ collections:
               - { label: "Hero Subtitle / 副标题", name: heroSubtitle, widget: markdown, buttons: [bold, italic, link], minimal: true, i18n: true }
               - { label: "Hero Image / 主图背景 (optional)", name: heroImage, widget: image, required: false, i18n: duplicate }
               - { label: "Hero Button Text / 按钮文字", name: heroCta, widget: string, i18n: true }
-              - { label: "Hero Button Link / 按钮链接 (optional)", name: heroCtaUrl, widget: string, required: false, i18n: true, hint: "URL the hero button links to. E.g. /en/programs/emba or https://example.com — leave empty to link to the Programs page." }
+              - label: "Hero Button Page / 按钮链接页面 (optional)"
+                name: heroCtaUrl
+                widget: relation
+                collection: pages
+                value_field: "{{slug}}"
+                display_fields: ["{{title}}"]
+                search_fields: [title, navLabel]
+                required: false
+                i18n: true
+                hint: "Choose which page the hero button links to. EN and ZH can link to different pages. Leave empty to default to the Programs page."
               - { label: "Highlights Title / 推广台标题", name: highlightsTitle, widget: string, i18n: true }
               - label: "Highlight Cards / 推广台卡片"
                 name: highlights
