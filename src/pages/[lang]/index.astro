@@ -38,7 +38,7 @@ const highlights = home.highlights ?? [];
     <div class="container">
       <h1>{home.heroTitle}</h1>
       <p set:html={marked.parseInline(home.heroSubtitle)} />
-      <a class="btn btn-primary" href={getLocalePath(lang, 'programs')}>{home.heroCta}</a>
+      <a class="btn btn-primary" href={home.heroCtaUrl ?? getLocalePath(lang, 'programs')}>{home.heroCta}</a>
     </div>
   </section>
 

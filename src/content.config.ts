@@ -65,6 +65,7 @@ const siteLocale = z.object({
     heroSubtitle: z.string(),
     heroImage: z.string().optional(),
     heroCta: z.string(),
+    heroCtaUrl: z.string().optional(),
     highlightsTitle: z.string(),
     highlights: z.array(z.object({ title: z.string(), text: z.string(), image: z.string().optional() })).optional(),
   }),
