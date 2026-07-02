@@ -1,8 +1,8 @@
 ---
 title: Corporate Consulting
 titleZh: 企业咨询
+published: false
 parent: faculty
-published: true
 ---
 
 Corporate consulting services information is coming soon.
