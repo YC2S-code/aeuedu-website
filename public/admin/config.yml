@@ -64,7 +64,7 @@ collections:
                 widget: relation
                 collection: pages
                 value_field: "{{slug}}"
-                display_fields: ["{{title}}"]
+                display_fields: ["{{title}} / {{titleZh}}"]
                 search_fields: [title, navLabel]
                 required: false
                 i18n: true
