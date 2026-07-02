@@ -1,9 +1,11 @@
 ---
 title: EMBA - 高级工商管理硕士
+published: true
 parent: programs
 navLabel: EMBA
 image: /images/uploads/pagebanner_emba.jpg
-published: true
+videoYoutube: null
+videoBilibili: null
 ---
 ## 以学问淬炼商道，以视野重塑格局
 
@@ -37,7 +39,7 @@ published: true
 
 - - -
 
-#### 核心课程 36学分 · The Core
+#### 核心课程 31学分 · The Core
 
 **十门核心课，重搭认知的地基**
 
@@ -45,7 +47,7 @@ published: true
 
 **亚欧EMBA学分**
 
-课程总计45学分：36学分核心课程、3学分论文研究、6学分国际游学（三次）。全程无闭卷考试，采用Pass/Fail评核制，以课堂参与度、团队项目成果与个人反思报告为主要考核维度。这不是一个让你背答案的课程，而是一个让你学会提出更好问题的训练场。
+课程总计45学分：31学分核心课程、6学分论文研究、8学分国际游学（三次）。全程无闭卷考试，采用Pass/Fail评核制，以课堂参与度、团队项目成果与个人反思报告为主要考核维度。这不是一个让你背答案的课程，而是一个让你学会提出更好问题的训练场。
 
 ![](/images/uploads/emba-core-credits.jpg)
 
