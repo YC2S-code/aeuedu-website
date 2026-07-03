@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: YC2S-code/aeuedu-website
   branch: main
+  base_url: https://aeu-cms-oauth.alvinboo.workers.dev
 
 local_backend: true
 
