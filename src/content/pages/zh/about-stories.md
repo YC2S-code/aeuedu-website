@@ -4,8 +4,6 @@ published: true
 parent: about
 navLabel: 亚欧故事
 image: /images/uploads/aboutaue.jpg
-videoYoutube: null
-videoBilibili: null
 ---
 # 有一种公信力，不是设计出来的，是熬出来的。
 

@@ -33,9 +33,10 @@ function bilibiliEmbedUrl(url: string): string | null {
   return m ? `https://player.bilibili.com/player.html?bvid=${m[1]}&autoplay=0` : null;
 }
 
-const videoUrl = lang === 'zh'
-  ? (entry!.data.videoBilibili ? bilibiliEmbedUrl(entry!.data.videoBilibili) : (entry!.data.videoYoutube ? youtubeEmbedUrl(entry!.data.videoYoutube) : null))
-  : (entry!.data.videoYoutube ? youtubeEmbedUrl(entry!.data.videoYoutube) : (entry!.data.videoBilibili ? bilibiliEmbedUrl(entry!.data.videoBilibili) : null));
+// Bilibili takes priority for both languages; YouTube as fallback
+const videoUrl = entry!.data.videoBilibili
+  ? bilibiliEmbedUrl(entry!.data.videoBilibili)
+  : (entry!.data.videoYoutube ? youtubeEmbedUrl(entry!.data.videoYoutube) : null);
 ---
 
 <Layout lang={lang} title={entry!.data.title}>
