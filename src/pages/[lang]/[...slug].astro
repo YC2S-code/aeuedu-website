@@ -47,6 +47,13 @@ const videoUrl = lang === 'zh'
   <div class="page-header">
     <div class="container">
       <h1>{entry!.data.title}</h1>
+      <div class="page-meta">
+        <span class="page-meta__reading-time" id="reading-time"></span>
+        <button class="page-meta__listen-btn" id="listen-btn" aria-label="Listen to this page">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+          <span id="listen-label">{lang === 'zh' ? '朗读' : 'Listen'}</span>
+        </button>
+      </div>
     </div>
   </div>
   <section class="section">
@@ -56,9 +63,94 @@ const videoUrl = lang === 'zh'
           <iframe src={videoUrl} allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" />
         </div>
       )}
-      <div class="prose">
+      <div class="prose" id="page-content">
         <Content />
       </div>
     </div>
   </section>
 </Layout>
+
+<style>
+.page-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted, #888);
+}
+.page-meta__reading-time {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.page-meta__listen-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-text-muted, #888);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.page-meta__listen-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.page-meta__listen-btn.listening {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+}
+</style>
+
+<script define:vars={{ lang }}>
+  // Reading time
+  const prose = document.getElementById('page-content');
+  const rtEl = document.getElementById('reading-time');
+  if (prose && rtEl) {
+    const words = prose.innerText.trim().split(/\s+/).filter(Boolean).length;
+    const wpm = lang === 'zh' ? 300 : 200; // Chinese readers process ~300 chars/min
+    const mins = Math.max(1, Math.round(words / wpm));
+    rtEl.textContent = lang === 'zh' ? `${mins} 分钟阅读` : `${mins} min read`;
+  }
+
+  // Text-to-speech
+  const btn = document.getElementById('listen-btn');
+  const label = document.getElementById('listen-label');
+  const stopLabel = lang === 'zh' ? '停止' : 'Stop';
+  const listenLabel = lang === 'zh' ? '朗读' : 'Listen';
+
+  if (btn && prose && 'speechSynthesis' in window) {
+    btn.addEventListener('click', () => {
+      if (window.speechSynthesis.speaking) {
+        window.speechSynthesis.cancel();
+        btn.classList.remove('listening');
+        label.textContent = listenLabel;
+        return;
+      }
+      const text = prose.innerText.trim();
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = lang === 'zh' ? 'zh-CN' : 'en-US';
+      utter.rate = 0.95;
+      utter.onend = () => {
+        btn.classList.remove('listening');
+        label.textContent = listenLabel;
+      };
+      utter.onerror = () => {
+        btn.classList.remove('listening');
+        label.textContent = listenLabel;
+      };
+      window.speechSynthesis.speak(utter);
+      btn.classList.add('listening');
+      label.textContent = stopLabel;
+    });
+  } else if (btn) {
+    // Hide button if TTS not supported
+    btn.style.display = 'none';
+  }
+</script>
