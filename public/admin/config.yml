@@ -3,6 +3,7 @@ backend:
   repo: YC2S-code/aeuedu-website
   branch: main
   base_url: https://aeu-cms-oauth.alvinboo.workers.dev
+  site_domain: www.aeuedu.com
 
 local_backend: true
 
