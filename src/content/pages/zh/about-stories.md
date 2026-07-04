@@ -5,18 +5,23 @@ parent: about
 navLabel: 亚欧故事
 image: /images/uploads/aboutaue.jpg
 videoBilibili: https://www.bilibili.com/video/BV1w8KQ6KE6x/
+videoYoutube: null
 ---
 # 有一种公信力，不是设计出来的，是熬出来的。
 
 亚欧（Asia Euro）的故事，始于2002年。一群深耕东南亚的教育者，以一个组织的形态，开始了对区域管理教育的系统性探索。三年后，这个探索有了国家的名分。
 
-![](/images/uploads/banner_aboutus.jpg)
+---
 
 **2005 · 国家子令**
 
 亚欧大学（Asia Euro University）由柬埔寨王国国家子令正式设立——成为受国家法律命名与保护的学术主体，具备完整学位颁授资格。彼时，东南亚高管教育的格局尚未成形。没有人知道，这片土地会成为今天连接亚欧商业文明最重要的节点之一。
 
 二十年后，我们站在这里。
+
+![](/images/uploads/banner_aboutus.jpg)
+
+---
 
 **国家授权**
 
@@ -25,6 +30,8 @@ videoBilibili: https://www.bilibili.com/video/BV1w8KQ6KE6x/
 ![](/images/uploads/EMBA.jpg)
 
 这是柬埔寨历史上首个经国家部级法令正式批准的**普通话授课EMBA项目**，填补了东南亚华商高管教育的结构性空白。课程由亚欧大学国际商学院（AEU Postgraduate School）设计与执行；**学位由亚欧大学依法颁授**。
+
+---
 
 **学术定位**
 
