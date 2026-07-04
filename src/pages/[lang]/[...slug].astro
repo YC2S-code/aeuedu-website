@@ -60,8 +60,10 @@ const videoUrl = entry!.data.videoBilibili
   <section class="section">
     <div class="container">
       {videoUrl && (
-        <div class="embed-responsive" style="max-width: 760px; margin-bottom: 2rem;">
-          <iframe src={videoUrl} allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" />
+        <div class="video-section">
+          <div class="embed-responsive">
+            <iframe src={videoUrl} allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" />
+          </div>
         </div>
       )}
       <div class="prose" id="page-content">

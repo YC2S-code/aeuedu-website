@@ -667,14 +667,18 @@ body.nav-open {
 }
 
 /* Video embed */
+.video-section {
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+}
 .embed-responsive {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: var(--radius);
   overflow: hidden;
-  margin: 1.5rem 0;
   background: #000;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
 }
 
 .embed-responsive iframe,
