@@ -39,7 +39,7 @@ const videoUrl = entry!.data.videoBilibili
   : (entry!.data.videoYoutube ? youtubeEmbedUrl(entry!.data.videoYoutube) : null);
 ---
 
-<Layout lang={lang} title={entry!.data.title}>
+<Layout lang={lang} title={entry!.data.title} image={entry!.data.image}>
   {entry!.data.image && (
     <div class="page-banner">
       <img src={entry!.data.image} alt={entry!.data.title} class="page-banner__img" />

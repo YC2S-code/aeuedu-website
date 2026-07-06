@@ -9,13 +9,19 @@ interface Props {
   lang: Lang;
   title: string;
   description?: string;
+  image?: string;
 }
 
-const { lang, title, description } = Astro.props;
+const { lang, title, description, image } = Astro.props;
 const _siteEntry = await getEntry('settings', 'site');
-  const settings = _siteEntry!.data[lang as 'en' | 'zh'];
+const settings = _siteEntry!.data[lang as 'en' | 'zh'];
 const siteName = settings.siteName;
 const pageTitle = title === siteName ? siteName : `${title} | ${siteName}`;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+const ogImage = image
+  ? new URL(image, Astro.site).toString()
+  : new URL('/images/branding/aeu-logo.png', Astro.site).toString();
+const ogDescription = description || settings.tagline || siteName;
 ---
 
 <!doctype html>
@@ -26,7 +32,22 @@ const pageTitle = title === siteName ? siteName : `${title} | ${siteName}`;
     <link rel="icon" type="image/png" href="/images/branding/favicon-32.png" />
     <link rel="apple-touch-icon" href="/images/branding/favicon-192.png" />
     <title>{pageTitle}</title>
-    {description && <meta name="description" content={description} />}
+    <meta name="description" content={ogDescription} />
+    <link rel="canonical" href={canonicalUrl} />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content={siteName} />
+    <!-- Telegram / Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={ogDescription} />
+    <meta name="twitter:image" content={ogImage} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
@@ -38,17 +59,5 @@ const pageTitle = title === siteName ? siteName : `${title} | ${siteName}`;
     </main>
     <Footer lang={lang} />
 
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" is:inline></script>
-    <script is:inline>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on('init', (user) => {
-          if (!user) {
-            window.netlifyIdentity.on('login', () => {
-              document.location.href = '/admin/';
-            });
-          }
-        });
-      }
-    </script>
   </body>
 </html>
