@@ -54,6 +54,35 @@ const videoUrl = entry!.data.videoBilibili
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
           <span id="listen-label">{lang === 'zh' ? '朗读' : 'Listen'}</span>
         </button>
+        <div class="page-share">
+          <span class="page-share__label">{lang === 'zh' ? '分享：' : 'Share:'}</span>
+          <!-- Facebook -->
+          <a class="page-share__btn" id="share-fb" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook" title="Facebook">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <!-- Telegram -->
+          <a class="page-share__btn" id="share-tg" href="#" target="_blank" rel="noopener" aria-label="Share on Telegram" title="Telegram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-16.5 6.875a2.25 2.25 0 0 0 .126 4.156l3.696 1.296 1.421 4.853a.75.75 0 0 0 1.232.293l2.115-2.115 3.967 2.92a2.25 2.25 0 0 0 3.438-1.428l2.625-16.5a2.25 2.25 0 0 0-2.098-2.565zM10.5 14.198l-.938 2.814-.938-3.188 8.625-8.625-6.75 9z"/></svg>
+          </a>
+          <!-- WeChat QR -->
+          <button class="page-share__btn" id="share-wc" aria-label="Share on WeChat" title="{lang === 'zh' ? '微信分享' : 'WeChat'}">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-3.897-6.348-7.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm4.843 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm4.652 2.531c-3.045 0-5.515 2.243-5.515 5.002 0 2.76 2.47 5.002 5.515 5.002.602 0 1.178-.093 1.725-.25a.61.61 0 0 1 .513.068l1.368.8a.233.233 0 0 0 .12.04.212.212 0 0 0 .208-.212c0-.052-.021-.102-.034-.153l-.28-1.064a.423.423 0 0 1 .153-.477C19.71 16.17 20.795 14.7 20.795 13.524c0-2.76-2.47-5.002-5.515-5.002zm-2.299 2.469c.46 0 .833.38.833.847a.84.84 0 0 1-.833.847.84.84 0 0 1-.833-.847c0-.467.373-.847.833-.847zm4.598 0c.46 0 .833.38.833.847a.84.84 0 0 1-.833.847.84.84 0 0 1-.833-.847c0-.467.373-.847.833-.847z"/></svg>
+          </button>
+          <!-- Copy link -->
+          <button class="page-share__btn" id="share-copy" aria-label="Copy link" title="{lang === 'zh' ? '复制链接' : 'Copy link'}">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          </button>
+        </div>
+      </div>
+      <!-- WeChat QR modal -->
+      <div class="wechat-modal" id="wechat-modal" role="dialog" aria-modal="true" aria-label="WeChat QR Code">
+        <div class="wechat-modal__box">
+          <button class="wechat-modal__close" id="wechat-close" aria-label="Close">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+          <p class="wechat-modal__hint">{lang === 'zh' ? '扫描二维码，在微信中打开' : 'Scan QR code to open in WeChat'}</p>
+          <img id="wechat-qr" class="wechat-modal__qr" src="" alt="QR Code" width="160" height="160" />
+        </div>
       </div>
     </div>
   </div>
@@ -109,6 +138,70 @@ const videoUrl = entry!.data.videoBilibili
   color: var(--color-primary);
   background: color-mix(in srgb, var(--color-primary) 8%, transparent);
 }
+.page-share {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: auto;
+}
+.page-share__label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted, #aaa);
+}
+.page-share__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border, #ddd);
+  background: transparent;
+  color: var(--color-text-muted, #888);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  padding: 0;
+  font-size: 0;
+}
+.page-share__btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.page-share__btn--copied { border-color: #22c55e !important; color: #22c55e !important; }
+/* WeChat modal */
+.wechat-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+}
+.wechat-modal.is-open { display: flex; }
+.wechat-modal__box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+  min-width: 220px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+.wechat-modal__close {
+  position: absolute;
+  top: 0.6rem; right: 0.6rem;
+  background: none; border: none; cursor: pointer;
+  color: #888; padding: 4px;
+}
+.wechat-modal__hint {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0 0 1rem;
+}
+.wechat-modal__qr {
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
 </style>
 
 <script define:vars={{ lang }}>
@@ -155,5 +248,45 @@ const videoUrl = entry!.data.videoBilibili
   } else if (btn) {
     // Hide button if TTS not supported
     btn.style.display = 'none';
+  }
+
+  // Share buttons
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  const fbBtn = document.getElementById('share-fb');
+  if (fbBtn) fbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+
+  const tgBtn = document.getElementById('share-tg');
+  if (tgBtn) tgBtn.href = `https://t.me/share/url?url=${pageUrl}&text=${pageTitle}`;
+
+  const wcBtn = document.getElementById('share-wc');
+  const wcModal = document.getElementById('wechat-modal');
+  const wcQr = document.getElementById('wechat-qr');
+  const wcClose = document.getElementById('wechat-close');
+  if (wcBtn && wcModal && wcQr) {
+    wcBtn.addEventListener('click', () => {
+      wcQr.src = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${pageUrl}`;
+      wcModal.classList.add('is-open');
+    });
+    wcClose?.addEventListener('click', () => wcModal.classList.remove('is-open'));
+    wcModal.addEventListener('click', (e) => { if (e.target === wcModal) wcModal.classList.remove('is-open'); });
+  }
+
+  const copyBtn = document.getElementById('share-copy');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        copyBtn.classList.add('page-share__btn--copied');
+        copyBtn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>';
+        setTimeout(() => {
+          copyBtn.classList.remove('page-share__btn--copied');
+          copyBtn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+        }, 2000);
+      } catch {
+        prompt(lang === 'zh' ? '复制链接：' : 'Copy this link:', window.location.href);
+      }
+    });
   }
 </script>
