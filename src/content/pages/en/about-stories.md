@@ -23,12 +23,22 @@ Twenty years later, we stand here.
 
 - - -
 
-**National Authorization**
+**EMBA Authorization**
 
-On November 29, 2024, Cambodia's Ministry of Education, Youth and Sport (MoEYS) formally issued a PRAKAS, authorizing Asia Euro University to launch its **Executive Master of Business Administration (EMBA)** program. A PRAKAS is a ministerial-level authorization within Cambodia's administrative legal system — not an honorary certificate, not a registration filing, but a formal legislative act through which the state confers legitimacy on Asia Euro University's authority to grant degrees.
-
-
+On November 29, 2024, Cambodia's Ministry of Education, Youth and Sport (MoEYS) formally issued a PRAKAS, authorizing Asia Euro University to launch its **Executive Master of Business Administration (EMBA)** program.
 
 ![](/images/uploads/EMBA.jpg)
 
 This marks the first Mandarin-taught EMBA program in Cambodian history to be formally approved by national ministerial decree — filling a structural gap in executive education for the Chinese business community across Southeast Asia. The program is designed and delivered by the Asia Euro University Postgraduate School; the degree is conferred by Asia Euro University in accordance with the law.
+
+**Academic Positioning**
+
+Why "Asia Euro"?
+
+The name isn't just about geography. It reflects a philosophy of leadership — combining the West's structured, analytical thinking with the East's practical, relationship-driven wisdom. Together, they shape executives who can lead confidently across both worlds.
+
+![](/images/uploads/about.jpg)
+
+As global supply chains shift and Southeast Asia becomes a new center of manufacturing and trade, this ability to bridge East and West is no longer optional — it's essential.
+
+True credibility doesn't need to announce itself. It simply stands, quietly, as the foundation everything else is built on.
