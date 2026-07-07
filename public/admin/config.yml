@@ -133,7 +133,7 @@ collections:
     i18n: true
     fields:
       - { label: "Title / 标题", name: title, widget: string, i18n: true }
-      - { label: "Date / 日期", name: date, widget: datetime, i18n: duplicate }
+      - { label: "Date / 日期 (可回填过去日期)", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, i18n: duplicate, hint: "Pick any date — set a past date to archive backdated articles. / 可选择过去的日期，用于归档旧文章。" }
       - { label: "Banner Image / 横幅图", name: image, widget: image, required: true, i18n: true, hint: "✅ JPG, PNG, WebP, GIF only. ❌ No TIFF/PSD/PDF. Recommended: 1200 x 675px (16:9)." }
       - label: "Category / 分类"
         name: category
@@ -162,8 +162,8 @@ collections:
     i18n: true
     fields:
       - { label: "Title / 标题", name: title, widget: string, i18n: true }
-      - { label: "Date / 开始日期", name: date, widget: datetime, i18n: duplicate }
-      - { label: "End Date / 结束日期", name: endDate, widget: datetime, required: false, i18n: duplicate }
+      - { label: "Date / 开始日期 (可回填过去日期)", name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, i18n: duplicate, hint: "Pick any date — set a past date to archive backdated events. / 可选择过去的日期，用于归档旧活动。" }
+      - { label: "End Date / 结束日期", name: endDate, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, required: false, i18n: duplicate }
       - { label: "Location / 地点", name: location, widget: string, required: false, i18n: true }
       - { label: "Banner Image / 横幅图", name: image, widget: image, required: true, i18n: true, hint: "✅ JPG, PNG, WebP, GIF only. ❌ No TIFF/PSD/PDF. Recommended: 1200 x 675px (16:9)." }
       - { label: "Category / 分类", name: category, widget: string, required: false, i18n: true }
