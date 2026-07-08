@@ -26,10 +26,50 @@ The program is taught primarily in Chinese and focuses on Southeast Asia’s bus
 
 ![](/images/uploads/7.png)
 
+### Why Cambodia
 
+#### Why Cambodia? Your Gateway to ASEAN
+
+Choosing where to study is a strategic decision. Cambodia is one of Southeast Asia’s fastest-growing business hubs and a key member of RCEP, offering direct access to ASEAN markets, a business-friendly environment, and USD-based transactions that make regional business more efficient.
+
+Delivered primarily in Chinese, this is **Cambodia’s first Chinese-language EMBA**, allowing executives to learn, discuss strategy, and build connections in their native language. Admission is based on professional experience rather than standardized tests such as the GMAT, making the program ideal for experienced business leaders.
 
 ![](/images/uploads/8.png)
 
+
+
+- - -
+
+### Executive Core Curriculum | 31 Credits
+
+##### **Ten Core Courses. One Strong Foundation.**
+
+Great leaders need more than knowledge—they need the right way of thinking. Our ten core courses are organized into four modules **covering strategy, leadership, marketing, finance,** and operations, equipping executives with the skills to make better decisions, lead effectively, and drive sustainable business growth.
+
+##### 45 EMBA Credits
+
+The EMBA program consists of 45 credits: 31 credits of core courses, 6 credits of thesis research, and 8 credits of international study tours (three trips). There are no written final exams. Assessment is based on class participation, team projects, and individual reflection, focusing on practical learning and real-world application.
+
 ![](/images/uploads/9.png)
+
+- - -
+
+### The Cohort
+
+##### A Network That Lasts a Lifetime
+
+The true value of an EMBA goes beyond the classroom. It is the trusted relationships, meaningful conversations, and lifelong connections that support you when opportunities and challenges arise.
+
+You will learn alongside founders, business owners, and next-generation leaders from diverse industries. Every experience shared becomes a new perspective, and every connection becomes a valuable asset. **When you join the program, you become part of a trusted executive community that grows and succeeds together.**
+
+- - -
+
+### Admissions
+
+**Admissions Process**
+
+Admission is based on professional achievement, not test scores. Applicants should hold a bachelor’s degree or above, have at least 8 years of work experience, and 5 years of management experience.
+
+The application process includes consultation: **application submission, interview, document review, admission decision, and enrollment.** Every step is designed to select experienced leaders and maintain the quality of each EMBA cohort.
 
 ![](/images/uploads/10.png)
