@@ -4,8 +4,8 @@ published: true
 parent: programs
 navLabel: EMBA
 image: /images/uploads/pagebanner_emba.jpg
-videoYoutube: null
 videoBilibili: null
+videoYoutube: null
 ---
 ## 以学问淬炼商道，以视野重塑格局
 
