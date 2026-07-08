@@ -27,9 +27,11 @@ Twenty years later, we stand here.
 
 On November 29, 2024, Cambodia's Ministry of Education, Youth and Sport (MoEYS) formally issued a PRAKAS, authorizing Asia Euro University to launch its **Executive Master of Business Administration (EMBA)** program.
 
-![](/images/uploads/EMBA.jpg)
+![](/images/uploads/1.png)
 
 This marks the first Mandarin-taught EMBA program in Cambodian to receive formal approval by the **Ministry of Education, Youth and Sport (MoEYS)** —  The program is designed and delivered by Asia Euro University's Postgraduate School, with degrees conferred by Asia Euro University in accordance with the law.
+
+- - -
 
 **Academic Positioning**
 
@@ -37,7 +39,7 @@ Why "Asia Euro"?
 
 **“Asia-Euro”** is more than a geographic name. It represents our educational philosophy — combining Western systematic thinking with Eastern practical wisdom to develop leaders who can succeed across different cultures, markets, and business environments.
 
-![](/images/uploads/about.jpg)
+![](/images/uploads/2.png)
 
 As global supply chains shift and Southeast Asia becomes a new center of manufacturing and trade, this ability to bridge East and West is no longer optional — it's essential.
 
