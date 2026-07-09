@@ -29,8 +29,6 @@ Participants followed the complete production process—from on-site bottle manu
 
 ![](/images/uploads/19.jpeg)
 
-
-
 ![](/images/uploads/20.jpeg)
 
 ![](/images/uploads/21.jpeg)
@@ -44,3 +42,11 @@ After touring the production facility, the delegation continued into the heart o
 ![](/images/uploads/23.jpeg)
 
 ![](/images/uploads/24.jpeg)
+
+### **Future Development | Centre for Venture & Investment Development**
+
+The **Centre for Venture & Investment Development** of the Asia Euro University International Business School will support the Aura Landscape brand through strategic positioning, investment planning, and ASEAN market expansion. Leveraging the Business School's industry-academia ecosystem, the initiative aims to connect capital, innovation, and the university's entrepreneurial network to accelerate sustainable business growth.
+
+**The Strength of the Asia Euro Alumni Network**
+
+One invitation can create opportunities that unite capital, industry, and trusted partnerships. This reflects the spirit of **"One Asia Euro Family"**—where the alumni network is more than a community; it is a platform built on trust, collaboration, and shared success.
