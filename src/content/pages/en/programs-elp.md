@@ -1,5 +1,5 @@
 ---
-title: ELP - Executive Leadership Program
+title: ELP - Entrepreneur Leadership Program
 titleZh: ""
 published: true
 parent: programs
