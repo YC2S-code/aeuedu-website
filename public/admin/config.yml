@@ -128,8 +128,6 @@ collections:
     folder: src/content/news
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    media_folder: "/images/uploads/news/{{slug}}"
-    public_folder: "/images/uploads/news/{{slug}}"
     i18n: true
     fields:
       - { label: "Title / 标题", name: title, widget: string, i18n: true }
@@ -157,8 +155,6 @@ collections:
     folder: src/content/events
     create: true
     slug: "{{slug}}"
-    media_folder: "/images/uploads/events/{{slug}}"
-    public_folder: "/images/uploads/events/{{slug}}"
     i18n: true
     fields:
       - { label: "Title / 标题", name: title, widget: string, i18n: true }
