@@ -1,7 +1,7 @@
 ---
 title: 同样的乱局，为什么有人越打越稳，有人越做越慌？
 date: 2026-06-25
-image: ""
+image: /images/uploads/1.jpeg
 category: news
 featured: false
 pinned: false
@@ -9,8 +9,6 @@ summary: |-
   **乱局中，最稀缺的不是资源，是判断力。**
   而判断力，来自于对自己、对人、对势的深度认知。
 ---
-![](/images/uploads/news/same-chaos-same-challenges—so-why-do-some-grow-steadier-with-every-move-while-others-grow-more-anxious-with-every-step/1.png)
-
 地缘政治、经济周期、市场剧变……
 
 这一轮的动荡，不是短暂的波动，是结构性的重组。
@@ -27,6 +25,8 @@ summary: |-
 **特邀圆融书院院长 · 孙大斌导师**
 
 以**《国学》**为底层认知框架，专为动荡期的经营者与管理者，提供一套看清局势的思维系统。
+
+![](/images/uploads/83aa890d-45ef-40b7-8146-f3aa37133d92.png)
 
 **这次，他将帮你做到三件事：**
 
