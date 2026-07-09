@@ -1,7 +1,7 @@
 ---
 title: 同样的乱局，为什么有人越打越稳，有人越做越慌？
 date: 2026-06-25
-image: /images/uploads/news/same-chaos-same-challenges—so-why-do-some-grow-steadier-with-every-move-while-others-grow-more-anxious-with-every-step/11.png
+image: /images/uploads/news/same-chaos-same-challenges—so-why-do-some-grow-steadier-with-every-move-while-others-grow-more-anxious-with-every-step/1.png
 category: news
 featured: false
 pinned: false
