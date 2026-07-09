@@ -3,7 +3,7 @@ title: 卓越企业家领袖班（ELP）
 published: true
 parent: programs
 navLabel: ELP 领袖班
-image: /images/uploads/pagebanner_elp.jpg
+image: /images/uploads/25.png
 videoBilibili: https://www.bilibili.com/video/BV1WtKQ6qEHT/?share_source=copy_web&vd_source=727821d0935e7fe259a51750307a27d4
 videoYoutube: null
 ---
