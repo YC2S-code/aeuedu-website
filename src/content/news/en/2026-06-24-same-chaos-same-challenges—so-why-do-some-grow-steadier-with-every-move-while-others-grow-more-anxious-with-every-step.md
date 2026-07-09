@@ -1,0 +1,50 @@
+---
+title: Same chaos, same challenges—so why do some grow steadier with every move,
+  while others grow more anxious with every step?
+date: 2026-06-25
+image: /images/uploads/news/same-chaos-same-challenges—so-why-do-some-grow-steadier-with-every-move-while-others-grow-more-anxious-with-every-step/11.png
+category: news
+featured: false
+pinned: false
+summary: Same chaos, same challenges—so why do some grow steadier with every
+  move, while others grow more anxious with every step?
+---
+地缘政治、经济周期、市场剧变……
+
+这一轮的动荡，不是短暂的波动，是结构性的重组。
+
+
+
+**很多人感觉：**生意越来越难做，努力却看不到方向 资源还在，但不知道该押哪一步团队还在，但人心开始涣散机会好像有，但不敢轻易出手
+
+
+
+**乱局中，最稀缺的不是资源，是判断力。**而判断力，来自于对自己、对人、对势的深度认知
+
+
+
+**特邀圆融书院院长 · 孙大斌导师**
+
+以**《国学》**为底层认知框架，专为动荡期的经营者与管理者，提供一套看清局势的思维系统。
+
+
+
+**这次，他将帮你做到三件事：**
+
+**✦ 认清自己:** 很多人在错误的时间点，做了错误的决定—— 不是因为信息不够，而是因为不了解自己的盲点与模式。认清自己，才能在压力下保持清醒，不被情绪与焦虑带着走。
+
+**✦ 读懂大势:** 乱局不是没有规律，而是规律变了。学会用国学的历史视野与周期思维，识别当下所处的位置，找到属于你的战略窗口——在别人恐慌时，看见机会。
+
+**✦ 识人用人:** 动荡期，人才的流失与人心的涣散，往往比市场风险更致命。学会看人、留人、借力—— 识别谁是真正能共渡难关的人，谁在消耗你的资源与精力。
+
+**这门课，专为以下人群而设：**
+
+✅ 正在经历业务压力、不知道下一步怎么走的创业者✅ 团队管理遇到瓶颈、感觉自己越来越孤立的管理者✅ 大环境让你焦虑、但还在坚持寻找突破口的经营者✅ 想在乱局中沉淀自己、提升决策质量的高潜力人才
+
+**ELP 第1届（第13班）· 洞察力**
+
+📅 8**月22日—23日**（周六及周日）📍 **地点 Venue:** Sun & Moon, Riverside Hotel
+
+🔴 **名额极为有限**
+
+> 乱世出智者，动荡炼判断力。不是等风停了再出发，而是在风中找到自己的锚。
