@@ -2,7 +2,7 @@
 title: Same chaos, same challenges—so why do some grow steadier with every move,
   while others grow more anxious with every step?
 date: 2026-06-25
-image: /images/uploads/news/same-chaos-same-challenges—so-why-do-some-grow-steadier-with-every-move-while-others-grow-more-anxious-with-every-step/1.jpeg
+image: /images/uploads/1.jpeg
 category: news
 featured: false
 pinned: false
