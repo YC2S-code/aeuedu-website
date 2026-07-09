@@ -1,7 +1,7 @@
 ---
 title: 学长引路，溯源奥拉山。亚欧校友共鉴柬埔寨珍稀水资源投资价值
 date: 2026-06-27
-image: /images/uploads/news/guided-by-a-fellow-alumnus-tracing-the-source-at-mount-aoral-aeu-alumni-explore-the-investment-value-of-cambodias-rare-water-resources/1.jpg
+image: /images/uploads/16.jpeg
 category: news
 featured: false
 pinned: false
@@ -9,34 +9,43 @@ summary: 深入水厂 · 全线工艺参观，考察首站，一行人在专业�
 ---
 山路崎岖，兴致不减。亚欧大学国际商学院校友、量子慈善机构创始人李明洋学长近日亲自发起组队，带领亚欧校友及商企私董会成员一行，深入柬埔寨奥拉山野生动物保护区——先参访水厂全线生产工艺，再徒步溯源至 Chrok La Eang 瀑布天然水源地，以一次由学长引路、以亚欧情谊为纽带的产业实地探访，见证这片柬埔寨珍稀水资源背后的投资价值与品牌潜力。
 
-![](/images/uploads/news/guided-by-a-fellow-alumnus-tracing-the-source-at-mount-aoral-aeu-alumni-explore-the-investment-value-of-cambodias-rare-water-resources/2.jpg)
+![](/images/uploads/17.jpeg)
 
 李明洋学长身兼多重身份：量子慈善机构创始人，同时也是此次奥拉山水厂的主要投资方之一。以亚欧学长的身份，他主动组队，邀请母校校友及私董会成员亲赴水源地，将自身产业资源与亚欧校友生态圈深度联结——以"带师弟师妹看清楚"的坦诚初心，开启这场产业实地尽调。
 
 ![](/images/uploads/news/guided-by-a-fellow-alumnus-tracing-the-source-at-mount-aoral-aeu-alumni-explore-the-investment-value-of-cambodias-rare-water-resources/3.jpg)
 
-**深入水厂 · 全线工艺参观**
+### **深入水厂 · 全线工艺参观**
 
-考察首站，一行人在专业人员带领下，完整参观了水厂从原料到成品的全套生产线，亲眼见证每一道工序背后的品控逻辑与技术投入
+考察首站，一行人在专业人员带领下，完整参观了水厂从原料到成品的全套生产线，亲眼见证每一道工序背后的品控逻辑与技术投入。
+
+![](/images/uploads/18.png)
 
 从吹瓶工序起，瓶胚在工厂内现场成型，杜绝外部容器污染风险；经多级过滤系统逐层净化后，水体进入恒温密封储存舱；最为关键的一环，是具备市场差异化价值的富氢处理工艺——通过电解技术将高浓度氢气溶入水中，赋予产品超越普通矿泉水的功能性定位；随后水体进入无菌室完成洁净灌装，最终经检验包装出厂。全套工艺链条完整，品控标准清晰，令参访团成员对产品的品质一致性与溢价空间有了具体而直观的认知。
 
+![](/images/uploads/19.jpeg)
 
-**水厂之后 · 徒步溯源**
+![](/images/uploads/20.jpeg)
 
-⛰ Phnom Aoral — 柬埔寨最高峰，海拔约1813m💧 Chrok La Eang — 保护区核心天然水源🛡 柬埔寨环境部重点生态保护区
+![](/images/uploads/21.jpeg)
+
+![](/images/uploads/22.jpeg)
+
+### **水厂之后 · 徒步溯源**
+
+`⛰ Phnom Aoral — 柬埔寨最高峰，海拔约1813m `💧` Chrok La Eang — 保护区核心天然水源 🛡 柬埔寨环境部重点生态保护区`
 
 看完生产线，一行人意犹未尽，随即上山溯源。在李明洋学长带领下，众人徒步深入奥拉山野生动物保护区腹地，抵达 Chrok La Eang 瀑布天然集水区。山路蜿蜒崎岖，热带密林中溪涧声声相伴，成员们沿水流上行，亲眼见证水体自山顶岩层经密林逐层净化汇聚的自然过程，在瀑布天然水池处驻足，以手触水，以眼验源。尽管路途颇具挑战，学长领队、师弟师妹相随，全程笑声不断，兴致盎然。
 
+![](/images/uploads/23.jpeg)
 
-**后续布局 · 创业投资发展中心参与**
+![](/images/uploads/24.jpeg)
 
-参访团构成 • **亚欧校友 + 私董会**核心工艺**富氢处理** • 功能性溢价核心差异化生产线节点 • **精密高端加工**
+### **后续布局 · 创业投资发展中心参与**
+
+`参访团构成 •`**`亚欧校友 + 私董会`** `核心工艺`**`富氢处理`** `生产线节点 • `**`精密高端加工`**
 
 据悉，亚欧大学国际商学院旗下**创业投资发展中心（Centre for Venture & Investment Development）**将就奥拉山水品牌建设项目展开深度参与，从品牌战略定位、融资结构设计及东盟市场准入路径等维度系统赋能，探索以商学院平台联结产业资本与校友企业家网络的产教融合新模式。李明洋学长的先行投资与此次校友网络的深度介入，为项目后续的资本联动与品牌共建奠定了坚实基础。
-
-
-
 
 ***亚欧校友生态圈的力量***
 
