@@ -1,31 +1,30 @@
 ---
-title: From Classroom to Industry Front Lines | AEU International Business
-  School Entrepreneur Practical Learning Series Successfully Held
+title: From Classroom to Industry | AEU Bridging Academic Learning with
+  Industrial Practice
 date: 2026-06-30
-image: /images/uploads/news/from-classroom-to-industry-front-lines-aeu-international-business-school-entrepreneur-practical-learning-series-successfully-held/1.png
+image: /images/uploads/14.jpeg
 category: news
 featured: false
 pinned: false
-summary: This event also marked an important stop in the International Business
-  School's ongoing series of corporate visits, further advancing the School's
-  talent development philosophy of "bridging theory with practice, connecting
-  the classroom with industry."
+summary: The visit further advanced the Business School's commitment to
+  connecting classroom learning with industry practice.
+video: ""
 ---
-### Integrating Knowledge and Action, Moving Toward Industry
+### Bridging Knowledge with Industry
 
-To continuously deepen the integration of industry and education—bringing the classroom into industry and connecting learning with practice—on the afternoon of June 30, 2026, the International Business School of Asia Euro University (AEU) organized a corporate visit for its EMBA, CEO, and entrepreneur students to **HW Garment Industry (Cambodia) Co., Ltd.** Under the theme **"Step into Industry, Connect with Practice, Empower Business Growth,"** participants toured the manufacturing site and engaged in in-depth discussions, jointly exploring the development opportunities facing Cambodia's manufacturing sector within the context of global supply chains.
+The Asia Euro University International Business School organized an industry visit on **30 June 2026** for its EMBA, CEO, and entrepreneur participants to **HW GARMENT INDUSTRY (CAMBODIA) CO., LTD.**
 
-This event also marked an important stop in the International Business School's ongoing series of corporate visits, further advancing the School's talent development philosophy of **"bridging theory with practice, connecting the classroom with industry."**
+Centered on the theme **"Connecting Industry, Advancing Practice, Empowering Business Growth,"** the visit provided firsthand insights into Cambodia's manufacturing sector and explored emerging opportunities within the global supply chain through factory tours and executive discussions.
 
-![](/images/uploads/news/from-classroom-to-industry-front-lines-aeu-international-business-school-entrepreneur-practical-learning-series-successfully-held/2.png)
+![](/images/uploads/15.jpeg)
 
-### Into the Heart of Manufacturing: Witnessing Industry in Action
+### **Inside the Production Floor**
 
-Accompanied by company leadership and the management team, the entrepreneur students toured the production floor firsthand, gaining a comprehensive understanding of the company's complete production process—from cutting and sewing to quality control, packaging, and shipping.
+Accompanied by the company's management team, participants toured the production facilities and gained a comprehensive understanding of the end-to-end manufacturing process—from fabric cutting and garment assembly to quality control and final packaging.
 
-As a long-standing export manufacturer serving international brands, HW Garment Industry operates a mature OEM/ODM production system and maintains deep, sustained engagement with the European and American markets. Through this on-site visit, students gained a more intuitive grasp of how modern manufacturing enterprises operate in areas such as lean management, quality control, lead-time management, and international supply chain coordination—deepening their understanding of the current state and development of Cambodia's manufacturing industry.
+As a leading export manufacturer serving international brands, **HW GARMENT INDUSTRY (CAMBODIA) CO., LTD.** operates a well-established OEM/ODM production system with a strong presence in the European and North American markets. The visit provided valuable insights into lean manufacturing, quality assurance, supply chain coordination, and Cambodia's evolving role in the global manufacturing industry.
 
-![](/images/uploads/news/from-classroom-to-industry-front-lines-aeu-international-business-school-entrepreneur-practical-learning-series-successfully-held/3.png)
+![](/images/uploads/26.jpeg)
 
 ### Focusing on Business Practice, Discussing the Future Together
 

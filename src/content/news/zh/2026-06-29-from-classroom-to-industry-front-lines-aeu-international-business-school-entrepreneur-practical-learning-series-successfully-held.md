@@ -1,7 +1,7 @@
 ---
 title: 从课堂到产业现场｜亚欧大学国际商学院企业家实践学习系列活动圆满举行
 date: 2026-06-30
-image: /images/uploads/news/from-classroom-to-industry-front-lines-aeu-international-business-school-entrepreneur-practical-learning-series-successfully-held/1.png
+image: /images/uploads/14.jpeg
 category: news
 featured: false
 pinned: false
@@ -14,7 +14,7 @@ video: ""
 
 此次活动也是国际商学院本阶段企业参访系列活动的重要一站，进一步落实学院 **“理论结合实践、课堂链接产业”** 的人才培养理念。
 
-![](/images/uploads/news/from-classroom-to-industry-front-lines-aeu-international-business-school-entrepreneur-practical-learning-series-successfully-held/2.png)
+![](/images/uploads/15.jpeg)
 
 ### 深入制造一线，看见产业真实运行
 
@@ -22,7 +22,7 @@ video: ""
 
 作为长期服务国际品牌的出口制造企业，HW GARMENT INDUSTRY 拥有成熟的OEM/ODM生产体系，并持续深耕欧美市场。通过实地参访，学员们更加直观地认识到现代制造企业在精益管理、品质控制、交期管理以及国际供应链协同方面的运营逻辑，对柬埔寨制造产业的发展现状有了更深入的理解。
 
-![](/images/uploads/news/from-classroom-to-industry-front-lines-aeu-international-business-school-entrepreneur-practical-learning-series-successfully-held/3.png)
+![](/images/uploads/26.jpeg)
 
 ### 聚焦经营实践，共话企业未来
 
