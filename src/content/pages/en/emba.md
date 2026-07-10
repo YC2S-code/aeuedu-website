@@ -10,7 +10,7 @@ image: /images/uploads/pagebanner_emba.jpg
 
 Connect with like-minded entrepreneurs and future business leaders to create a thriving business community across Southeast Asia.
 
-![](/images/uploads/1.png)
+![](/images/uploads/6.jpeg)
 
 Artificial intelligence is reshaping the way businesses operate. As technology takes over routine analysis and decision-making, the greatest advantage belongs to leaders who can think strategically, adapt quickly, and lead with confidence. At the same time, shifting global markets and the rapid rise of Southeast Asia are creating new opportunities that require a broader perspective and stronger leadership than ever before.
 
@@ -35,8 +35,6 @@ Choosing where to study is a strategic decision. Cambodia is one of Southeast As
 Delivered primarily in Chinese, this is **Cambodia’s first Chinese-language EMBA**, allowing executives to learn, discuss strategy, and build connections in their native language. Admission is based on professional experience rather than standardized tests such as the GMAT, making the program ideal for experienced business leaders.
 
 ![](/images/uploads/8.png)
-
-
 
 - - -
 
