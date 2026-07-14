@@ -30,11 +30,11 @@ video: ""
 
 企业家学员结合自身行业背景，就**企业战略定位、供应链布局、人力资源管理、国际市场拓展及跨境经营**等议题积极互动，共同探讨企业在全球经济新格局下的发展路径。
 
-![](/images/uploads/news/from-classroom-to-industry-front-lines-aeu-international-business-school-entrepreneur-practical-learning-series-successfully-held/4.png)
+![](/images/uploads/27.jpeg)
 
 企业管理团队也分享了企业的发展历程及经营经验，并介绍了柬埔寨制造业近年来的发展趋势，以及企业在提升生产效率、优化管理体系、推动绿色制造等方面的实践经验。
 
-![](/images/uploads/news/from-classroom-to-industry-front-lines-aeu-international-business-school-entrepreneur-practical-learning-series-successfully-held/5.jpg)
+![](/images/uploads/28.jpeg)
 
 ### 从课堂走向产业，构建国际商业认知
 
@@ -44,13 +44,13 @@ video: ""
 
 这种沉浸式学习方式，让课堂知识真正转化为企业经营能力，也不断提升企业家面对全球市场变化的战略思维与决策能力。
 
-![](/images/uploads/news/from-classroom-to-industry-front-lines-aeu-international-business-school-entrepreneur-practical-learning-series-successfully-held/6.png)
+![](/images/uploads/29.jpeg)
 
 ### 搭建高质量企业家学习平台
 
 未来，亚欧大学国际商学院将持续发挥国际化管理教育平台优势，围绕东盟经济发展趋势，持续组织更多高质量企业参访、行业研究及国际交流活动，进一步整合政府、产业、企业及校友资源，打造兼具国际视野与产业深度的企业家学习共同体。
 
-![](/images/uploads/news/from-classroom-to-industry-front-lines-aeu-international-business-school-entrepreneur-practical-learning-series-successfully-held/7.png)
+![](/images/uploads/30.jpeg)
 
 学院将继续以实践赋能成长，以交流促进合作，为培养具有全球视野、战略思维和创新能力的新一代企业领导者持续贡献力量。
 
