@@ -32,11 +32,11 @@ During the discussion session, both sides engaged in in-depth dialogue on the cu
 
 Drawing on their own industry backgrounds,  **the entrepreneur students actively participated in discussions on topics such as corporate strategic positioning, supply chain layout, human resources management, international market expansion** , and cross-border operations—jointly exploring development pathways for businesses amid the new landscape of the global economy.
 
-![](/images/uploads/news/from-classroom-to-industry-front-lines-aeu-international-business-school-entrepreneur-practical-learning-series-successfully-held/4.png)
+![](/images/uploads/27.jpeg)
 
 The company's management team also shared insights into the company's development history and operational experience, outlining recent trends in Cambodia's manufacturing industry, along with the company's practical experience in improving production efficiency, optimizing management systems, and advancing green manufacturing.
 
-![](/images/uploads/news/from-classroom-to-industry-front-lines-aeu-international-business-school-entrepreneur-practical-learning-series-successfully-held/5.jpg)
+![](/images/uploads/28.jpeg)
 
 ### From Classroom to Industry: Building International Business Acumen
 
@@ -46,13 +46,13 @@ The International Business School has long upheld a  **"classroom learning + cor
 
 This immersive approach to learning transforms classroom knowledge into genuine business management capability, while continuously strengthening entrepreneurs' strategic thinking and decision-making skills in navigating global market changes.
 
-![](/images/uploads/news/from-classroom-to-industry-front-lines-aeu-international-business-school-entrepreneur-practical-learning-series-successfully-held/6.png)
+![](/images/uploads/29.jpeg)
 
 ### Building a High-Quality Learning Platform for Entrepreneurs
 
 Looking ahead, the International Business School of Asia Euro University will continue to leverage its strengths as an international management education platform. With a focus on ASEAN economic development trends, the School will organize further high-quality corporate visits, industry research, and international exchange activities, while integrating resources from government, industry, enterprises, and alumni networks—building an entrepreneur learning community that combines international vision with industry depth.
 
-![](/images/uploads/news/from-classroom-to-industry-front-lines-aeu-international-business-school-entrepreneur-practical-learning-series-successfully-held/7.png)
+![](/images/uploads/30.jpeg)
 
 The School will continue to empower growth through practice and foster collaboration through exchange, contributing steadily to the cultivation of a new generation of business leaders with global vision, strategic thinking, and innovative capability.
 
