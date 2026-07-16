@@ -13,13 +13,11 @@ summary: As the digital era transforms industries, AI-powered short video
 
 As AI transforms the digital economy, **PEP Cohort 12** provided business leaders with practical insights into AI-powered short video operations, live streaming, and content commercialization, empowering them to thrive in the digital era.
 
-![](/images/uploads/12-期-1.png)
+---
 
 PEP Cohort 12 officially commenced with an inspiring opening ceremony at the **Postgraduate School**. **H.E. Prof. Dr. Try Chanthuch**, Vice Chairman of the Board of Trustees of Asia Euro University and Dean of the Postgraduate School, delivered a keynote address highlighting the transformative impact of AI-powered short video technologies and encouraging participants to embrace innovation to strengthen their business competitiveness. His inspiring remarks set the stage for two days of practical learning and meaningful exchange.
 
 ![](/images/uploads/12-期-2.jpg)
-
-
 
 ![](/images/uploads/12-期-11.jpg)
 
