@@ -1,54 +1,52 @@
 ---
 title: The 12th Session of the PEP Program Concludes with Great Success
 date: 2026-05-30
-image: /images/uploads/12-期-1.png
+image: /images/uploads/32.png
 category: news
 featured: false
 pinned: false
-summary: 在数字化浪潮席卷全球的当下，AI短视频运营与商业变现已成为重塑商业格局的热门焦点。
+summary: As the digital era transforms industries, AI-powered short video
+  operations and content monetization have become essential drivers of business
+  growth and innovation.
 ---
-## PEP第12期圆满落幕 AI短视频盛宴
+### **PEP Cohort 12 Successfully Concludes: AI Short Video Operations & Commercialization**
 
-
-
-在数字化浪潮席卷全球的当下，AI短视频运营与商业变现已成为重塑商业格局的热门焦点。第12期PEP **“AI短视频运营与商业变现实战”** 活动的成功举办，不仅为众多商业精英搭建了前沿的学习与交流平台，更提供了一场极具实操价值的思想盛宴。在此，我们将一同回顾本次课程的精彩亮点与核心成果。
-
-
+As AI transforms the digital economy, **PEP Cohort 12** provided business leaders with practical insights into AI-powered short video operations, live streaming, and content commercialization, empowering them to thrive in the digital era.
 
 ![](/images/uploads/12-期-1.png)
 
-
-
-**第12期PEP**课程于研究生院盛大启幕。开幕现场气氛庄重热烈，**亚欧大学校董会副主席暨研究生院院长 Try Chanthuch 教授（博士）阁下**亲临现场，发表了极具前瞻性的致辞。他深刻剖析了AI短视频在当今商业语境下的核心驱动力，勉励校友们借此契机重塑商业竞争力。院长的精彩发言为为期两天的知识盛宴吹响了号角，极大激发了全体学员的求知热情与无限期待。
+PEP Cohort 12 officially commenced with an inspiring opening ceremony at the **Postgraduate School**. **H.E. Prof. Dr. Try Chanthuch**, Vice Chairman of the Board of Trustees of Asia Euro University and Dean of the Postgraduate School, delivered a keynote address highlighting the transformative impact of AI-powered short video technologies and encouraging participants to embrace innovation to strengthen their business competitiveness. His inspiring remarks set the stage for two days of practical learning and meaningful exchange.
 
 ![](/images/uploads/12-期-2.jpg)
 
+
+
 ![](/images/uploads/12-期-11.jpg)
 
-开幕后的首日重磅课程，由独角兽玖比拾陆MCN机构创办人、台湾新媒体应用发展协会创会理事长**陈祈彦（Alex）老师**倾情主讲。陈老师将前沿理论与一线MCN操盘经验深度融合，系统剖析了短视频营销的底层逻辑。从精准捕捉用户注意力、塑造品牌IP，到打通商业变现闭环，他通过生动的实战案例为学员们带来了一场极具落地价值的干货分享。课堂现场互动热烈，学员们在深度的启发与交流中全面构建了短视频运营的系统思维，为未来的实战应用奠定了坚实基础。
+The first day featured an engaging session led by **Alex Chen**, Founder of Unicorn 9x16 MCN and Founding Chairman of the Taiwan New Media Application Development Association. Drawing on extensive industry experience, he shared practical strategies for AI-powered short video marketing, brand building, and content monetization. Through real-world case studies and interactive discussions, participants gained valuable insights and practical skills to apply in today's digital business environment.
 
 ![](/images/uploads/12-期-3.jpg)
 
-次日课程由拥有深厚影视导演与高校教学背景的杭州恒隐影视创始人**张文耀老师**担纲主讲。张老师聚焦“AI短视频底层逻辑与实战运营”，系统剖析了AI赋能内容创作的原理、效率提升技巧及数据分析优化策略。通过直观的实操演示与一线 “避坑” 经验分享，他精准解答了学员们的实际困惑。在热烈的互动中，学员们不仅彻底打通了AI技术的底层逻辑，更切实提升了短视频实战运营能力。
+On the second day, **Zhang Wenyao**, Founder of Hangzhou Hengyin Film & Media, led an in-depth session on the fundamentals of AI-powered short video production and operations. Through live demonstrations, practical techniques, and real-world case studies, participants gained a deeper understanding of AI-driven content creation, operational strategies, and data optimization, strengthening their ability to apply AI effectively in digital marketing.
 
 ![](/images/uploads/12-期-4.jpg)
 
-第二天下午，特邀嘉宾**江国龙老师**以“短视频数据分析与发布策略”为题，为学员们带来了一场干货满满的精彩讲座。江老师依托详实的大数据分析，深入浅出地拆解了平台分发逻辑，并针对如何精准把握发布节点与科学规划内容排期进行了全方位指导。此次分享旨在赋能学员，帮助他们在瞬息万变的新媒体环境中实现流量与曝光的最大化。
+In the afternoon, guest speaker **Jiang Guolong** delivered an insightful session on **Short Video Data Analytics and Publishing Strategies**. Through data-driven analysis and practical guidance, participants learned how platform algorithms work, how to optimize content scheduling, and how to maximize reach and audience engagement in today's fast-changing digital media landscape.
 
 ![](/images/uploads/12-期-5.jpg)
 
-在随后的实操演练中，学员们分为4个小组，将两天来所学的AI短视频战略融会贯通。大家充分发挥创意与团队协作精神，圆满完成了高质量的短视频拍摄与剪辑，实现了从前沿理论到商业实战的完美落地。
+Participants were divided into four teams to apply the knowledge gained throughout the program. By combining creativity, teamwork, and AI-powered strategies, each team successfully produced and edited high-quality short videos, transforming classroom learning into practical business outcomes.
 
 ![](/images/uploads/12-期-6.jpg)
 
-傍晚时分，**第12期PEP**隆重落下帷幕。**亚欧大学董事长李坤泰公爵与亚欧大学院长 Try Chanthuch 教授** 联袂出席闭幕盛典，亲临现场观摩各组实战路演并作权威评审。两位嘉宾对学员们展现出的前瞻创意与极强的商业落地能力给予了充分肯定。随后，亚欧大学董事长李坤泰公爵发表了高屋建瓴的闭幕致辞，在圆满总结本期学习成果之际，再次深刻强调了AI短视频在赋能未来商业版图中的核心战略地位。
+PEP Cohort 12 concluded with a distinguished closing ceremony attended by **Lok Neak Oknha Dr. Ly Kunthai**, Chairman of Asia Euro University, and **H.E. Prof. Dr. Try Chanthuch**, President of Asia Euro University. They evaluated the participants' final project presentations, recognized their creativity and practical business applications, and reaffirmed the strategic role of AI-powered short video technologies in shaping the future of business.
 
 ![](/images/uploads/12-期-7.jpg)
 
 ![](/images/uploads/12-期-8.jpg)
 
-闭幕式最后，嘉宾为全体校友庄重颁发了结业证书，高度肯定了大家的实战成果。此次 PEP 第12期课程不仅为校友们赋能了前沿的AI短视频技能，更搭建了高价值的商业交流与人脉拓展平台。
+The program concluded with a certificate presentation ceremony, recognizing participants for their successful completion and practical achievements. PEP Cohort 12 not only equipped business leaders with cutting-edge AI-powered short video skills but also fostered valuable networking and collaboration opportunities.
 
-**第12期PEP《AI短视频运营与商业变现实战》**至此圆满落幕，但成长的脚步永不停歇。欢迎持续关注我们的官方公众号，获取更多前沿干货与学习机会，与我们一同探索数字商业新未来！
+Thank you to everyone who participated in **PEP Cohort 12 – AI Short Video Operations & Commercialization**. We look forward to welcoming you to future programs as we continue exploring innovation and leadership in the digital business era.
 
 ![](/images/uploads/12-期-9.jpg)
