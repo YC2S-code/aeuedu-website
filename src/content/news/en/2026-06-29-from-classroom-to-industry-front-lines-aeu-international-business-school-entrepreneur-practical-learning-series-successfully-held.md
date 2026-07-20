@@ -3,7 +3,7 @@ title: From Classroom to Industry | AEU Bridging Academic Learning with
   Industrial Practice
 date: 2026-06-30
 image: /images/uploads/14.jpeg
-category: news
+category: alumni
 featured: false
 pinned: false
 summary: The visit further advanced the Business School's commitment to

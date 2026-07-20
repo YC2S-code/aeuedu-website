@@ -2,7 +2,7 @@
 title: 从课堂到产业现场｜亚欧大学国际商学院企业家实践学习系列活动圆满举行
 date: 2026-06-30
 image: /images/uploads/14.jpeg
-category: news
+category: alumni
 featured: false
 pinned: false
 summary: 此次活动也是国际商学院本阶段企业参访系列活动的重要一站，进一步落实学院 **“理论结合实践、课堂链接产业”** 的人才培养理念。
