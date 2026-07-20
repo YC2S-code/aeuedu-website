@@ -2,7 +2,7 @@
 title: The 12th Session of the PEP Program Concludes with Great Success
 date: 2026-05-30
 image: /images/uploads/32.png
-category: news
+category: event
 featured: false
 pinned: false
 summary: As the digital era transforms industries, AI-powered short video

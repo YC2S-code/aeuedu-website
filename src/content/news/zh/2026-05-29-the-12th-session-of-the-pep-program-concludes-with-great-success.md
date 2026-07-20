@@ -2,7 +2,7 @@
 title: PEP第12期圆满落幕
 date: 2026-05-30
 image: /images/uploads/12-期-1.png
-category: news
+category: event
 featured: false
 pinned: false
 summary: 在数字化浪潮席卷全球的当下，AI短视频运营与商业变现已成为重塑商业格局的热门焦点。
