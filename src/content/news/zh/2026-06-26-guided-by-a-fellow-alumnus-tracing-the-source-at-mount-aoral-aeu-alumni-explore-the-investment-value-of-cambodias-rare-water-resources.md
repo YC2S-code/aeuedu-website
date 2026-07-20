@@ -2,7 +2,7 @@
 title: 学长引路，溯源奥拉山。亚欧校友共鉴柬埔寨珍稀水资源投资价值
 date: 2026-06-27
 image: /images/uploads/16.jpeg
-category: news
+category: alumni
 featured: false
 pinned: false
 summary: 深入水厂 · 全线工艺参观，考察首站，一行人在专业人员带领下，完整参观了水厂从原料到成品的全套生产线，亲眼见证每一道工序背后的品控逻辑与技术投入。

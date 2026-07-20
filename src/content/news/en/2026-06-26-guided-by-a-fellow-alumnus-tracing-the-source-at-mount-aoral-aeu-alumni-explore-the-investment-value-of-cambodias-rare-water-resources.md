@@ -3,7 +3,7 @@ title: Guided by Alumni. Discovering the Source of the Aural Mountain. Exploring
   Cambodia's Rare Water Resource Investment Opportunities.
 date: 2026-06-27
 image: /images/uploads/16.jpeg
-category: news
+category: alumni
 featured: false
 pinned: false
 summary: >-
