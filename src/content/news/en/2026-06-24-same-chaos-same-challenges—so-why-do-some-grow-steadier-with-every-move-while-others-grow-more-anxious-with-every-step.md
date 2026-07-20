@@ -3,7 +3,7 @@ title: Same chaos, same challenges—so why do some grow steadier with every mov
   while others grow more anxious with every step?
 date: 2026-06-25
 image: /images/uploads/11.png
-category: news
+category: announcement
 featured: false
 pinned: false
 summary: True Leadership Begins with Judgment, Not Resources.

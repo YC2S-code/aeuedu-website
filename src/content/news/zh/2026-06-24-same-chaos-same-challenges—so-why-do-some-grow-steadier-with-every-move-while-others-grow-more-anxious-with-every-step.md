@@ -2,7 +2,7 @@
 title: 同样的乱局，为什么有人越打越稳，有人越做越慌？
 date: 2026-06-25
 image: /images/uploads/1.jpeg
-category: news
+category: announcement
 featured: false
 pinned: false
 summary: |-
