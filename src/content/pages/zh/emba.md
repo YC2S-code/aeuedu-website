@@ -3,7 +3,7 @@ title: EMBA - 高级工商管理硕士
 published: true
 parent: programs
 navLabel: EMBA
-image: /images/uploads/pagebanner_emba.jpg
+image: /images/uploads/1ll-copy.jpeg
 videoBilibili: null
 videoYoutube: null
 ---
