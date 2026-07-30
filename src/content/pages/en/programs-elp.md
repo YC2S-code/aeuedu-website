@@ -4,7 +4,7 @@ titleZh: ""
 published: true
 parent: programs
 navLabel: ELP
-image: /images/uploads/25.png
+image: /images/uploads/47.jpg
 videoBilibili: https://www.bilibili.com/video/BV1WtKQ6qEHT/?share_source=copy_web&vd_source=727821d0935e7fe259a51750307a27d4
 ---
 ### More Than Learning—A Chance to Grow as a Leader
