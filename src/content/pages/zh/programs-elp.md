@@ -4,7 +4,9 @@ published: true
 parent: programs
 navLabel: ELP 领袖班
 image: /images/uploads/47.jpg
-videoBilibili: https://www.bilibili.com/video/BV1WtKQ6qEHT/?share_source=copy_web&vd_source=727821d0935e7fe259a51750307a27d4
+videoBilibili: 【ELP 领袖班第1届-13班 ｜ 掌控局势的人，从不等待机会，而是创造机会  ‣ 企业家班火热招生中  ‣
+  8月开班，现在加入！】
+  https://www.bilibili.com/video/BV13s3s6pE1y/?share_source=copy_web&vd_source=727821d0935e7fe259a51750307a27d4
 videoYoutube: null
 ---
 ## **不只是学习，而是一次领袖的自我重建**
