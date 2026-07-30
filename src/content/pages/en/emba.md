@@ -4,13 +4,13 @@ titleZh: EMBA
 published: true
 parent: programs
 navLabel: EMBA
-image: /images/uploads/1ll-copy.jpeg
+image: /images/uploads/46.jpg
 ---
 ### Learn with purpose. Lead with vision.
 
 Connect with like-minded entrepreneurs and future business leaders to create a thriving business community across Southeast Asia.
 
-![](/images/uploads/6.jpeg)
+![](/images/uploads/1ll-copy.jpeg)
 
 Artificial intelligence is reshaping the way businesses operate. As technology takes over routine analysis and decision-making, the greatest advantage belongs to leaders who can think strategically, adapt quickly, and lead with confidence. At the same time, shifting global markets and the rapid rise of Southeast Asia are creating new opportunities that require a broader perspective and stronger leadership than ever before.
 
